@@ -1,0 +1,49 @@
+:root {
+  --line-width: 100px;
+  --arrow-width: 12px;
+  --arrow-height: 12px;
+  --circle-width: 40px;
+  --circle-height: 40px;
+  --black: #383838;
+  --dark-white: #f3f3f4;
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  background: var(--dark-white);
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}
+.swiper-button-next {
+  border-radius: 50%;
+  top: 5em;
+  right: 4px;
+  background: var(--dark-white);
+  color: var(--black);
+  filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
+  position: absolute;
+  z-index: 10;
+}
+.swiper-button-next::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+.swiper-button-next:active {
+  background: #e5e5e5;
+}
+
+@media (max-width: 1024px) {
+  .circle {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper-button-next {
+    top: 4em;
+  }
+  .circle {
+    width: 32px;
+    height: 32px;
+  }
+}

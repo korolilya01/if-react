@@ -1,0 +1,74 @@
+input[type='radio'] {
+  display: none;
+}
+.radio-but {
+  display: inline-block;
+  padding: 16px 48px;
+  width: fit-content;
+  height: fit-content;
+  background: var(--dark-white);
+  border-radius: 8px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--black);
+}
+.radio__places {
+  padding: 16px 24px;
+}
+input[type='radio']:checked + .radio-but {
+  color: var(--white);
+  background: var(--blue);
+}
+.dest__button-regions:checked ~ .block__regions {
+  display: block;
+}
+.dest__button-cities:checked ~ .block__cities {
+  display: block;
+}
+.dest__button-places:checked ~ .block__places {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .radio-but {
+    padding: 8px 48px;
+    font-size: 20px;
+    color: var(--black);
+  }
+  .radio__places {
+    padding: 8px 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .radio-but {
+    padding: 8px 24px;
+    font-size: 16px;
+    margin-bottom: 52px;
+  }
+  .radio__places {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .radio-but {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+  .radio__places {
+    padding: 8px 24px;
+  }
+  .places-text {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .radio-but {
+    font-size: 19px;
+    line-height: 22px;
+    margin-bottom: 0;
+  }
+}

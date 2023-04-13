@@ -1,0 +1,16 @@
+:root {
+  --arrow-width: 12px;
+  --arrow-height: 12px;
+  --black: #383838;
+}
+.arrows {
+  width: var(--arrow-width);
+  height: var(--arrow-height);
+  border: 2px solid var(--black);
+  border-left: 0;
+  border-top: 0;
+  position: absolute;
+  transform: rotate(-50deg) skewX(-15deg);
+  top: calc(50% - var(--arrow-width) / 2);
+  left: calc(50% - var(--arrow-height) / 2);
+}
