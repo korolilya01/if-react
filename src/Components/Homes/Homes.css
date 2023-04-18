@@ -1,19 +1,40 @@
-* {
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  margin: 0;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(../../fonts/Roboto-Regular.woff) format('woff'), local('Roboto'),
-    url(../../fonts/Roboto-Medium.woff2) format('woff2');
-}
-:root {
-  --light-white: #eaf0f9;
-}
-a {
-  text-decoration: none;
-}
 .homes {
   background-color: var(--light-white);
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 104px;
+  min-width: 0;
+  gap: 16px;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .list {
+    margin: 0;
+    font-size: 20px;
+  }
+  .homes__list {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .list {
+    margin-bottom: 0;
+  }
 }

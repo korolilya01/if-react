@@ -11,7 +11,10 @@ export const Hotels = ({ className }) =>
     <div key={id} className={classNames('swiper-slide', className)}>
       <div className="homes__item">
         <img className="img-style" src={imageUrl} alt={name} />
-        <a className="item__text" href="src/Components/Hotels/Hotels#">
+        <a
+          className="item__text"
+          href="src/Components/Hotels/Hotels#Hotels.jsx"
+        >
           {name}
         </a>
         <p className={classNames('item__text', 'hostel-location')}>
