@@ -1,8 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 
-import './Title.css';
+import styles from './Title.module.scss';
 
-export const Title = ({ className, content }) => (
-  <h2 className={classNames('title', className)}>{content}</h2>
+// eslint-disable-next-line react/prop-types
+export const Title = ({ content }) => (
+  <h2 className={styles.title}>{content}</h2>
 );

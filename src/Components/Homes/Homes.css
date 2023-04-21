@@ -1,19 +1,10 @@
-* {
-  box-sizing: border-box;
-  font-family: Roboto, sans-serif;
-  margin: 0;
-}
-@font-face {
-  font-family: Roboto;
-  src: url(../../fonts/Roboto-Regular.woff) format('woff'), local('Roboto'),
-    url(../../fonts/Roboto-Medium.woff2) format('woff2');
-}
-:root {
-  --light-white: #eaf0f9;
-}
-a {
-  text-decoration: none;
-}
 .homes {
   background-color: var(--light-white);
+}
+
+@media (max-width: 1024px) {
+    .homes__list {
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }

@@ -1,8 +1,8 @@
 import React from 'react';
-import classNames from 'classnames';
 
-import './Container.css';
+import styles from './Container.module.scss';
 
-export const Container = ({ children, className }) => (
-  <div className={classNames('container', className)}>{children}</div>
+// eslint-disable-next-line react/prop-types
+export const Container = ({ children }) => (
+  <div className={styles.container}>{children}</div>
 );

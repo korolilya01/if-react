@@ -5,6 +5,13 @@
   margin-top: 104px;
   min-width: 0;
   gap: 16px;
+  @media (max-width: 1024px) {
+    margin: 0;
+    font-size: 20px;
+  }
+  @media (max-width: 480px) {
+    margin-bottom: 0;
+  }
 }
 .swiper-wrapper {
   position: relative;
@@ -16,21 +23,4 @@
   box-sizing: content-box;
   justify-content: space-between;
   margin: 0 auto;
-}
-
-@media (max-width: 1024px) {
-  .list {
-    margin: 0;
-    font-size: 20px;
-  }
-  .homes__list {
-    display: flex;
-    flex-wrap: nowrap;
-  }
-}
-
-@media (max-width: 480px) {
-  .list {
-    margin-bottom: 0;
-  }
 }
