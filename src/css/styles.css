@@ -496,21 +496,21 @@ ul {
 }
 
 /* available */
-.available-hotels--hidden {
-  display: none;
-}
-.available__item {
-  height: 432px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
+/*.available-hotels--hidden {*/
+/*  display: none;*/
+/*}*/
+/*.available__item {*/
+/*  height: 432px;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  justify-content: start;*/
+/*}*/
 
 /* homes */
-.homes,
-.available-hotels {
-  background-color: var(--light-white);
-}
+/*.homes,*/
+/*.available-hotels {*/
+/*  background-color: var(--light-white);*/
+/*}*/
 .homes__item,
 .dest__item {
   height: 432px;
@@ -611,9 +611,6 @@ ul {
 }
 
 /* destinations--additional */
-.container {
-  position: relative;
-}
 .block__regions-add,
 .block__cities-add,
 .block__places-add {
