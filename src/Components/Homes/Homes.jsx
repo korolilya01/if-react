@@ -22,9 +22,7 @@ export const Homes = () => {
             className={classNames('homes__list', 'swiper-wrapper')}
             array={data}
           />
-          <SwiperButton className="circle">
-            <Arrow />
-          </SwiperButton>
+          <SwiperButton className="circle" />
         </SwiperContainer>
       </Container>
     </section>
