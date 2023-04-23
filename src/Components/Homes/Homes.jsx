@@ -3,7 +3,6 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './Homes.css';
-import { Arrow } from '../SwiperButton/Arrow';
 import { Container } from '../Container';
 import { List } from '../List';
 import { SwiperButton } from '../SwiperButton';

@@ -18,4 +18,3 @@ export const Hotels = ({ imageUrl, name, city, country }) => {
     </div>
   );
 };
-// data.map(({ id, name, city, country, imageUrl }) => (
