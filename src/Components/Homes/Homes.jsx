@@ -9,7 +9,7 @@ import { SwiperButton } from '../SwiperButton';
 import { SwiperContainer } from '../SwiperContainer';
 import { Title } from '../Title';
 
-import { data } from '../Hotels/data';
+import { HOTEL_DATA } from '../Hotels/data';
 
 // eslint-disable-next-line react/prop-types
 export const Homes = () => {
@@ -20,7 +20,7 @@ export const Homes = () => {
         <SwiperContainer>
           <List
             className={classNames('homes__list', 'swiper-wrapper')}
-            array={data}
+            array={HOTEL_DATA}
           />
           <SwiperButton className="circle" />
         </SwiperContainer>

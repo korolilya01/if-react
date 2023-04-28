@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { data } from '../Hotels/data';
+import { HOTEL_DATA } from '../../Hotels/data';
+import { Icon } from '../../Icon';
+
+import './TopSectionForm.scss';
 
 // eslint-disable-next-line react/prop-types
 export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
-  const [destination, setDestination] = useState('');
-
-  const inputSearch = (event) => {
-    event.preventDefault();
-    setDestination(event.target.value);
-  };
-
   const buttonSearchClick = (event) => {
     event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    const { destination } = data;
+
     setAvailableHotels(
-      data.filter(({ name, city, country }) => {
+      HOTEL_DATA.filter(({ name, city, country }) => {
         return (
           name.includes(destination) ||
           city.includes(destination) ||
@@ -24,13 +26,15 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
     );
     setVisibleHotels('block');
   };
-
   return (
-    <form action="#" method="get" className="form-filter">
+    <form
+      onSubmit={buttonSearchClick}
+      action="#"
+      method="get"
+      className="form-filter"
+    >
       <div className="page__search">
-        <svg className="icon-search">
-          <use href="#search" />
-        </svg>
+        <Icon className="searchIcon" iconHref="#search" />
         <label htmlFor="city" className="text-city page-text">
           Your destination or hotel name
         </label>
@@ -38,9 +42,8 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
           id="city"
           className="page__search-city page-text"
           type="text"
-          name="choose-city"
+          name="destination"
           placeholder=" Your destination or hotel name"
-          onChange={inputSearch}
         />
         <label htmlFor="date-in" className="text-date page-text">
           Check-in - Check-out
@@ -169,7 +172,6 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
           className="page__search-button"
           type="submit"
           name="page__search-button"
-          onClick={buttonSearchClick}
         >
           Search
         </button>

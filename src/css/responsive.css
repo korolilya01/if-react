@@ -40,9 +40,6 @@
 }
 
 @media (max-width: 1200px) {
-  .header {
-    /*margin-bottom: 120px;*/
-  }
   .text-city,
   .text-date {
     padding-bottom: 10px;
@@ -50,34 +47,19 @@
   .page__search-button {
     font-size: 20px;
   }
-  .icon-logo {
-    width: 160px;
-    height: 32px;
-  }
-  .icon-night {
-    width: 24px;
-    height: 24px;
-  }
-  .icon-account {
-    width: 32px;
-    height: 32px;
-  }
+
   .links {
     font-size: 20px;
   }
   .page-text {
     font-size: 15px;
   }
-  .account {
-    font-size: 20px;
-  }
+
   .account__email-text,
   .account__password-text {
     font-size: 14px;
   }
-  .account__button {
-    font-size: 18px;
-  }
+
   .offers__description {
     font-size: 22px;
   }
@@ -145,11 +127,7 @@
   p {
     margin: 0;
   }
-  .page__title {
-    font-size: 44px;
-    margin-bottom: 90px;
-    line-height: 50px;
-  }
+
   .page__search {
     display: grid;
     gap: 8px;
@@ -160,12 +138,7 @@
     border: 5px solid var(--dark-yellow);
     margin-bottom: 80px;
   }
-  .icon-search {
-    display: flex;
-    position: relative;
-    top: -95px;
-    left: 12px;
-  }
+
   .page__search-city {
     grid-column: 1 / span 6;
     grid-row: 1;
@@ -232,16 +205,7 @@
     border-radius: 4px;
     width: auto;
   }
-  .header__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-left: 48px;
-  }
-  .page__apps {
-    padding-bottom: 40px;
-  }
+
   .offers__line {
     display: none;
   }
@@ -366,58 +330,24 @@
     width: 95%;
     margin: 0 auto;
   }
-  .main {
-    height: 100%;
-  }
-  .header__items {
-    gap: 16px;
-  }
+
   .page__search {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, 48px);
     height: 224px;
   }
-  .page__title {
-    font-size: 32px;
-    margin-bottom: 60px;
-    line-height: 42px;
-    margin-top: 52px;
-  }
+
   .links {
     display: none;
   }
-  .account {
-    width: 320px;
-    margin: 50px auto;
-  }
+
   .account__email-field,
   .account__password-field {
     width: 240px;
   }
-  .account__button {
-    width: 240px;
-  }
-  .icon-logo {
-    width: 120px;
-    height: 30px;
-  }
-  .icon-night {
-    width: 20px;
-    height: 20px;
-  }
-  .icon-account {
-    width: 24px;
-    height: 24px;
-  }
-  .icon-menu {
-    display: flex;
-    width: 28px;
-    height: 20px;
-  }
-  .icon-search {
-    top: -208px;
-  }
+
+
   .page__search-city {
     grid-column: 1 / span 8;
     grid-row: 1;
@@ -636,22 +566,11 @@
   .col-xs-6 {
     width: calc(var(--col-width) * 6);
   }
-  .main-wrap {
-    padding-top: 0;
-  }
+
   .container {
     padding: 40px 0;
   }
-  .header {
-    width: 100%;
-    height: 48px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .account {
-    font-size: 16px;
-    width: 240px;
-  }
+
   .account__email-text,
   .account__password-text {
     font-size: 12px;
@@ -660,33 +579,7 @@
   .account__password-field {
     width: 160px;
   }
-  .account__button {
-    font-size: 16px;
-    width: 160px;
-    margin-bottom: 12px;
-  }
-  .icon-logo {
-    width: 122px;
-    height: 24px;
-  }
-  .icon-night {
-    width: 16px;
-    height: 16px;
-  }
-  .icon-account {
-    width: 24px;
-    height: 24px;
-  }
-  .icon-menu {
-    width: 24px;
-    height: 16px;
-  }
-  .page__title {
-    font-size: 30px;
-    margin-bottom: 32px;
-    margin-top: 40px;
-    line-height: 35px;
-  }
+
   .page__search {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
