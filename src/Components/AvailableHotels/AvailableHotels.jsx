@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import styles from './AvailableHotels.module.scss';
 
 import { Container } from '../Container';
-//import { Hotels } from '../Hotels';
+import { List } from '../List';
 import { SwiperButton } from '../SwiperButton';
 import { SwiperContainer } from '../SwiperContainer';
 import { Title } from '../Title';
+
 import classNames from 'classnames';
-import { List } from '../List';
 
 // eslint-disable-next-line react/prop-types
 export const AvailableHotels = ({ availableHotels, visibleHotels }) => {
@@ -25,7 +25,7 @@ export const AvailableHotels = ({ availableHotels, visibleHotels }) => {
           />
           <SwiperButton
             swiperButton={{ display: swiperButton }}
-            className="circle"
+            className={styles.circle}
           />
         </SwiperContainer>
       </Container>
