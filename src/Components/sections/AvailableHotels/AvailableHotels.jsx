@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 import styles from './AvailableHotels.module.scss';
 
-import { Container } from '../Container';
-import { List } from '../List';
-import { SwiperButton } from '../SwiperButton';
-import { SwiperContainer } from '../SwiperContainer';
-import { Title } from '../Title';
+import { Container } from '../../Container';
+import { List } from '../../List';
+import { SwiperButton } from '../../SwiperButton';
+import { SwiperContainer } from '../../SwiperContainer';
+import { Title } from '../../Title';
 
 import classNames from 'classnames';
 

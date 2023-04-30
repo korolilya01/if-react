@@ -5,10 +5,10 @@ import classNames from 'classnames';
 import styles from './List.module.scss';
 
 // eslint-disable-next-line react/prop-types
-export const List = ({ className, array, setSwiperButton }) => {
+export const List = ({ setSwiperButton, className, array }) => {
   // eslint-disable-next-line react/prop-types
   if (array.length <= 4) {
-    setSwiperButton('none');
+    setSwiperButton;
   }
   return (
     <div className={classNames(styles.list, className)}>

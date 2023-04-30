@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { HOTEL_DATA } from '../../Hotels/data';
 import { Icon } from '../../Icon';
 
 import './TopSectionForm.scss';
+import { getAvailableHotels } from '../../../utils';
 
 // eslint-disable-next-line react/prop-types
 export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
@@ -15,15 +15,9 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
 
     const { destination } = data;
 
-    setAvailableHotels(
-      HOTEL_DATA.filter(({ name, city, country }) => {
-        return (
-          name.includes(destination) ||
-          city.includes(destination) ||
-          country.includes(destination)
-        );
-      }),
-    );
+    getAvailableHotels(destination).then((hotels) => {
+      setAvailableHotels(hotels);
+    });
     setVisibleHotels('block');
   };
   return (

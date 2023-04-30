@@ -1,3 +1,5 @@
+export const DATA_URL = 'https://if-student-api.onrender.com/api/hotels';
+
 export const HOTEL_DATA = [
   {
     id: '71ce9eac-e9b9-44f0-a342-9ff0b565f3b7',
