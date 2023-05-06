@@ -9,19 +9,24 @@ import { SwiperContainer } from '../../SwiperContainer';
 import { Title } from '../../Title';
 
 import classNames from 'classnames';
+import { useAvailableHotelsContext } from './AvailableHotels.context';
 
 // eslint-disable-next-line react/prop-types
-export const AvailableHotels = ({ availableHotels, visibleHotels }) => {
+export const AvailableHotels = () => {
+  const { cards } = useAvailableHotelsContext();
   const [swiperButton, setSwiperButton] = useState('block');
+  if (cards.length === 0) {
+    return null;
+  }
   return (
-    <section className={styles.section} style={visibleHotels}>
+    <section className={styles.section}>
       <Container>
         <Title content="Available hotels" />
         <SwiperContainer>
           <List
             setSwiperButton={setSwiperButton}
             className={classNames('homes__list', 'swiper-wrapper')}
-            array={availableHotels}
+            array={cards}
           />
           <SwiperButton
             swiperButton={{ display: swiperButton }}

@@ -3,10 +3,13 @@ import React from 'react';
 import { Icon } from '../../Icon';
 
 import './TopSectionForm.scss';
+
 import { getAvailableHotels } from '../../../utils';
+import { useAvailableHotelsContext } from '../../sections/AvailableHotels/AvailableHotels.context';
 
 // eslint-disable-next-line react/prop-types
-export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
+export const TopSectionForm = () => {
+  const { setCards } = useAvailableHotelsContext();
   const buttonSearchClick = (event) => {
     event.preventDefault();
 
@@ -14,11 +17,7 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
     const data = Object.fromEntries(formData.entries());
 
     const { destination } = data;
-
-    getAvailableHotels(destination).then((hotels) => {
-      setAvailableHotels(hotels);
-    });
-    setVisibleHotels('block');
+    getAvailableHotels(destination).then((hotels) => setCards(hotels));
   };
   return (
     <form
