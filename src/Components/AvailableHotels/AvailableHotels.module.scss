@@ -1,0 +1,21 @@
+/* available */
+.section {
+  background-color: var(--light-white);
+}
+.sectionHide {
+  display: none;
+}
+
+.available__item {
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background: var(--dark-white);
+  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
+}

@@ -1,22 +1,6 @@
-:root {
-  --line-width: 100px;
-  --arrow-width: 12px;
-  --arrow-height: 12px;
-  --circle-width: 40px;
-  --circle-height: 40px;
-  --black: #383838;
-  --dark-white: #f3f3f4;
-}
-.circle {
-  width: 40px;
-  height: 40px;
-  background: var(--dark-white);
-  box-shadow: 0 4px 4px rgb(0 0 0 / 25%);
-}
+
 .swiper-button-next {
   border-radius: 50%;
-  top: 5em;
-  right: 4px;
   background: var(--dark-white);
   color: var(--black);
   filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
