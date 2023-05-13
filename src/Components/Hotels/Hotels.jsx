@@ -4,7 +4,6 @@ import classNames from 'classnames';
 
 import './Hotels.css';
 
-// eslint-disable-next-line react/prop-types
 export const Hotels = ({ imageUrl, name, city, country }) => {
   return (
     <div className="homes__item">

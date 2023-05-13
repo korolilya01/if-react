@@ -3,9 +3,8 @@ import React from 'react';
 import { Icon } from '../../Icon';
 
 import './TopSectionForm.scss';
-import { getAvailableHotels } from '../../../utils';
+import { getAvailableHotels } from '../../../services/index';
 
-// eslint-disable-next-line react/prop-types
 export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
   const buttonSearchClick = (event) => {
     event.preventDefault();

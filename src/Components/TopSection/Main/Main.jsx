@@ -5,7 +5,6 @@ import { Icon } from '../../Icon';
 
 import styles from './Main.module.scss';
 
-// eslint-disable-next-line react/prop-types
 export const Main = ({ setVisibleHotels, setAvailableHotels }) => (
   <main className={styles.page}>
     <h1 className={styles.pageTitle}>
