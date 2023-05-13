@@ -4,10 +4,9 @@ import { Icon } from '../../Icon';
 
 import './TopSectionForm.scss';
 
-import { getAvailableHotels } from '../../../utils';
+import { getAvailableHotels } from '../../../services/index';
 import { useAvailableHotelsContext } from '../../sections/AvailableHotels/AvailableHotels.context';
 
-// eslint-disable-next-line react/prop-types
 export const TopSectionForm = () => {
   const { setCards } = useAvailableHotelsContext();
   const buttonSearchClick = (event) => {

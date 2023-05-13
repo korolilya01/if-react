@@ -9,9 +9,8 @@ import { SwiperButton } from '../../SwiperButton';
 import { SwiperContainer } from '../../SwiperContainer';
 import { Title } from '../../Title';
 
-import { getHomesHotels } from '../../../utils';
+import { getHomesHotels } from '../../../services/index';
 
-// eslint-disable-next-line react/prop-types
 export const Homes = () => {
   const [hotel, setHotel] = useState([]);
 

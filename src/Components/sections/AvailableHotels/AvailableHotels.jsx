@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useMemo } from 'react';
 
 import styles from './AvailableHotels.module.scss';
 
@@ -11,10 +11,12 @@ import { Title } from '../../Title';
 import classNames from 'classnames';
 import { useAvailableHotelsContext } from './AvailableHotels.context';
 
-// eslint-disable-next-line react/prop-types
-export const AvailableHotels = () => {
+export const AvailableHotels = ({ availableHotels }) => {
   const { cards } = useAvailableHotelsContext();
-  const [swiperButton, setSwiperButton] = useState('block');
+  const swiperButton = useMemo(
+    () => (availableHotels.length > 4 ? 'block' : 'none'),
+    [availableHotels],
+  );
   if (cards.length === 0) {
     return null;
   }
@@ -24,7 +26,6 @@ export const AvailableHotels = () => {
         <Title content="Available hotels" />
         <SwiperContainer>
           <List
-            setSwiperButton={setSwiperButton}
             className={classNames('homes__list', 'swiper-wrapper')}
             array={cards}
           />
