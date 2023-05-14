@@ -1,12 +1,15 @@
 import React from 'react';
 
-import { HOTEL_DATA } from '../../Hotels/data';
 import { Icon } from '../../Icon';
 
 import './TopSectionForm.scss';
 
-// eslint-disable-next-line react/prop-types
-export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
+import { getAvailableHotels } from '../../../services/index';
+import { useAvailableHotelsContext } from '../../sections/AvailableHotels/AvailableHotels.context';
+import { Calendar } from './Calendar';
+
+export const TopSectionForm = () => {
+  const { setCards } = useAvailableHotelsContext();
   const buttonSearchClick = (event) => {
     event.preventDefault();
 
@@ -14,17 +17,7 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
     const data = Object.fromEntries(formData.entries());
 
     const { destination } = data;
-
-    setAvailableHotels(
-      HOTEL_DATA.filter(({ name, city, country }) => {
-        return (
-          name.includes(destination) ||
-          city.includes(destination) ||
-          country.includes(destination)
-        );
-      }),
-    );
-    setVisibleHotels('block');
+    getAvailableHotels(destination).then((hotels) => setCards(hotels));
   };
   return (
     <form
@@ -45,29 +38,8 @@ export const TopSectionForm = ({ setAvailableHotels, setVisibleHotels }) => {
           name="destination"
           placeholder=" Your destination or hotel name"
         />
-        <label htmlFor="date-in" className="text-date page-text">
-          Check-in - Check-out
-        </label>
-        <div className="page__search-date">
-          <label htmlFor="date-in" className="date-in-mob page-text">
-            Check-in date
-          </label>
-          <input
-            id="date-in"
-            className="date-in page-text"
-            type="date"
-            name="choose-date-in"
-          />
-          <label htmlFor="date-out" className="date-out-mob page-text">
-            Check-out date
-          </label>
-          <input
-            id="date-out"
-            type="date"
-            className="date-out page-text"
-            name="choose-date-out"
-          />
-        </div>
+        <Calendar />
+        <span className="text-date page-text">Check-in - Check-out</span>
         <div className="page__search-info page-text" id="page__search-info">
           <div className="info-column column-adults">
             <p>Adults</p>
