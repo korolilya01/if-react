@@ -5,9 +5,7 @@ export const AvailableHotelsContext = createContext({
   setCards: (newCards) => {},
 });
 
-// eslint-disable-next-line react/prop-types
 export const AvailableHotelsContextProvider = ({ children }) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const [cards, setCards] = useState([]);
   return (
     <AvailableHotelsContext.Provider value={{ cards, setCards }}>

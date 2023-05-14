@@ -5,7 +5,7 @@ import { Icon } from '../../Icon';
 
 import styles from './Main.module.scss';
 
-export const Main = ({ setVisibleHotels, setAvailableHotels }) => (
+export const Main = () => (
   <main className={styles.page}>
     <h1 className={styles.pageTitle}>
       Discover stays <br />

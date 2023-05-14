@@ -6,6 +6,7 @@ import './TopSectionForm.scss';
 
 import { getAvailableHotels } from '../../../services/index';
 import { useAvailableHotelsContext } from '../../sections/AvailableHotels/AvailableHotels.context';
+import { Calendar } from './Calendar';
 
 export const TopSectionForm = () => {
   const { setCards } = useAvailableHotelsContext();
@@ -37,29 +38,8 @@ export const TopSectionForm = () => {
           name="destination"
           placeholder=" Your destination or hotel name"
         />
-        <label htmlFor="date-in" className="text-date page-text">
-          Check-in - Check-out
-        </label>
-        <div className="page__search-date">
-          <label htmlFor="date-in" className="date-in-mob page-text">
-            Check-in date
-          </label>
-          <input
-            id="date-in"
-            className="date-in page-text"
-            type="date"
-            name="choose-date-in"
-          />
-          <label htmlFor="date-out" className="date-out-mob page-text">
-            Check-out date
-          </label>
-          <input
-            id="date-out"
-            type="date"
-            className="date-out page-text"
-            name="choose-date-out"
-          />
-        </div>
+        <Calendar />
+        <span className="text-date page-text">Check-in - Check-out</span>
         <div className="page__search-info page-text" id="page__search-info">
           <div className="info-column column-adults">
             <p>Adults</p>
