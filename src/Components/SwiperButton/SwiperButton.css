@@ -1,11 +1,10 @@
-
 .swiper-button-next {
   border-radius: 50%;
   background: var(--dark-white);
   color: var(--black);
   filter: drop-shadow(0 4px 4px rgb(0 0 0 / 25%));
   position: absolute;
-  z-index: 10;
+  right: 0;
 }
 .swiper-button-next::after {
   font-size: 18px;

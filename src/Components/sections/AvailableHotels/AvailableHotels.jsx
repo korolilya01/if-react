@@ -11,13 +11,13 @@ import { Title } from '../../Title';
 import classNames from 'classnames';
 import { useAvailableHotelsContext } from './AvailableHotels.context';
 
-export const AvailableHotels = ({ availableHotels }) => {
+export const AvailableHotels = () => {
   const { cards } = useAvailableHotelsContext();
   const swiperButton = useMemo(
-    () => (availableHotels.length > 4 ? 'block' : 'none'),
-    [availableHotels],
+    () => (cards.length > 4 ? 'block' : 'none'),
+    [cards],
   );
-  if (cards.length === 0) {
+  if (!cards || cards.length === 0) {
     return null;
   }
   return (
@@ -28,11 +28,12 @@ export const AvailableHotels = ({ availableHotels }) => {
           <List
             className={classNames('homes__list', 'swiper-wrapper')}
             array={cards}
-          />
-          <SwiperButton
-            swiperButton={{ display: swiperButton }}
-            className={styles.circle}
-          />
+          >
+            <SwiperButton
+              swiperButton={{ display: swiperButton }}
+              className={styles.circle}
+            />
+          </List>
         </SwiperContainer>
       </Container>
     </section>
