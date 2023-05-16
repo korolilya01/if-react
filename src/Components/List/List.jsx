@@ -4,12 +4,13 @@ import classNames from 'classnames';
 
 import styles from './List.module.scss';
 
-export const List = ({ className, array }) => {
+export const List = ({ className, array, children }) => {
   return (
     <div className={classNames(styles.list, className)}>
       {array.map((item) => (
         <Hotels key={item.id} {...item} />
       ))}
+      {children}
     </div>
   );
 };
