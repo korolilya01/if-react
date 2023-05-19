@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import { AvailableHotels } from '../AvailableHotels';
-import { Homes } from '../Homes';
+import { AvailableHotels } from '../sections/AvailableHotels';
+import { Homes } from '../sections/Homes';
 import { Sprites } from '../Sprites';
 import { TopSection } from '../TopSection';
 

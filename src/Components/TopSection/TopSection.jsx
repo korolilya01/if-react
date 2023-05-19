@@ -6,7 +6,6 @@ import { AccountForm } from './AccountForm';
 
 import './TopSection.scss';
 
-// eslint-disable-next-line react/prop-types
 export const TopSection = ({ setAvailableHotels, setVisibleHotels }) => {
   return (
     <section className="main">
