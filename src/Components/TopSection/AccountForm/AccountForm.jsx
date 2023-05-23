@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './AccountForm.scss';
-import { Input } from '../../assets/Input';
+import { Input } from '../../Input';
 
 export const AccountForm = () => (
   <form action="#" className="account account-block">
