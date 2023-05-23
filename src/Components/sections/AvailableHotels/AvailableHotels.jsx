@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 
 import styles from './AvailableHotels.module.scss';
 
@@ -13,10 +13,6 @@ import { useAvailableHotelsContext } from './AvailableHotels.context';
 
 export const AvailableHotels = () => {
   const { cards } = useAvailableHotelsContext();
-  const swiperButton = useMemo(
-    () => (cards.length > 4 ? 'block' : 'none'),
-    [cards],
-  );
   if (!cards || cards.length === 0) {
     return null;
   }
@@ -29,10 +25,7 @@ export const AvailableHotels = () => {
             className={classNames('homes__list', 'swiper-wrapper')}
             array={cards}
           >
-            <SwiperButton
-              swiperButton={{ display: swiperButton }}
-              className={styles.circle}
-            />
+            {cards.length > 4 && <SwiperButton className={styles.circle} />}
           </List>
         </SwiperContainer>
       </Container>
