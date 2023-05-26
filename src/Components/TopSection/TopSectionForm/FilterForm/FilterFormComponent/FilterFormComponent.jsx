@@ -1,6 +1,7 @@
 import React from 'react';
 
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 export const FilterFormComponent = ({ title, value, name }) => {
   return (
@@ -15,4 +16,10 @@ export const FilterFormComponent = ({ title, value, name }) => {
       />
     </div>
   );
+};
+
+FilterFormComponent.propTypes = {
+  title: PropTypes.string,
+  value: PropTypes.number,
+  name: PropTypes.string,
 };

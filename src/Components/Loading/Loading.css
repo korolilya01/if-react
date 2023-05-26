@@ -1,0 +1,14 @@
+.loading {
+    border: 4px solid #f3f3f3; /* цвет рамки */
+    border-top: 4px solid #3498db; /* цвет верхней рамки */
+    border-radius: 50%; /* делает квадратные углы круглыми */
+    width: 30px; /* ширина */
+    height: 30px; /* высота */
+    animation: spin 1s linear infinite; /* анимация */
+    margin: 0 auto; /* чтобы выровнять по центру */
+}
+
+@keyframes spin { /* определяем анимацию */
+    0% { transform: rotate(0deg); } /* начальный угол */
+    100% { transform: rotate(360deg); } /* конечный угол */
+}
