@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
 
@@ -11,33 +11,27 @@ import { Title } from '../../Title';
 
 import { getHomesHotels } from '../../../services/index';
 
-export class Homes extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cards: [],
-    };
-  }
-  componentDidMount() {
-    getHomesHotels().then((cards) => this.setState({ cards }));
-  }
-  render() {
-    const { cards } = this.state;
-    return (
-      <>
-        <section className="homes">
-          <Container>
-            <Title content="Homes guests loves" />
-            <SwiperContainer>
-              <List
-                className={classNames('homes__list', 'swiper-wrapper')}
-                array={cards}
-              />
-              <SwiperButton className="circle" />
-            </SwiperContainer>
-          </Container>
-        </section>
-      </>
-    );
-  }
-}
+export const Homes = () => {
+  const [hotel, setHotel] = useState([]);
+
+  useEffect(() => {
+    getHomesHotels().then((hotels) => setHotel(hotels));
+  }, []);
+
+  return (
+    <>
+      <section className="homes">
+        <Container>
+          <Title content="Homes guests loves" />
+          <SwiperContainer>
+            <List
+              className={classNames('homes__list', 'swiper-wrapper')}
+              array={hotel}
+            />
+            <SwiperButton className="circle" />
+          </SwiperContainer>
+        </Container>
+      </section>
+    </>
+  );
+};

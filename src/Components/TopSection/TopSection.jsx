@@ -6,15 +6,12 @@ import { AccountForm } from './AccountForm';
 
 import './TopSection.scss';
 
-export const TopSection = ({ setAvailableHotels, setVisibleHotels }) => {
+export const TopSection = () => {
   return (
     <section className="main">
       <div className="container main-wrap">
         <Header />
-        <Main
-          setAvailableHotels={setAvailableHotels}
-          setVisibleHotels={setVisibleHotels}
-        />
+        <Main />
         <AccountForm />
       </div>
     </section>

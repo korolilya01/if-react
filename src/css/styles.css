@@ -189,23 +189,6 @@ ul {
   width: 92px;
   height: 84px;
 }
-
-/* available */
-/*.available-hotels--hidden {*/
-/*  display: none;*/
-/*}*/
-/*.available__item {*/
-/*  height: 432px;*/
-/*  display: flex;*/
-/*  flex-direction: column;*/
-/*  justify-content: start;*/
-/*}*/
-
-/* homes */
-/*.homes,*/
-/*.available-hotels {*/
-/*  background-color: var(--light-white);*/
-/*}*/
 .homes__item,
 .dest__item {
   height: 432px;
