@@ -1,12 +1,13 @@
 import React from 'react';
 
+import { Calendar } from './Calendar';
+import { FilterForm } from './FilterForm/index';
 import { Icon } from '../../Icon';
 
 import './TopSectionForm.scss';
 
 import { getAvailableHotels } from '../../../services/index';
 import { useAvailableHotelsContext } from '../../sections/AvailableHotels/AvailableHotels.context';
-import { Calendar } from './Calendar';
 
 export const TopSectionForm = () => {
   const { setCards } = useAvailableHotelsContext();
@@ -40,106 +41,9 @@ export const TopSectionForm = () => {
         />
         <Calendar />
         <span className="text-date page-text">Check-in - Check-out</span>
-        <div className="page__search-info page-text" id="page__search-info">
-          <div className="info-column column-adults">
-            <p>Adults</p>
-            <input
-              className="info-num info-num-adults page-text"
-              type="text"
-              name="choose-adult"
-              value="1"
-              required
-            />
-          </div>
-          <div className="info-column column-children">
-            <p>Children</p>
-            <input
-              className="info-num info-num-children page-text"
-              type="text"
-              name="choose-children"
-              value="0"
-              required
-            />
-          </div>
-          <div className="info-column column-room">
-            <p>Room</p>
-            <input
-              className="info-num info-num-rooms page-text"
-              type="text"
-              name="choose-room"
-              value="1"
-              required
-            />
-          </div>
-          <div className="filter filter-hidden" id="filter">
-            <div className="filter-form">
-              <p className="filter-form__property filter-form__value">Adults</p>
-              <div className="filter-form__counter">
-                <button
-                  disabled
-                  className="filter-form__btn adults-btn__minus filter-btn__minus"
-                >
-                  –
-                </button>
-                <div
-                  id="adults"
-                  className="filter-form__value filter-form__value--adults"
-                >
-                  1
-                </div>
-                <button className="filter-form__btn adults-btn__plus filter-btn__plus">
-                  +
-                </button>
-              </div>
-            </div>
-            <div className="filter-form">
-              <p className="filter-form__property filter-form__value">
-                Children
-              </p>
-              <div className="filter-form__counter">
-                <button
-                  disabled
-                  className="filter-form__btn children-btn__minus filter-btn__minus"
-                >
-                  –
-                </button>
-                <div
-                  id="children"
-                  className="filter-form__value filter-form__value--children"
-                >
-                  0
-                </div>
-                <button className="filter-form__btn children-btn__plus filter-btn__plus">
-                  +
-                </button>
-              </div>
-            </div>
-            <div className="filter-form">
-              <p className="filter-form__property filter-form__value">Rooms</p>
-              <div className="filter-form__counter">
-                <button
-                  disabled
-                  className="filter-form__btn rooms-btn__minus filter-btn__minus"
-                >
-                  –
-                </button>
-                <div
-                  id="rooms"
-                  className="filter-form__value filter-form__value--rooms"
-                >
-                  1
-                </div>
-                <button className="filter-form__btn rooms-btn__plus filter-btn__plus">
-                  +
-                </button>
-              </div>
-            </div>
-            <div className="filter-form__children filter-form__children--hidden">
-              <p>What is the age of the child you’re travelling with?</p>
-              <div className="filter-form__children--container"></div>
-            </div>
-          </div>
-        </div>
+
+        <FilterForm />
+
         <button
           className="page__search-button"
           type="submit"

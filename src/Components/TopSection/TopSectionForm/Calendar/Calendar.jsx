@@ -3,7 +3,6 @@ import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './Calendar.scss';
-import '../../../../css/styles.css';
 
 export const Calendar = () => {
   const [dateRange, setDateRange] = useState([null, null]);
