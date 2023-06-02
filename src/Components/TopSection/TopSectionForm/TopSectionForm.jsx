@@ -26,7 +26,7 @@ export const TopSectionForm = memo(() => {
   };
   const scrollToAvailableHotels = () => {
     if (scrollAvailableHotels && scrollAvailableHotels.current) {
-      // проверка на наличие объекта и его свойства current
+      // checking if the object and its properties are current
       scrollAvailableHotels.current.scrollIntoView({
         behavior: 'smooth',
       });
