@@ -59,10 +59,6 @@
   .account__password-text {
     font-size: 14px;
   }
-
-  .offers__description {
-    font-size: 22px;
-  }
   .item__text {
     font-size: 18px;
     margin-top: 8px;
@@ -117,9 +113,6 @@
   }
   .col-md-8 {
     width: calc(var(--col-width) * 8);
-  }
-  .offers__title:after {
-    display: none;
   }
   .container {
     padding: 60px 100px;
@@ -205,7 +198,6 @@
     border-radius: 4px;
     width: auto;
   }
-
   .offers__line {
     display: none;
   }
@@ -216,20 +208,6 @@
   .list {
     margin: 0;
     font-size: 20px;
-  }
-  .offers__list {
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-  .offers__icon {
-    width: 64px;
-  }
-  .offers__description {
-    font-size: 18px;
-  }
-  .offers__item {
-    height: 152px;
-    justify-content: space-around;
   }
   .homes__list,
   .dest__list {
@@ -330,24 +308,19 @@
     width: 95%;
     margin: 0 auto;
   }
-
   .page__search {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, 48px);
     height: 224px;
   }
-
   .links {
     display: none;
   }
-
   .account__email-field,
   .account__password-field {
     width: 240px;
   }
-
-
   .page__search-city {
     grid-column: 1 / span 8;
     grid-row: 1;
@@ -399,20 +372,6 @@
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 32px;
-  }
-  .offers__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .offers__icon {
-    width: 60px;
-  }
-  .offers__description {
-    font-size: 18px;
-    line-height: 18px;
-  }
-  .offers__item {
-    height: 130px;
   }
   .icon-trip_house_mobile {
     display: flex;
@@ -619,20 +578,6 @@
   }
   .list {
     margin-bottom: 0;
-  }
-  .offers__list {
-    gap: 36px;
-    margin-top: 0;
-  }
-  .offers__icon {
-    width: 56px;
-  }
-  .offers__description {
-    font-size: 15px;
-  }
-  .offers__item {
-    height: 104px;
-    justify-content: space-between;
   }
   .homes__item {
     height: 296px;

@@ -53,64 +53,6 @@ ul {
 
 
 
-/* offers */
-.title {
-  font-size: 40px;
-  font-weight: bold;
-  margin: 0 auto 104px;
-  width: fit-content;
-  line-height: 47px;
-}
-.offers__title {
-  position: relative;
-  margin-bottom: 0;
-}
-.offers__title::after {
-  content: '';
-  width: var(--line-width);
-  height: 4px;
-  background-color: var(--dark-yellow);
-  position: absolute;
-  top: 72px;
-  left: calc(50% - var(--line-width) / 2);
-}
-.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 104px;
-  min-width: 0;
-}
-.offers__item {
-  height: 176px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-.offers__description {
-  display: block;
-  justify-content: space-between;
-}
-
-/* offers__icon */
-.icon-support {
-  width: 76px;
-  height: 92px;
-}
-.icon-communicate {
-  width: 84px;
-  height: 84px;
-}
-.icon-devices {
-  width: 100px;
-  height: 68px;
-}
-.icon-like {
-  width: 92px;
-  height: 84px;
-}
 .homes__item,
 .dest__item {
   height: 432px;

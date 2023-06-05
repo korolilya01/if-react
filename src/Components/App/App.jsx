@@ -10,6 +10,10 @@ import { Header } from '../TopSection/Header';
 import { Main } from '../TopSection/Main';
 import { Container } from '../Container';
 import { Outlet } from 'react-router-dom';
+import { Footer } from '../Footer';
+import { Offers } from '../Offers';
+
+import '../../css/responsive.css';
 
 export function App() {
   const [authorize, setAuthorize] = useState(false);
@@ -28,8 +32,10 @@ export function App() {
           </Container>
         </TopSection>
         <AvailableHotels />
+        <Offers />
         <Homes />
         <Outlet />
+        <Footer />
       </AvailableHotelsContextProvider>
     </>
   ) : (
