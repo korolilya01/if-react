@@ -13,7 +13,9 @@
   align-items: start;
 }
 .img-style {
-  height: 295px;
+  aspect-ratio: 1/1;
+  max-width: 296px;
+  min-width: 156px;
 }
 .item__text {
   width: 100%;

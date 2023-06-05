@@ -10,6 +10,8 @@ export const Input = memo(function Input({
   labelId,
   content,
   placeholder,
+  value,
+  onChange,
 }) {
   return (
     <>
@@ -22,6 +24,8 @@ export const Input = memo(function Input({
         type={type}
         className={inputClassName}
         placeholder={placeholder}
+        value={value}
+        onChange={onChange}
       />
     </>
   );
