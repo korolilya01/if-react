@@ -20,36 +20,34 @@ export const ReviewsPage = ({
   countryFlag,
 }) => {
   return (
-    <div className="swiper-slide">
-      <div className="reviews__item">
-        <div className="reviews__block-top">
-          <img src={img} alt={name} />
-          <p className="reviews__text reviews__decor">{price}</p>
-        </div>
-        <div className="reviews__block-info">
-          <a href="#" className="reviews__text reviews__text-name">
-            {name}
-          </a>
-          <a href="#" className="reviews__text reviews__text-location">
-            {location}
-          </a>
-          <div className="reviews__mark">
-            <p className="reviews__mark-text">{mark}</p>
-          </div>
-          <p className="reviews__score">{reviews}</p>
-        </div>
-        <div className="reviews__commit">
-          <Icon className="icon-reviews__commit" iconHref="#reviews__person" />
-          <div className="reviews__commit-person-info">
-            <p className="reviews__text">{author}</p>
-            <p className="reviews__text reviews__commit-country">
-              <Icon className="icon-flag" iconHref={countryFlag} />
-              {authorCountry}
-            </p>
-          </div>
-        </div>
-        <p className="reviews__text reviews__text-indent">{description}</p>
+    <div className="reviews__item">
+      <div className="reviews__block-top">
+        <img src={img} alt={name} />
+        <p className="reviews__text reviews__decor">{price}</p>
       </div>
+      <div className="reviews__block-info">
+        <a href="#" className="reviews__text reviews__text-name">
+          {name}
+        </a>
+        <a href="#" className="reviews__text reviews__text-location">
+          {location}
+        </a>
+        <div className="reviews__mark">
+          <p className="reviews__mark-text">{mark}</p>
+        </div>
+        <p className="reviews__score">{reviews}</p>
+      </div>
+      <div className="reviews__commit">
+        <Icon className="icon-reviews__commit" iconHref="#reviews__person" />
+        <div className="reviews__commit-person-info">
+          <p className="reviews__text">{author}</p>
+          <p className="reviews__text reviews__commit-country">
+            <Icon className="icon-flag" iconHref={countryFlag} />
+            {authorCountry}
+          </p>
+        </div>
+      </div>
+      <p className="reviews__text reviews__text-indent">{description}</p>
     </div>
   );
 };
