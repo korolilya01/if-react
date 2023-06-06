@@ -70,13 +70,7 @@
   .wrapper:hover .dest__list-add {
     padding-bottom: 0;
   }
-  .reviews__mark-text,
-  .reviews__text {
-    font-size: 16px;
-  }
-  .reviews__score {
-    font-size: 12px;
-  }
+
   .footer__text {
     font-size: 18px;
   }
@@ -237,14 +231,6 @@
   .destinations-add {
     display: none;
   }
-  .reviews__mark-text,
-  .reviews__text {
-    font-size: 14px;
-  }
-  .icon-reviews__commit {
-    width: 48px;
-    height: 48px;
-  }
   .sign-up__block {
     padding: 0;
     margin: 0 50px;
@@ -398,33 +384,7 @@
   .dest__item:nth-child(3) {
     display: none;
   }
-  .reviews-wrap {
-    background: var(--light-white);
-  }
-  .reviews__item {
-    margin: 0 auto;
-    max-width: 352px;
-    height: 732px;
-  }
-  .reviews__decor {
-    visibility: hidden;
-  }
-  .reviews__commit {
-    margin: 24px 4px;
-  }
-  .reviews__block-info {
-    margin: 0;
-  }
-  .reviews__mark {
-    width: 40px;
-    height: 26px;
-  }
-  .reviews__score {
-    font-size: 10px;
-  }
-  .reviews__text {
-    margin: 0;
-  }
+
   .icon-sign-up,
   .sign-up__button {
     display: none;
@@ -593,36 +553,6 @@
     margin-bottom: 0;
     max-width: 220px;
     max-height: 250px;
-  }
-  .reviews__item {
-    width: 328px;
-    max-width: 100%;
-  }
-  .reviews__text-name,
-  .reviews__text-location {
-    position: absolute;
-    bottom: 12px;
-  }
-  .reviews__block-info {
-    margin: 0 0 12px;
-  }
-  .reviews__commit {
-    margin: 0 0 24px;
-  }
-  .reviews__text-indent {
-    margin: 0;
-    padding-bottom: 32px;
-  }
-  .reviews__mark-text,
-  .reviews__text {
-    font-size: 15px;
-  }
-  .reviews__score {
-    font-size: 12px;
-  }
-  .icon-reviews__commit {
-    width: 44px;
-    height: 44px;
   }
   .sign-up__text {
     font-weight: 400;

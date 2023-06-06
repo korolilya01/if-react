@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Icon } from '../Icon';
+import { Icon } from '../../Icon';
 
 import PropTypes from 'prop-types';
 
@@ -12,8 +12,8 @@ export const OffersPage = ({ description, name, tag }) => {
   return (
     <div className="col-lg-3 col-md-3 col-sm-4 col-xs-4">
       <div className="offers__item">
-        <Icon className={classNames(name, 'offers__icon')} iconHref={tag} />
-        <p>{description}</p>
+        <Icon className={classNames('offers__icon', name)} iconHref={tag} />
+        <p className="offers__description">{description}</p>
       </div>
     </div>
   );

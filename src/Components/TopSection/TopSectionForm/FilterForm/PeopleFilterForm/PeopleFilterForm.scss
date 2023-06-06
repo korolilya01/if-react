@@ -13,6 +13,10 @@
   top: calc(100% + 12px);
   left: 58%;
   color: var(--black);
+  @media (max-width: 768px) {
+    top: 78%;
+    left: 30%;
+  }
 }
 .filter-form {
   display: flex;

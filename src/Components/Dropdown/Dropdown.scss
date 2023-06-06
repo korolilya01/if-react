@@ -16,6 +16,24 @@
   font-size: 20px;
   text-align: center;
   margin-top: 30px;
+  @media (max-width: 1024px) {
+    font-size: 18px;
+    width: 160px;
+    height: 40px;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+    width: 144px;
+    height: 36px;
+    right: 40px;
+  }
+  @media (max-width: 480px) {
+    font-size: 14px;
+    width: 104px;
+    height: 30px;
+    right: 40px;
+    top: 30%;
+  }
 }
 .sign-out-button--hidden {
   visibility: hidden;

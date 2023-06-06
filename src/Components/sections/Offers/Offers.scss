@@ -22,7 +22,6 @@
   min-width: 0;
 }
 .offers__list {
-  justify-content: space-between;
   @media (max-width: 1024px) {
     gap: 10px;
     flex-wrap: wrap;
@@ -68,17 +67,6 @@
 }
 
 /* offers__icon */
-.offers__icon {
-  @media (max-width: 1024px) {
-    width: 64px;
-  }
-  @media (max-width: 768px) {
-    width: 60px;
-  }
-  @media (max-width: 480px) {
-    width: 56px;
-  }
-}
 
 .icon-support {
   width: 76px;
@@ -95,4 +83,15 @@
 .icon-like {
   width: 92px;
   height: 84px;
+}
+.offers__icon {
+  @media (max-width: 1024px) {
+    width: 64px;
+  }
+  @media (max-width: 768px) {
+    width: 60px;
+  }
+  @media (max-width: 480px) {
+    width: 56px;
+  }
 }

@@ -11,7 +11,8 @@ import { Main } from '../TopSection/Main';
 import { Container } from '../Container';
 import { Outlet } from 'react-router-dom';
 import { Footer } from '../Footer';
-import { Offers } from '../Offers';
+import { Reviews } from '../sections/Reviews';
+import { Offers } from '../sections/Offers';
 
 import '../../css/responsive.css';
 
@@ -35,6 +36,7 @@ export function App() {
         <Offers />
         <Homes />
         <Outlet />
+        <Reviews />
         <Footer />
       </AvailableHotelsContextProvider>
     </>

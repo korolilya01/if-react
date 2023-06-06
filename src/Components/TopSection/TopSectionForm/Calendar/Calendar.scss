@@ -5,6 +5,20 @@
   padding: 0;
   border: 0;
   width: 21%;
+  @media (max-width: 1024px) {
+    display: grid;
+    grid-row: 1;
+    grid-column: 7 / span 4;
+    width: 100%;
+    background-color: var(--white);
+  }
+  @media (max-width: 768px) {
+    grid-row: 2;
+    grid-column: 1 / span 8;
+  }
+  @media (max-width: 480px) {
+    grid-column: 1 / span 6;
+  }
 }
 .react-datepicker__input-container {
   position: relative;
@@ -20,6 +34,12 @@
   color: var(--black);
   line-height: 21px;
   text-align: center;
+  @media (max-width: 1200px) {
+    font-size: 15px;
+  }
+  @media (max-width: 1024px) {
+    text-align: start;
+  }
 }
 
 /*month's window*/
@@ -29,23 +49,31 @@
   background: var(--white);
   border-radius: 8px;
   padding: 12px 22px 18px;
+  @media (max-width: 768px) {
+    width: 270px;
+  }
 }
 .react-datepicker__header {
   background-color: var(--white);
   border-bottom: 1px solid var(--white);
 }
 .react-datepicker__current-month {
-  font-size: 18px;
   line-height: 21px;
   text-align: center;
   color: var(--black);
   margin-bottom: 12px;
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
 }
 .react-datepicker__day-name {
   font-size: 14px;
   line-height: 16px;
   text-align: center;
   color: #4d4d4d;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 .react-datepicker__month {
   margin: 0;
@@ -59,6 +87,9 @@
   margin: 0;
   border-radius: 0;
   padding: 8px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 .react-datepicker__day--outside-month {
   visibility: hidden;

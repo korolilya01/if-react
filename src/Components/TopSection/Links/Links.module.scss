@@ -17,6 +17,9 @@
     visibility: visible;
     animation: under-line 0.5s ease-out 0.3s both;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 @keyframes under-line {
   from {
