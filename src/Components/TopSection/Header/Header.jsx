@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+import { Icon } from '../../Icon';
+import { Dropdown } from '../../Dropdown';
 import { Links } from '../Links';
 
 import './Header.scss';
-import { Icon } from '../../Icon';
-import { Dropdown } from '../../Dropdown';
 
 export const Header = ({ authorize, setAuthorize }) => {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const showDropdown = () => {
     setIsVisible(!isVisible);
@@ -14,7 +16,11 @@ export const Header = ({ authorize, setAuthorize }) => {
   return (
     <>
       <header className="header">
-        <Icon className="logo" iconHref="#trip_house" />
+        <Icon
+          onClick={() => navigate('/')}
+          className="logo"
+          iconHref="#trip_house"
+        />
         <nav className="header__offers">
           <div className="header__links">
             <Links content="Stays" />

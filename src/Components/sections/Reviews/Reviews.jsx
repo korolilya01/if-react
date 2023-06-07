@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Container } from '../../Container';
 import { Title } from '../../Title';
+import { Slider } from './Slider';
 
 import { data } from './Data';
 
-import '../../../css/swiper-style.css';
+import '../../../css/swiper-style.scss';
 import './Reviews.scss';
-import { Slider } from './Slider';
 
 export const Reviews = () => {
   return (

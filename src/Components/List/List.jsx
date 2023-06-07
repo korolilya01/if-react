@@ -21,7 +21,7 @@ export const List = ({ className, array, children }) => {
           0: { slidesPerView: 1 },
           480: { slidesPerView: 2 },
           768: { slidesPerView: 3 },
-          1024: { slidesPerView: 4 },
+          1200: { slidesPerView: 4 },
         }}
         loop={true}
       >

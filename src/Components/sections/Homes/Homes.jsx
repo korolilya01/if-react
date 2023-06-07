@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
 
-import './Homes.css';
+import './Homes.scss';
 import { Container } from '../../Container';
 import { List } from '../../List';
 import { Title } from '../../Title';

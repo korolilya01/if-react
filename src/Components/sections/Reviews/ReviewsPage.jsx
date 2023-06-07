@@ -22,7 +22,7 @@ export const ReviewsPage = ({
   return (
     <div className="reviews__item">
       <div className="reviews__block-top">
-        <img src={img} alt={name} />
+        <img className="reviews__img" src={img} alt={name} />
         <p className="reviews__text reviews__decor">{price}</p>
       </div>
       <div className="reviews__block-info">
