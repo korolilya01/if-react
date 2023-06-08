@@ -35,6 +35,12 @@
   color: var(--black);
   margin-bottom: 8px;
   margin-left: 40px;
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 }
 .account__email-text {
   margin-top: 40px;
@@ -50,6 +56,12 @@
   border: 2px solid var(--light-grey);
   border-radius: 8px;
   margin: 0 auto;
+  @media (max-width: 768px) {
+    width: 240px;
+  }
+  @media (max-width: 480px) {
+    width: 160px;
+  }
 }
 .account__button {
   width: 320px;

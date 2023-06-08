@@ -54,11 +54,6 @@
   .page-text {
     font-size: 15px;
   }
-
-  .account__email-text,
-  .account__password-text {
-    font-size: 14px;
-  }
   .item__text {
     font-size: 18px;
     margin-top: 8px;
@@ -107,9 +102,6 @@
   }
   .col-md-8 {
     width: calc(var(--col-width) * 8);
-  }
-  .container {
-    padding: 60px 100px;
   }
   p {
     margin: 0;
@@ -289,11 +281,6 @@
   .col-sm-6 {
     width: calc(var(--col-width) * 6);
   }
-  .container {
-    padding: 60px 50px;
-    width: 95%;
-    margin: 0 auto;
-  }
   .page__search {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
@@ -302,10 +289,6 @@
   }
   .links {
     display: none;
-  }
-  .account__email-field,
-  .account__password-field {
-    width: 240px;
   }
   .page__search-city {
     grid-column: 1 / span 8;
@@ -485,20 +468,6 @@
   .col-xs-6 {
     width: calc(var(--col-width) * 6);
   }
-
-  .container {
-    padding: 40px 0;
-  }
-
-  .account__email-text,
-  .account__password-text {
-    font-size: 12px;
-  }
-  .account__email-field,
-  .account__password-field {
-    width: 160px;
-  }
-
   .page__search {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -549,8 +518,6 @@
   }
   img {
     margin-bottom: 0;
-    /*max-width: 220px;*/
-    /*max-height: 250px;*/
   }
   .sign-up__text {
     font-weight: 400;
