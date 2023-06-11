@@ -1,11 +1,12 @@
 import React from 'react';
-import { Hotels } from '../Hotels';
-import classNames from 'classnames';
 
-import styles from './List.module.scss';
+import { Hotels } from '../Hotels';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import classNames from 'classnames';
+
+import styles from './List.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 

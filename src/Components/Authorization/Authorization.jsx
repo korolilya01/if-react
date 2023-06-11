@@ -2,10 +2,11 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-import { Input } from '../Input';
 import { Button } from '../Button';
-import { loginAction } from '../../store/actions/auth.actions';
+import { Input } from '../Input';
 import { StaticPage } from '../StaticPage';
+
+import { loginAction } from '../../store/actions/auth.actions';
 
 import classNames from 'classnames';
 

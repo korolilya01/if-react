@@ -2,23 +2,22 @@ import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { AvailableHotels } from '../sections/AvailableHotels';
-import { AvailableHotelsContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
-//import { Container } from '../Container';
+import { AvailableHotelsScrollContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
 import { Footer } from '../Footer';
-//import { Header } from '../TopSection/Header';
 import { Homes } from '../sections/Homes';
 import { Main } from '../TopSection/Main';
 import { Offers } from '../sections/Offers';
 import { Outlet, useNavigate } from 'react-router-dom';
-import { Reviews } from '../sections/Reviews';
-//import { TopSection } from '../TopSection';
-
-import '../../css/responsive.css';
 import { StaticPage } from '../StaticPage';
-//import { Authorization } from '../Authorization';
+import { Reviews } from '../sections/Reviews';
+
+import { authSelector } from '../../store/selectors/auth.selector';
+
+import '../../css/styles.css';
+import '../../css/responsive.css';
 
 export function App() {
-  const loggedOut = useSelector((state) => state.auth.email === null);
+  const loggedOut = useSelector(authSelector);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,13 +28,13 @@ export function App() {
 
   return (
     <>
-      <AvailableHotelsContextProvider>
+      <AvailableHotelsScrollContextProvider>
         <StaticPage>
           <Outlet />
           <Main />
         </StaticPage>
         <AvailableHotels />
-      </AvailableHotelsContextProvider>
+      </AvailableHotelsScrollContextProvider>
       <Offers />
       <Homes />
       <Reviews />

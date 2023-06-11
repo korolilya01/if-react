@@ -6,6 +6,8 @@ import { Dropdown } from '../../Dropdown';
 import { Icon } from '../../Icon';
 import { Links } from '../Links';
 
+import { authSelector } from '../../../store/selectors/auth.selector';
+
 import './Header.scss';
 
 export const Header = () => {
@@ -14,7 +16,7 @@ export const Header = () => {
   const showDropdown = () => {
     setIsVisible(!isVisible);
   };
-  const isLogged = useSelector((state) => state.auth.email !== null);
+  const isLogged = useSelector(authSelector);
   return (
     <>
       <header className="header">
@@ -33,7 +35,7 @@ export const Header = () => {
             <Icon
               onClick={showDropdown}
               className="accountIcon"
-              iconHref={isLogged ? '#night-account' : '#account'}
+              iconHref={isLogged ? '#account' : '#night-account'}
             />
             <Dropdown isVisible={isVisible} />
             <Icon className="menu" iconHref="#menu" />

@@ -5,17 +5,14 @@ const INITIAL_STATE = {
 export const authReducer = (state = INITIAL_STATE, action) => {
   const newState = structuredClone(state);
   switch (action.type) {
-    case 'auth/login': {
+    case 'auth/login':
       return {
         email: action.payload.email,
         password: action.payload.password,
       };
-    }
-    case 'auth/logout': {
+    case 'auth/logout':
       return INITIAL_STATE;
-    }
-    default: {
+    default:
       return newState;
-    }
   }
 };
