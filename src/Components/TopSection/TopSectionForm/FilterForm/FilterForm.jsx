@@ -26,7 +26,6 @@ export const FilterForm = () => {
     roomsNum,
     setRoomsNum,
   } = useTopSectionFormContext();
-
   return (
     <>
       <div
@@ -34,17 +33,13 @@ export const FilterForm = () => {
         id="page__search-info"
         onClick={toggleVisibility}
       >
-        <FilterFormComponent
-          title="Adults"
-          name="adults"
-          value={`${adultsNum}`}
-        />
+        <FilterFormComponent title="Adults" name="adults" value={adultsNum} />
         <FilterFormComponent
           title="Children"
           name="children"
-          value={`${childrenNum}`}
+          value={childrenNum}
         />
-        <FilterFormComponent title="Room" name="rooms" value={`${roomsNum}`} />
+        <FilterFormComponent title="Room" name="rooms" value={roomsNum} />
       </div>
       {showFilterForm && (
         <div className="filter" id="filter">
@@ -72,7 +67,7 @@ export const FilterForm = () => {
             value={roomsNum}
             onChange={setRoomsNum}
           />
-          <ChildrenFilterForm value={childrenNum} onChange={setChildrenNum} />
+          <ChildrenFilterForm value={childrenNum} onChange={setAdultsNum} />
         </div>
       )}
     </>

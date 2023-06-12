@@ -19,8 +19,8 @@
     "prefer-const": "error",
     "semi": ["error", "always"],
     "no-var": "warn",
-//    "no-unused-vars": ["error", { "vars": "all", "args": "none", "ignoreRestSiblings": false }],
     "react/prop-types": "off",
+    "react/display-name": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   }

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { memo, useState } from 'react';
 import DatePicker from 'react-datepicker';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './Calendar.scss';
 
-export const Calendar = () => {
+export const Calendar = memo(() => {
   const [dateRange, setDateRange] = useState([null, null]);
   const [startDay, endDay] = dateRange;
   return (
@@ -20,4 +20,4 @@ export const Calendar = () => {
       dateFormat="dd-MMM-yy"
     />
   );
-};
+});

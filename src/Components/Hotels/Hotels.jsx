@@ -3,6 +3,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import './Hotels.css';
+import PropTypes from 'prop-types';
 
 export const Hotels = ({ imageUrl, name, city, country }) => {
   return (
@@ -16,4 +17,11 @@ export const Hotels = ({ imageUrl, name, city, country }) => {
       </p>
     </div>
   );
+};
+
+Hotels.propTypes = {
+  imageUrl: PropTypes.string,
+  name: PropTypes.string,
+  city: PropTypes.string,
+  country: PropTypes.string,
 };

@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { memo } from 'react';
 
+import { Button } from '../../Button';
 import { Calendar } from './Calendar';
 import { FilterForm } from './FilterForm/index';
 import { Icon } from '../../Icon';
+import { Input } from '../../Input';
 
 import './TopSectionForm.scss';
 
-import { getAvailableHotels } from '../../../services/index';
 import { useAvailableHotelsContext } from '../../sections/AvailableHotels/AvailableHotels.context';
 
-export const TopSectionForm = () => {
-  const { setCards } = useAvailableHotelsContext();
+import { getAvailableHotels } from '../../../services';
+
+export const TopSectionForm = memo(() => {
+  const { setCards, scrollAvailableHotels } = useAvailableHotelsContext();
+
   const buttonSearchClick = (event) => {
     event.preventDefault();
 
@@ -20,6 +24,18 @@ export const TopSectionForm = () => {
     const { destination } = data;
     getAvailableHotels(destination).then((hotels) => setCards(hotels));
   };
+  const scrollToAvailableHotels = () => {
+    if (scrollAvailableHotels && scrollAvailableHotels.current) {
+      // checking if the object and its properties are current
+      scrollAvailableHotels.current.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+  setTimeout(() => {
+    scrollToAvailableHotels();
+  }, 20);
+
   return (
     <form
       onSubmit={buttonSearchClick}
@@ -29,29 +45,27 @@ export const TopSectionForm = () => {
     >
       <div className="page__search">
         <Icon className="searchIcon" iconHref="#search" />
-        <label htmlFor="city" className="text-city page-text">
-          Your destination or hotel name
-        </label>
-        <input
+        <Input
           id="city"
-          className="page__search-city page-text"
+          labelId="city"
+          inputClassName="page__search-city page-text"
+          labelClassName="text-city page-text"
+          content="Your destination or hotel name"
           type="text"
           name="destination"
           placeholder=" Your destination or hotel name"
         />
         <Calendar />
         <span className="text-date page-text">Check-in - Check-out</span>
-
         <FilterForm />
-
-        <button
-          className="page__search-button"
+        <Button
           type="submit"
-          name="page__search-button"
-        >
-          Search
-        </button>
+          buttonClassName="page__search-button"
+          buttonName="page__search-button"
+          content="Search"
+          onClick={scrollToAvailableHotels}
+        />
       </div>
     </form>
   );
-};
+});

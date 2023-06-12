@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useRef, useState } from 'react';
 
 export const AvailableHotelsContext = createContext({
   cards: [],
@@ -7,8 +7,11 @@ export const AvailableHotelsContext = createContext({
 
 export const AvailableHotelsContextProvider = ({ children }) => {
   const [cards, setCards] = useState([]);
+  const scrollAvailableHotels = useRef();
   return (
-    <AvailableHotelsContext.Provider value={{ cards, setCards }}>
+    <AvailableHotelsContext.Provider
+      value={{ cards, setCards, scrollAvailableHotels }}
+    >
       {children}
     </AvailableHotelsContext.Provider>
   );
