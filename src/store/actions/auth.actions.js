@@ -1,6 +1,6 @@
-export const loginAction = ({ email, password }) => ({
+export const loginAction = (payload) => ({
   type: 'auth/login',
-  payload: { email: email, password: password },
+  payload,
 });
 
 export const logoutAction = {

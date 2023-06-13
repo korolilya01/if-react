@@ -20,11 +20,10 @@ export const Authorization = () => {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const email = formData.get('email');
-    const password = formData.get('password');
+    const data = Object.fromEntries(formData.entries());
 
-    if (email && password) {
-      dispatch(loginAction({ email, password }));
+    if (data) {
+      dispatch(loginAction({ data }));
       navigate('/');
     }
   };

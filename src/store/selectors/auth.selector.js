@@ -1,1 +1,1 @@
-export const authSelector = (state) => state.auth.email === null;
+export const authSelector = (state) => state.auth === null;

@@ -4,6 +4,8 @@ import { Hotels } from '../Hotels';
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { listBreakpoints } from './data';
+
 import classNames from 'classnames';
 
 import styles from './List.module.scss';
@@ -17,13 +19,8 @@ export const List = ({ className, array, children }) => (
       spaceBetween={8}
       slidesPerView={4}
       navigation
-      breakpoints={{
-        0: { slidesPerView: 1 },
-        480: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
-        1200: { slidesPerView: 4 },
-      }}
-      loop={true}
+      breakpoints={listBreakpoints}
+      loop
     >
       {array.map((item) => (
         <SwiperSlide key={item.id}>

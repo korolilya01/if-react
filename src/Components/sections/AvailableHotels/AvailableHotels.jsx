@@ -16,8 +16,9 @@ import styles from './AvailableHotels.module.scss';
 
 export const AvailableHotels = () => {
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
+
   const hotelsArray = useSelector(availableSelector);
-  if (hotelsArray.length === 0) {
+  if (!hotelsArray.length) {
     return null;
   }
 

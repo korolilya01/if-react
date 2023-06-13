@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-import { Dropdown } from '../../Dropdown';
-import { Icon } from '../../Icon';
+import { Dropdown } from '../Dropdown';
+import { Icon } from '../Icon';
 import { Links } from '../Links';
 
-import { authSelector } from '../../../store/selectors/auth.selector';
+import { authSelector } from '../../store/selectors/auth.selector';
 
 import './Header.scss';
 

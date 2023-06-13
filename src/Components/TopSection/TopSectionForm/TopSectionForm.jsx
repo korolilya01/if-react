@@ -14,20 +14,22 @@ import { getAvailableHotels } from '../../../services';
 import { useDispatch } from 'react-redux';
 import { availableActions } from '../../../store/actions/availbale.actions';
 
-import './TopSectionForm.scss';
-
 export const TopSectionForm = memo(() => {
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
   const dispatch = useDispatch();
+
   const buttonSearchClick = (event) => {
     event.preventDefault();
+
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
     const { destination } = data;
+
     getAvailableHotels(destination).then((hotels) => {
       dispatch(availableActions(hotels));
     });
   };
+
   const scrollToAvailableHotels = () => {
     if (scrollAvailableHotels && scrollAvailableHotels.current) {
       // checking if the object and its properties are current
@@ -36,6 +38,7 @@ export const TopSectionForm = memo(() => {
       });
     }
   };
+
   setTimeout(() => {
     scrollToAvailableHotels();
   }, 20);
