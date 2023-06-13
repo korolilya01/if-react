@@ -1,20 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import { AvailableHotels } from '../sections/AvailableHotels';
+import { AvailableHotelsScrollContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
+import { Footer } from '../Footer';
 import { Homes } from '../sections/Homes';
-import { Sprites } from '../Sprites';
-import { TopSection } from '../TopSection';
-import { AvailableHotelsContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
+import { Main } from '../TopSection/Main';
+import { Offers } from '../sections/Offers';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { StaticPage } from '../StaticPage';
+import { Reviews } from '../sections/Reviews';
+
+import { authSelector } from '../../store/selectors/auth.selector';
+
+import '../../css/styles.css';
+import '../../css/responsive.css';
 
 export function App() {
+  const loggedOut = useSelector(authSelector);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (loggedOut) {
+      navigate('/login');
+    }
+  }, [loggedOut, navigate]);
+
   return (
     <>
-      <Sprites />
-      <AvailableHotelsContextProvider>
-        <TopSection />
+      <AvailableHotelsScrollContextProvider>
+        <StaticPage>
+          <Outlet />
+          <Main />
+        </StaticPage>
         <AvailableHotels />
-      </AvailableHotelsContextProvider>
+      </AvailableHotelsScrollContextProvider>
+      <Offers />
       <Homes />
+      <Reviews />
+      <Footer />
     </>
   );
 }

@@ -1,21 +1,17 @@
-import React, { createContext, useContext, useRef, useState } from 'react';
+import React, { createContext, useContext, useRef } from 'react';
 
-export const AvailableHotelsContext = createContext({
-  cards: [],
-  setCards: (newCards) => {},
+export const AvailableHotelsScrollContext = createContext({
+  current: null,
 });
 
-export const AvailableHotelsContextProvider = ({ children }) => {
-  const [cards, setCards] = useState([]);
-  const scrollAvailableHotels = useRef();
+export const AvailableHotelsScrollContextProvider = ({ children }) => {
+  const scrollAvailableHotels = useRef(null);
   return (
-    <AvailableHotelsContext.Provider
-      value={{ cards, setCards, scrollAvailableHotels }}
-    >
+    <AvailableHotelsScrollContext.Provider value={scrollAvailableHotels}>
       {children}
-    </AvailableHotelsContext.Provider>
+    </AvailableHotelsScrollContext.Provider>
   );
 };
 
-export const useAvailableHotelsContext = () =>
-  useContext(AvailableHotelsContext);
+export const useAvailableHotelsScrollContext = () =>
+  useContext(AvailableHotelsScrollContext);

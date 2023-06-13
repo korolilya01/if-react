@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/radio_button.css" />
-    <link rel="stylesheet" href="css/swiper-style.css" />
-    <link rel="icon" href="images/logo.ico" />
+    <link rel="stylesheet" href="css/swiper-style.scss" />
+    <link rel="icon" href="../public/images/logo.ico" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8.4.5/swiper.min.css"
@@ -23,218 +23,8 @@
     <title>TripHouse</title>
   </head>
   <body>
-    <section class="main">
-      <div class="container main-wrap">
-        <input id="radio-but__acc" type="radio" class="radio-but__acc" />
-        <header class="header">
-          <a href="..">
-            <svg class="icon-logo">
-              <use href="#trip_house" />
-            </svg>
-          </a>
-          <nav class="header__offers">
-            <div class="header__links">
-              <a class="links" href="#">Stays</a>
-              <a class="links" href="#">Attractions</a>
-            </div>
-            <div class="header__items">
-              <svg class="icon-night">
-                <use href="#night" />
-              </svg>
-              <label for="radio-but__acc">
-                <svg class="icon-account">
-                  <use href="#account" />
-                </svg>
-              </label>
-              <svg class="icon-menu">
-                <use href="#menu" />
-              </svg>
-            </div>
-          </nav>
-        </header>
-        <main class="page">
-          <h1 class="page__title">
-            Discover stays <br />
-            to live, work or just relax
-          </h1>
-          <form action="#" method="get" class="form-filter">
-            <div class="page__search">
-              <svg class="icon-search">
-                <use href="#search" />
-              </svg>
-              <label for="city" class="text-city page-text"
-                >Your destination or hotel name</label
-              >
-              <input
-                id="city"
-                class="page__search-city page-text"
-                type="text"
-                name="choose-city"
-                placeholder=" Your destination or hotel name"
-              />
-              <label for="date-in" class="text-date page-text"
-                >Check-in - Check-out</label
-              >
-              <div class="page__search-date">
-                <label for="date-in" class="date-in-mob page-text"
-                  >Check-in date</label
-                >
-                <input
-                  id="date-in"
-                  class="date-in page-text"
-                  type="date"
-                  name="choose-date-in"
-                />
-                <label for="date-out" class="date-out-mob page-text"
-                  >Check-out date</label
-                >
-                <input
-                  id="date-out"
-                  type="date"
-                  class="date-out page-text"
-                  name="choose-date-out"
-                />
-              </div>
-              <div class="page__search-info page-text" id="page__search-info">
-                <div class="info-column column-adults">
-                  <p>Adults</p>
-                  <input
-                    class="info-num info-num-adults page-text"
-                    type="text"
-                    name="choose-adult"
-                    value="1"
-                    required
-                  />
-                </div>
-                <div class="info-column column-children">
-                  <p>Children</p>
-                  <input
-                    class="info-num info-num-children page-text"
-                    type="text"
-                    name="choose-children"
-                    value="0"
-                    required
-                  />
-                </div>
-                <div class="info-column column-room">
-                  <p>Room</p>
-                  <input
-                    class="info-num info-num-rooms page-text"
-                    type="text"
-                    name="choose-room"
-                    value="1"
-                    required
-                  />
-                </div>
-              </div>
-              <button
-                class="page__search-button"
-                type="submit"
-                name="page__search-button"
-              >
-                Search
-              </button>
-            </div>
-          </form>
-          <div class="page__apps">
-            <a href="#">
-              <svg class="icon-google_play">
-                <use href="#google_play" />
-              </svg>
-            </a>
-            <a href="#">
-              <svg class="icon-app_store">
-                <use href="#app_store" />
-              </svg>
-            </a>
-          </div>
-        </main>
-        <form action="#" class="account account-block">
-          <p class="account__title">Sign in</p>
-          <label for="email" class="account__email-text">Email address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            class="account__email-field"
-          />
-          <label for="password" class="account__password-text">Password</label>
-          <input
-            id="password"
-            name="password"
-            type="password"
-            class="account__password-field"
-          />
-          <button type="submit" class="account__button" name="account__button">
-            Sign in
-          </button>
-        </form>
-      </div>
-    </section>
     
-    <section class="available-hotels available-hotels--hidden">
-      <div class="container">
-        <h2 class="title">Available hotels</h2>
-        <div class="swiper-container swiper-available">
-          <div class="list available__list swiper-wrapper"></div>
-          <div class="swiper-button-next circle">
-            <div class="arrows"></div>
-          </div>
-        </div>
-      </div>
-    </section>
     
-    <section class="offers">
-      <div class="container">
-        <h2 class="title offers__title">What do we offer</h2>
-        <div class="list offers__list">
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-            <div class="offers__item">
-              <svg class="offers__icon icon-support">
-                <use href="#support" />
-              </svg>
-              <p class="offers__description">Support 24/7</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-            <div class="offers__item">
-              <svg class="offers__icon icon-communicate">
-                <use href="#communicate" />
-              </svg>
-              <p class="offers__description">Communicate directly</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-            <div class="offers__item">
-              <svg class="offers__icon icon-devices">
-                <use href="#devices" />
-              </svg>
-              <p class="offers__description">Book online</p>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-            <div class="offers__item">
-              <svg class="offers__icon icon-like">
-                <use href="#like" />
-              </svg>
-              <p class="offers__description">Real guest reviews</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="homes">
-      <div class="container">
-        <h2 class="title">Homes guests loves</h2>
-        <div class="swiper-container">
-          <div class="list homes__list swiper-wrapper"></div>
-          <div class="swiper-button-next circle">
-            <div class="arrows"></div>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <section class="destinations">
       <div class="container">
@@ -271,7 +61,7 @@
               <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/maldives.png" alt="Maldives" /><button
+                    ><img src="../public/images/maldives.png" alt="Maldives" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -284,7 +74,7 @@
               <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/spain.png" alt="Spain" /><button
+                    ><img src="../public/images/spain.png" alt="Spain" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -300,7 +90,7 @@
               <div class="dest__item col-lg-3 col-md-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/norway.png" alt="Norway" /><button
+                    ><img src="../public/images/norway.png" alt="Norway" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -316,7 +106,7 @@
               <div class="dest__item col-lg-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/island.png" alt="Island" /><button
+                    ><img src="../public/images/island.png" alt="Island" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -337,7 +127,7 @@
                     <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                       <div class="item-link">
                         <a href="#"
-                          ><img src="images/japan.png" alt="Japan" /><button
+                          ><img src="../public/images/japan.png" alt="Japan" /><button
                             type="submit"
                             class="but__dest"
                           >
@@ -350,7 +140,7 @@
                     <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                       <div class="item-link">
                         <a href="#"
-                          ><img src="images/france.png" alt="France" /><button
+                          ><img src="../public/images/france.png" alt="France" /><button
                             type="submit"
                             class="but__dest"
                           >
@@ -367,7 +157,7 @@
                       <div class="item-link">
                         <a href="#"
                           ><img
-                            src="images/scotland.png"
+                            src="../public/images/scotland.png"
                             alt="Scotland"
                           /><button type="submit" class="but__dest">
                             Book now
@@ -382,7 +172,7 @@
                     <div class="dest__item col-lg-3">
                       <div class="item-link">
                         <a href="#"
-                          ><img src="images/russia.png" alt="Russia" /><button
+                          ><img src="../public/images/russia.png" alt="Russia" /><button
                             type="submit"
                             class="but__dest"
                           >
@@ -406,7 +196,7 @@
               <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/berlin.png" alt="Berlin" /><button
+                    ><img src="../public/images/berlin.png" alt="Berlin" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -419,7 +209,7 @@
               <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/paris.png" alt="Paris" /><button
+                    ><img src="../public/images/paris.png" alt="Paris" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -435,7 +225,7 @@
               <div class="dest__item col-lg-3 col-md-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/budapest.png" alt="Budapest" /><button
+                    ><img src="../public/images/budapest.png" alt="Budapest" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -451,7 +241,7 @@
               <div class="dest__item col-lg-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/london.png" alt="London" /><button
+                    ><img src="../public/images/london.png" alt="London" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -476,7 +266,7 @@
                       <div class="item-link">
                         <a href="#"
                           ><img
-                            src="images/barcelona.png"
+                            src="../public/images/barcelona.png"
                             alt="Barcelona"
                           /><button type="submit" class="but__dest">
                             Book now
@@ -488,7 +278,7 @@
                     <div class="dest__item col-lg-3 col-md-3 col-sm-3 col-xs-3">
                       <div class="item-link">
                         <a href="#"
-                          ><img src="images/tbilisi.png" alt="Tbilisi" /><button
+                          ><img src="../public/images/tbilisi.png" alt="Tbilisi" /><button
                             type="submit"
                             class="but__dest"
                           >
@@ -504,7 +294,7 @@
                     <div class="dest__item col-lg-3 col-md-3">
                       <div class="item-link">
                         <a href="#"
-                          ><img src="images/moscow.png" alt="Moscow" /><button
+                          ><img src="../public/images/moscow.png" alt="Moscow" /><button
                             type="submit"
                             class="but__dest"
                           >
@@ -521,7 +311,7 @@
                       <div class="item-link">
                         <a href="#"
                           ><img
-                            src="images/amsterdam.png"
+                            src="../public/images/amsterdam.png"
                             alt="Amsterdam"
                           /><button type="submit" class="but__dest">
                             Book now
@@ -545,7 +335,7 @@
                 <div class="item-link">
                   <a href="#"
                     ><img
-                      src="images/ed_castle.png"
+                      src="../public/images/ed_castle.png"
                       alt="Edinburgh Castle"
                     /><button type="submit" class="but__dest">
                       Book now
@@ -560,7 +350,7 @@
                 <div class="item-link">
                   <a href="#"
                     ><img
-                      src="images/neuschwanstein.png"
+                      src="../public/images/neuschwanstein.png"
                       alt="Neuschwanstein"
                     /><button type="submit" class="but__dest">
                       Book now
@@ -577,7 +367,7 @@
               <div class="dest__item col-lg-3 col-md-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/big_ban.png" alt="Big Ban" /><button
+                    ><img src="../public/images/big_ban.png" alt="Big Ban" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -595,7 +385,7 @@
               <div class="dest__item col-lg-3">
                 <div class="item-link">
                   <a href="#"
-                    ><img src="images/colosseum.png" alt="Colosseum" /><button
+                    ><img src="../public/images/colosseum.png" alt="Colosseum" /><button
                       type="submit"
                       class="but__dest"
                     >
@@ -620,7 +410,7 @@
                       <div class="item-link">
                         <a href="#"
                           ><img
-                            src="images/matterhom.png"
+                            src="../public/images/matterhom.png"
                             alt="Matterhom"
                           /><button type="submit" class="but__dest">
                             Book now
@@ -635,7 +425,7 @@
                       <div class="item-link">
                         <a href="#"
                           ><img
-                            src="images/morskie_oko.png"
+                            src="../public/images/morskie_oko.png"
                             alt="Morskie Oko"
                           /><button type="submit" class="but__dest">
                             Book now
@@ -650,7 +440,7 @@
                     <div class="dest__item col-lg-3 col-md-3">
                       <div class="item-link">
                         <a href="#"
-                          ><img src="images/krka.png" alt="Krka" /><button
+                          ><img src="../public/images/krka.png" alt="Krka" /><button
                             type="submit"
                             class="but__dest"
                           >
@@ -667,7 +457,7 @@
                       <div class="item-link">
                         <a href="#"
                           ><img
-                            src="images/cabo_da_roca.png"
+                            src="../public/images/cabo_da_roca.png"
                             alt="Cabo da roca"
                           /><button type="submit" class="but__dest">
                             Book now
@@ -689,6 +479,7 @@
         </form>
       </div>
     </section>
+    
     <section class="sign-up">
       <div class="container sign-up__block">
         <div class="icon-sign-up">
@@ -716,208 +507,157 @@
         <a href="#" class="sign-up__link">Install</a>
       </div>
     </section>
-    <section class="reviews">
-      <div class="container reviews-wrap">
-        <h2 class="title reviews__title">Guests reviews</h2>
-        <div class="swiper-container">
-          <div class="list reviews__list swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="reviews__item">
-                <div class="reviews__block-top">
-                  <img
-                    src="images/ubud_bali_resort&spa.png"
-                    alt="Ubud Bali Resort&SPA"
-                  />
-                  <p class="reviews__text reviews__decor">From 250 USD</p>
-                </div>
-                <div class="reviews__block-info">
-                  <a href="#" class="reviews__text reviews__text-name"
-                    >Ubud Bali Resort&SPA</a
-                  >
-                  <a href="#" class="reviews__text reviews__text-location"
-                    >Bali, Indonesia</a
-                  >
-                  <div class="reviews__mark">
-                    <p class="reviews__mark-text">9,4</p>
-                  </div>
-                  <p class="reviews__score">1324 reviews</p>
-                </div>
-                <div class="reviews__commit">
-                  <svg class="icon-reviews__commit">
-                    <use href="#reviews__person" />
-                  </svg>
-                  <div class="reviews__commit-person-info">
-                    <p class="reviews__text">Hanna Ivanova</p>
+    
+<!--    <section class="reviews">-->
+<!--      <div class="container reviews-wrap">-->
+<!--        <h2 class="title reviews__title">Guests reviews</h2>-->
+<!--        <div class="swiper-container">-->
+<!--          <div class="list reviews__list swiper-wrapper">-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="reviews__item">-->
+<!--                <div class="reviews__block-top">-->
+<!--                  <img-->
+<!--                    src="images/ubud_bali_resort&spa.png"-->
+<!--                    alt="Ubud Bali Resort&SPA"-->
+<!--                  />-->
+<!--                  <p class="reviews__text reviews__decor">From 250 USD</p>-->
+<!--                </div>-->
+<!--                <div class="reviews__block-info">-->
+<!--                  <a href="#" class="reviews__text reviews__text-name"-->
+<!--                    >Ubud Bali Resort&SPA</a-->
+<!--                  >-->
+<!--                  <a href="#" class="reviews__text reviews__text-location"-->
+<!--                    >Bali, Indonesia</a-->
+<!--                  >-->
+<!--                  <div class="reviews__mark">-->
+<!--                    <p class="reviews__mark-text">9,4</p>-->
+<!--                  </div>-->
+<!--                  <p class="reviews__score">1324 reviews</p>-->
+<!--                </div>-->
+<!--                <div class="reviews__commit">-->
+<!--                  <svg class="icon-reviews__commit">-->
+<!--                    <use href="#reviews__person" />-->
+<!--                  </svg>-->
+<!--                  <div class="reviews__commit-person-info">-->
+<!--                    <p class="reviews__text">Hanna Ivanova</p>-->
 
-                    <p class="reviews__text reviews__commit-country">
-                      <svg class="icon-flag">
-                        <use href="#flag-ua" />
-                      </svg>
-                      Ukraine
-                    </p>
-                  </div>
-                </div>
-                <p class="reviews__text reviews__text-indent">
-                  Great location, really pleasant and clean rooms, but the thing
-                  that makes this such a good place to stay are the staff. All
-                  of the people are incredibly helpful and generous with their
-                  time and advice.
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="reviews__item">
-                <div class="reviews__block-top">
-                  <div class="item-review">
-                    <img
-                      src="images/king_kong_hotel.png"
-                      alt="Ubud Bali Resort&SPA"
-                    />
-                  </div>
-                  <p class="reviews__text reviews__decor">From 40 USD</p>
-                </div>
-                <div class="reviews__block-info">
-                  <a href="#" class="reviews__text reviews__text-name"
-                    >King Kong Hostel</a
-                  >
-                  <a href="#" class="reviews__text reviews__text-location"
-                    >Rotterdam, Netherlands</a
-                  >
-                  <div class="reviews__mark">
-                    <p class="reviews__mark-text">8,9</p>
-                  </div>
-                  <p class="reviews__score">2016 reviews</p>
-                </div>
-                <div class="reviews__commit">
-                  <svg class="icon-reviews__commit">
-                    <use href="#reviews__person" />
-                  </svg>
-                  <div class="reviews__commit-person-info">
-                    <p class="reviews__text">Adam Smith</p>
-                    <p class="reviews__text reviews__commit-country">
-                      <svg class="icon-flag">
-                        <use href="#flag-us" />
-                      </svg>
-                      USA
-                    </p>
-                  </div>
-                </div>
-                <p class="reviews__text reviews__text-indent">
-                  I've been in this hostel for a month and here is the best
-                  hostel of all Excellent management of excellent and ethical
-                  staff and bedrooms Bathrooms are always clean and excellent
-                  Most importantly, those who work here are kind and
-                  good-natured.
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="reviews__item">
-                <div class="reviews__block-top">
-                  <div class="item-review">
-                    <img
-                      src="images/rokoko_hotel.png"
-                      alt="Ubud Bali Resort&SPA"
-                    />
-                  </div>
-                  <p class="reviews__text reviews__decor">From 100 USD</p>
-                </div>
-                <div class="reviews__block-info">
-                  <a href="#" class="reviews__text reviews__text-name"
-                    >Rokoko Hotel</a
-                  >
-                  <a href="#" class="reviews__text reviews__text-location"
-                    >Ourika, Marocco</a
-                  >
-                  <div class="reviews__mark">
-                    <p class="reviews__mark-text">9,1</p>
-                  </div>
-                  <p class="reviews__score">815 reviews</p>
-                </div>
-                <div class="reviews__commit">
-                  <svg class="icon-reviews__commit">
-                    <use href="#reviews__person" />
-                  </svg>
-                  <div class="reviews__commit-person-info">
-                    <p class="reviews__text">Anika Messer</p>
-                    <p class="reviews__text reviews__commit-country">
-                      <svg class="icon-flag">
-                        <use href="#flag-de" />
-                      </svg>
-                      Germany
-                    </p>
-                  </div>
-                </div>
-                <p class="reviews__text reviews__text-indent">
-                  Efficient, friendly, professional, and appropriately
-                  attentive. Great hotel in a great location. Easy access to all
-                  the surrounding historical sites. Staff is fantastic. Will
-                  definitely stay at this location during my next stay in
-                  Marocco.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-button-next circle swiper-button-next-dest">
-            <div class="arrows"></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-    <footer class="footer">
-      <div class="container">
-        <svg class="footer__icon icon-trip_house_mobile">
-          <use href="#trip_house_mobile" />
-        </svg>
-        <div class="footer__list">
-          <div class="col-lg-3 col-md-3 col-sm-1 col-xs-1">
-            <ul class="footer__links">
-              <li>
-                <a class="footer__text-title footer__text" href="#">About</a>
-              </li>
-              <li><a class="footer__text" href="#">How Triphouse works</a></li>
-              <li><a class="footer__text" href="#">Careers</a></li>
-              <li><a class="footer__text" href="#">Privacy</a></li>
-              <li><a class="footer__text" href="#">Terms</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">
-            <ul class="footer__links">
-              <li>
-                <a class="footer__text footer__text-title" href="#"
-                  >Property types</a
-                >
-              </li>
-              <li><a class="footer__text" href="#">Guest houses</a></li>
-              <li><a class="footer__text" href="#">Hotels</a></li>
-              <li><a class="footer__text" href="#">Apartments</a></li>
-              <li><a class="footer__text" href="#">Villas</a></li>
-              <li><a class="footer__text" href="#">Holiday homes</a></li>
-              <li><a class="footer__text" href="#">Hostels</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-1 col-xs-1">
-            <ul class="footer__links">
-              <li>
-                <a class="footer__text footer__text-title" href="#">Support</a>
-              </li>
-              <li>
-                <a class="footer__text" href="#">Contact Customer Service</a>
-              </li>
-              <li><a class="footer__text" href="#">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div class="footer__item-bot">
-            <p class="footer__text footer__text-bottom">
-              © 2022Triphouse, Inc. All rights reserved
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+<!--                    <p class="reviews__text reviews__commit-country">-->
+<!--                      <svg class="icon-flag">-->
+<!--                        <use href="#flag-ua" />-->
+<!--                      </svg>-->
+<!--                      Ukraine-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <p class="reviews__text reviews__text-indent">-->
+<!--                  Great location, really pleasant and clean rooms, but the thing-->
+<!--                  that makes this such a good place to stay are the staff. All-->
+<!--                  of the people are incredibly helpful and generous with their-->
+<!--                  time and advice.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="reviews__item">-->
+<!--                <div class="reviews__block-top">-->
+<!--                  <div class="item-review">-->
+<!--                    <img-->
+<!--                      src="images/king_kong_hotel.png"-->
+<!--                      alt="Ubud Bali Resort&SPA"-->
+<!--                    />-->
+<!--                  </div>-->
+<!--                  <p class="reviews__text reviews__decor">From 40 USD</p>-->
+<!--                </div>-->
+<!--                <div class="reviews__block-info">-->
+<!--                  <a href="#" class="reviews__text reviews__text-name"-->
+<!--                    >King Kong Hostel</a-->
+<!--                  >-->
+<!--                  <a href="#" class="reviews__text reviews__text-location"-->
+<!--                    >Rotterdam, Netherlands</a-->
+<!--                  >-->
+<!--                  <div class="reviews__mark">-->
+<!--                    <p class="reviews__mark-text">8,9</p>-->
+<!--                  </div>-->
+<!--                  <p class="reviews__score">2016 reviews</p>-->
+<!--                </div>-->
+<!--                <div class="reviews__commit">-->
+<!--                  <svg class="icon-reviews__commit">-->
+<!--                    <use href="#reviews__person" />-->
+<!--                  </svg>-->
+<!--                  <div class="reviews__commit-person-info">-->
+<!--                    <p class="reviews__text">Adam Smith</p>-->
+<!--                    <p class="reviews__text reviews__commit-country">-->
+<!--                      <svg class="icon-flag">-->
+<!--                        <use href="#flag-us" />-->
+<!--                      </svg>-->
+<!--                      USA-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <p class="reviews__text reviews__text-indent">-->
+<!--                  I've been in this hostel for a month and here is the best-->
+<!--                  hostel of all Excellent management of excellent and ethical-->
+<!--                  staff and bedrooms Bathrooms are always clean and excellent-->
+<!--                  Most importantly, those who work here are kind and-->
+<!--                  good-natured.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="swiper-slide">-->
+<!--              <div class="reviews__item">-->
+<!--                <div class="reviews__block-top">-->
+<!--                  <div class="item-review">-->
+<!--                    <img-->
+<!--                      src="images/rokoko_hotel.png"-->
+<!--                      alt="Ubud Bali Resort&SPA"-->
+<!--                    />-->
+<!--                  </div>-->
+<!--                  <p class="reviews__text reviews__decor">From 100 USD</p>-->
+<!--                </div>-->
+<!--                <div class="reviews__block-info">-->
+<!--                  <a href="#" class="reviews__text reviews__text-name"-->
+<!--                    >Rokoko Hotel</a-->
+<!--                  >-->
+<!--                  <a href="#" class="reviews__text reviews__text-location"-->
+<!--                    >Ourika, Marocco</a-->
+<!--                  >-->
+<!--                  <div class="reviews__mark">-->
+<!--                    <p class="reviews__mark-text">9,1</p>-->
+<!--                  </div>-->
+<!--                  <p class="reviews__score">815 reviews</p>-->
+<!--                </div>-->
+<!--                <div class="reviews__commit">-->
+<!--                  <svg class="icon-reviews__commit">-->
+<!--                    <use href="#reviews__person" />-->
+<!--                  </svg>-->
+<!--                  <div class="reviews__commit-person-info">-->
+<!--                    <p class="reviews__text">Anika Messer</p>-->
+<!--                    <p class="reviews__text reviews__commit-country">-->
+<!--                      <svg class="icon-flag">-->
+<!--                        <use href="#flag-de" />-->
+<!--                      </svg>-->
+<!--                      Germany-->
+<!--                    </p>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <p class="reviews__text reviews__text-indent">-->
+<!--                  Efficient, friendly, professional, and appropriately-->
+<!--                  attentive. Great hotel in a great location. Easy access to all-->
+<!--                  the surrounding historical sites. Staff is fantastic. Will-->
+<!--                  definitely stay at this location during my next stay in-->
+<!--                  Marocco.-->
+<!--                </p>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="swiper-button-next circle swiper-button-next-dest">-->
+<!--            <div class="arrows"></div>-->
+<!--          </div>-->
+<!--          <div class="swiper-pagination"></div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+    
     <script type="module" src="js/index.js"></script>
     <script type="module" src="js/getRequest.js"></script>
     <script type="module" src="js/filterForm.js"></script>

@@ -1,36 +1,34 @@
 import React, { Suspense } from 'react';
 
-import styles from './AvailableHotels.module.scss';
+import { useAvailableHotelsScrollContext } from './AvailableHotels.context';
+
+import { useSelector } from 'react-redux';
+import { availableSelector } from '../../../store/selectors/available.selector';
 
 import { Container } from '../../Container';
 import { List } from '../../List';
 import { Loading } from '../../Loading';
-import { SwiperButton } from '../../SwiperButton';
-import { SwiperContainer } from '../../SwiperContainer';
 import { Title } from '../../Title';
 
 import classNames from 'classnames';
-import { useAvailableHotelsContext } from './AvailableHotels.context';
+
+import styles from './AvailableHotels.module.scss';
 
 export const AvailableHotels = () => {
-  const { cards, scrollAvailableHotels } = useAvailableHotelsContext();
-  if (!cards || cards.length === 0) {
+  const scrollAvailableHotels = useAvailableHotelsScrollContext();
+
+  const hotelsArray = useSelector(availableSelector);
+  if (!hotelsArray.length) {
     return null;
   }
+
   return (
     <section className={styles.section} ref={scrollAvailableHotels}>
       <Container>
         <Title content="Available hotels" />
-        <SwiperContainer>
-          <Suspense fallback={<Loading />}>
-            <List
-              className={classNames('homes__list', 'swiper-wrapper')}
-              array={cards}
-            >
-              {cards.length > 4 && <SwiperButton className={styles.circle} />}
-            </List>
-          </Suspense>
-        </SwiperContainer>
+        <Suspense fallback={<Loading />}>
+          <List className={classNames('homes__list')} array={hotelsArray} />
+        </Suspense>
       </Container>
     </section>
   );

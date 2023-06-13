@@ -1,23 +1,22 @@
 import React from 'react';
 
-import classNames from 'classnames';
+import { Link } from 'react-router-dom';
 
-import './Hotels.css';
+import './Hotels.scss';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-export const Hotels = ({ imageUrl, name, city, country }) => {
-  return (
-    <div className="homes__item">
+export const Hotels = ({ imageUrl, name, city, country, id }) => (
+  <div className="homes__item">
+    <Link to={`/hotels/${id}`} state={{ imageUrl, name, city, country }}>
       <img className="img-style" src={imageUrl} alt={name} />
-      <a className="item__text" href="src/Components/Hotels/Hotels#">
-        {name}
-      </a>
+      <p className="item__text">{name}</p>
       <p className={classNames('item__text', 'hostel-location')}>
         {city}, {country}
       </p>
-    </div>
-  );
-};
+    </Link>
+  </div>
+);
 
 Hotels.propTypes = {
   imageUrl: PropTypes.string,

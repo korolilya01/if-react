@@ -1,0 +1,33 @@
+@import 'TopSectionForm';
+@import 'SearchCity';
+@import 'SearchFilter';
+@import 'SearchButton';
+
+/*text */
+.page-text {
+  font-size: 18px;
+  line-height: 21px;
+  outline-color: var(--white);
+  color: var(--black);
+  @media (max-width: 1200px) {
+    font-size: 15px;
+  }
+}
+.text-city,
+.text-date {
+  position: absolute;
+  top: -48px;
+  color: var(--white);
+  @media (max-width: 1200px) {
+    padding-bottom: 10px;
+  }
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+.text-city {
+  left: 24px;
+}
+.text-date {
+  left: 40%;
+}
