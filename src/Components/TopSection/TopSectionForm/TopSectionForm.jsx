@@ -12,7 +12,7 @@ import { useAvailableHotelsScrollContext } from '../../sections/AvailableHotels/
 
 import { getAvailableHotels } from '../../../services';
 import { useDispatch } from 'react-redux';
-import { availableActions } from '../../../store/actions/availbale.actions';
+import { availableSearch } from '../../../store/slices/available.slice';
 
 export const TopSectionForm = memo(() => {
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
@@ -26,7 +26,7 @@ export const TopSectionForm = memo(() => {
     const { destination } = data;
 
     getAvailableHotels(destination).then((hotels) => {
-      dispatch(availableActions(hotels));
+      dispatch(availableSearch(hotels));
     });
   };
 

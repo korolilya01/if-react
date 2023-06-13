@@ -18,7 +18,7 @@ export const AvailableHotels = () => {
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
 
   const hotelsArray = useSelector(availableSelector);
-  if (!hotelsArray.length) {
+  if (hotelsArray.length === 0) {
     return null;
   }
 

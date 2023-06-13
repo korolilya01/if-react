@@ -6,7 +6,7 @@ import { Button } from '../Button';
 import { Input } from '../Input';
 import { StaticPage } from '../StaticPage';
 
-import { loginAction } from '../../store/actions/auth.actions';
+import { login } from '../../store/slices/auth.slice';
 
 import classNames from 'classnames';
 
@@ -23,7 +23,7 @@ export const Authorization = () => {
     const data = Object.fromEntries(formData.entries());
 
     if (data) {
-      dispatch(loginAction({ data }));
+      dispatch(login({ data }));
       navigate('/');
     }
   };
