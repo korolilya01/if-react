@@ -9,8 +9,9 @@ const availableSlice = createSlice({
   initialState: availableState,
   reducers: {
     availableSearch: (state, { payload }) => payload,
+    availableLogout: () => availableState,
   },
 });
 
-export const { availableSearch } = availableSlice.actions;
+export const { availableSearch, availableLogout } = availableSlice.actions;
 export const availableReducer = availableSlice.reducer;
