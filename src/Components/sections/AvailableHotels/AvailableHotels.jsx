@@ -15,6 +15,7 @@ export const AvailableHotels = () => {
   if (!cards || cards.length === 0) {
     return null;
   }
+
   return (
     <section className={styles.section} ref={scrollAvailableHotels}>
       <Container>

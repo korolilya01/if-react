@@ -1,6 +1,7 @@
 import React from 'react';
+
 import { Container } from '../Container';
-import { Header } from '../TopSection/Header';
+import { Header } from '../Header';
 import { Sprites } from '../Sprites';
 import { Footer } from '../Footer';
 
@@ -9,8 +10,10 @@ import { ScrollRestoration, useLocation } from 'react-router-dom';
 import styles from './HotelCardPage.module.scss';
 
 export const HotelCardPage = () => {
+
   const location = useLocation();
   const { state } = location;
+
   return (
     <>
       <ScrollRestoration />

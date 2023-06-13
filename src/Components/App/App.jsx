@@ -6,7 +6,7 @@ import { Sprites } from '../Sprites';
 import { TopSection } from '../TopSection';
 import { AvailableHotelsContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
 import { Authorization } from '../Authorization';
-import { Header } from '../TopSection/Header';
+import { Header } from '../Header';
 import { Main } from '../TopSection/Main';
 import { Container } from '../Container';
 import { Outlet } from 'react-router-dom';

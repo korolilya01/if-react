@@ -19,8 +19,9 @@
   }
 }
 .account__title {
-  font-weight: 500;
+  font-weight: bold;
   line-height: 28px;
+  font-size: 24px;
   text-align: center;
   color: var(--black);
   margin-top: 36px;
@@ -50,6 +51,7 @@
   border: 2px solid var(--light-grey);
   border-radius: 8px;
   margin: 0 auto;
+  padding-left: 8px;
 }
 .account__button {
   width: 320px;
@@ -77,10 +79,4 @@
   &:active {
     background: var(--dark-yellow);
   }
-}
-.radio-but__acc:checked ~ main {
-  display: none;
-}
-.radio-but__acc:checked ~ .account-block {
-  display: flex;
 }

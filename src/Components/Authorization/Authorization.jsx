@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { Input } from '../Input';
 import { Button } from '../Button';
@@ -8,13 +8,16 @@ import classNames from 'classnames';
 import './Authorization.scss';
 
 export const Authorization = ({ onLogin }) => {
-  const [userEmail, setUserEmail] = useState('');
-  const [userPassword, setUserPassword] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    localStorage.setItem(userEmail, userPassword);
-    if (localStorage.getItem(userEmail)) {
+
+    const authorizationData = new FormData(event.target);
+    const data = Object.fromEntries(authorizationData.entries());
+
+    const { email } = data;
+    console.log(data);
+    if (email) {
       onLogin();
     }
   };
@@ -32,8 +35,6 @@ export const Authorization = ({ onLogin }) => {
         name="email"
         type="email"
         inputClassName="account__email-field"
-        value={userEmail}
-        onChange={(event) => setUserEmail(event.target.value)}
         content="Email address"
       />
       <Input
@@ -43,8 +44,6 @@ export const Authorization = ({ onLogin }) => {
         name="password"
         type="password"
         inputClassName="account__password-field"
-        value={userPassword}
-        onChange={(event) => setUserPassword(event.target.value)}
         content="Password"
       />
       <Button

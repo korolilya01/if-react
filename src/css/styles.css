@@ -25,16 +25,6 @@
   --light-grey: #cecece;
   --light-blue: #7fb3f9;
 }
-
-.container {
-  color: var(--black);
-  margin: 0 auto;
-  padding: 120px 104px;
-  max-width: 1440px;
-  position: relative;
-  font-size: 24px;
-  font-weight: 400;
-}
 input {
   outline: none;
   border: none;
@@ -51,9 +41,6 @@ ul {
   margin: 0;
 }
 
-
-
-.homes__item,
 .dest__item {
   height: 432px;
   width: 100%;
@@ -270,42 +257,4 @@ ul {
 .sign-up__link,
 .sign-up__block-logo {
   display: none;
-}
-
-/* footer */
-.footer {
-  background-color: var(--dark-blue);
-}
-.icon-trip_house_mobile {
-  width: 96px;
-  height: 20px;
-  display: none;
-}
-.footer__list {
-  display: flex;
-  gap: 110px;
-}
-.footer__links {
-  max-width: fit-content;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-/* footer__text-setting */
-.footer__text {
-  color: var(--white);
-  font-size: 20px;
-  line-height: 23px;
-  margin-bottom: 20px;
-}
-.footer__text:hover {
-  color: var(--blue);
-}
-.footer__text-title {
-  font-weight: 500;
-}
-.footer__text-bottom {
-  font-size: 14px;
-  margin-top: 64px;
 }
