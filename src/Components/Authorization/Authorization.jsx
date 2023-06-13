@@ -18,6 +18,7 @@ export const Authorization = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const formData = new FormData(event.target);
     const email = formData.get('email');
     const password = formData.get('password');
@@ -27,6 +28,7 @@ export const Authorization = () => {
       navigate('/');
     }
   };
+
   return (
     <StaticPage>
       <form

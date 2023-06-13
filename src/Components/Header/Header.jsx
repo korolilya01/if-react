@@ -12,11 +12,14 @@ import './Header.scss';
 
 export const Header = () => {
   const navigate = useNavigate();
+
   const [isVisible, setIsVisible] = useState(false);
+
   const showDropdown = () => {
     setIsVisible(!isVisible);
   };
   const isLogged = useSelector(authSelector);
+
   return (
     <>
       <header className="header">
@@ -27,8 +30,8 @@ export const Header = () => {
         />
         <nav className="header__offers">
           <div className="header__links">
-            <Links content="Stays" />
-            <Links content="Attractions" />
+            <Links content="Stays" className="header__link" />
+            <Links content="Attractions" className="header__link" />
           </div>
           <div className="header__items">
             <Icon className="night" iconHref="#night" />

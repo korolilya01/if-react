@@ -40,19 +40,9 @@
 }
 
 @media (max-width: 1200px) {
-  .text-city,
-  .text-date {
-    padding-bottom: 10px;
-  }
-  .page__search-button {
-    font-size: 20px;
-  }
-
-  .links {
-    font-size: 20px;
-  }
-  .page-text {
-    font-size: 15px;
+  .account__email-text,
+  .account__password-text {
+    font-size: 14px;
   }
   .item__text {
     font-size: 18px;
@@ -99,94 +89,8 @@
   p {
     margin: 0;
   }
-
-  .page__search {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(2, 48px);
-    height: 115px;
-    background: var(--dark-yellow);
-    border: 5px solid var(--dark-yellow);
-    margin-bottom: 80px;
-  }
-
-  .page__search-city {
-    grid-column: 1 / span 6;
-    grid-row: 1;
-    padding-left: 36px;
-    border-radius: 4px;
-    border: 0;
-    width: auto;
-  }
-  .page__search-date {
-    grid-column: 7 / span 4;
-    grid-row: 1;
-    display: flex;
-    justify-content: space-between;
-    color: var(--black);
-    border: none;
-    border-radius: 8px;
-    position: relative;
-    z-index: 0.5;
-    width: auto;
-  }
-  .date-in,
-  .date-out {
-    width: 49%;
-    border-radius: 4px;
-    position: relative;
-    padding-left: 8px;
-    padding-top: 20px;
-    z-index: 0;
-  }
-
-  .text-city,
-  .text-date {
-    display: none;
-  }
-  .date-in-mob,
-  .date-out-mob {
-    width: 49%;
-    display: flex;
-    color: var(--black);
-    padding-left: 8px;
-    padding-top: 6px;
-    position: absolute;
-    z-index: 1;
-  }
-  .date-out-mob {
-    right: 0;
-  }
-  .page__search-info {
-    grid-column: 1 / span 6;
-    grid-row: 2;
-    border-radius: 4px;
-    border: 0;
-    width: auto;
-  }
-  .filter-form__property {
-    font-size: 15px;
-  }
-  .filter-form__value {
-    font-size: 15px;
-  }
-  .page__search-button {
-    grid-column: 7 / span 4;
-    grid-row: 2;
-    border-radius: 4px;
-    width: auto;
-  }
   .offers__line {
     display: none;
-  }
-  .title {
-    font-size: 36px;
-    margin-bottom: 70px;
-  }
-  .list {
-    margin: 0;
-    font-size: 20px;
   }
   .homes__list,
   .dest__list {
@@ -271,67 +175,13 @@
   .col-sm-6 {
     width: calc(var(--col-width) * 6);
   }
-  .page__search {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 48px);
-    height: 224px;
+
+  .account__email-field,
+  .account__password-field {
+    width: 240px;
   }
-  .links {
-    display: none;
-  }
-  .page__search-city {
-    grid-column: 1 / span 8;
-    grid-row: 1;
-  }
-  .page__search-date {
-    grid-column: 1 / span 8;
-    grid-row: 2;
-  }
-  .filter {
-    width: 216px;
-    height: 172px;
-  }
-  .filter-form__property {
-    font-size: 12px;
-  }
-  .filter-form__value {
-    font-size: 12px;
-  }
-  .page__search-info {
-    grid-column: 1 / span 8;
-    grid-row: 3;
-    font-size: 12px;
-    line-height: 14px;
-    display: grid;
-    grid-template-columns: repeat(9, 1fr);
-  }
-  .column-adults {
-    grid-column: 1 / span 3;
-    border-right: 1px solid var(--grey);
-  }
-  .column-children {
-    grid-column: 4 / span 3;
-    border-right: 1px solid var(--grey);
-  }
-  .column-room {
-    grid-column: 7 / span 3;
-  }
-  .info-column {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding-left: 8px;
-  }
-  .page__search-button {
-    grid-column: 1 / span 8;
-    grid-row: 4;
-  }
-  .title {
-    font-size: 32px;
-    line-height: 32px;
-    margin-bottom: 32px;
-  }
+
+
   .icon-trip_house_mobile {
     display: flex;
     margin: 0 auto 32px;
@@ -429,45 +279,13 @@
   .col-xs-6 {
     width: calc(var(--col-width) * 6);
   }
-  .page__search {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin-bottom: 32px;
+  .account__email-text,
+  .account__password-text {
+    font-size: 12px;
   }
-  .page__search-city {
-    grid-column: 1 / span 6;
-    grid-row: 1;
-  }
-  .page__search-date {
-    grid-column: 1 / span 6;
-  }
-  .page__search-info {
-    grid-column: 1 / span 6;
-    grid-row: 3;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-  }
-  .column-adults {
-    grid-column: 1 / span 2;
-    border-right: 1px solid var(--grey);
-  }
-  .column-children {
-    grid-column: 3 / span 2;
-    border-right: 1px solid var(--grey);
-  }
-  .column-room {
-    grid-column: 5 / span 2;
-  }
-  .page__search-button {
-    grid-column: 1 / span 6;
-    grid-row: 4;
-  }
-  .title {
-    font-size: 28px;
-    margin-bottom: 32px;
-  }
-  .list {
-    margin-bottom: 0;
+  .account__email-field,
+  .account__password-field {
+    width: 160px;
   }
 
   .item__text {

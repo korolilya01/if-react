@@ -20,6 +20,7 @@ export const AvailableHotels = () => {
   if (hotelsArray.length === 0) {
     return null;
   }
+
   return (
     <section className={styles.section} ref={scrollAvailableHotels}>
       <Container>

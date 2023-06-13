@@ -16,6 +16,7 @@
   font-size: 20px;
   text-align: center;
   margin-top: 30px;
+  cursor: pointer;
   @media (max-width: 1024px) {
     font-size: 18px;
     width: 160px;
@@ -34,9 +35,6 @@
     right: 40px;
     top: 30%;
   }
-}
-.sign-out-button--hidden {
-  visibility: hidden;
 }
 .sign-out-button:hover {
   opacity: 0.8;

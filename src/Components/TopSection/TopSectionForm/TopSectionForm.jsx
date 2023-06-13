@@ -6,6 +6,8 @@ import { FilterForm } from './FilterForm/index';
 import { Icon } from '../../Icon';
 import { Input } from '../../Input';
 
+import './TopSectionFormStyles/TopSectionFormMain.scss';
+
 import { useAvailableHotelsScrollContext } from '../../sections/AvailableHotels/AvailableHotels.context';
 
 import { getAvailableHotels } from '../../../services';
