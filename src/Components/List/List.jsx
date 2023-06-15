@@ -12,22 +12,26 @@ import styles from './List.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-export const List = ({ className, array, children }) => (
-  <div className={classNames(styles.list, className)}>
-    <Swiper
-      modules={[Navigation]}
-      spaceBetween={8}
-      slidesPerView={4}
-      navigation
-      breakpoints={listBreakpoints}
-      loop
-    >
-      {array.map((item) => (
-        <SwiperSlide key={item.id}>
-          <Hotels {...item} />
-        </SwiperSlide>
-      ))}
-      {children}
-    </Swiper>
-  </div>
-);
+export const List = ({ className, array, children }) => {
+  const slidesPerView = array.length > 4 ? 4 : array.length;
+
+  return (
+    <div className={classNames(styles.list, className)}>
+      <Swiper
+        modules={[Navigation]}
+        spaceBetween={8}
+        slidesPerView={slidesPerView}
+        navigation
+        breakpoints={listBreakpoints}
+        loop
+      >
+        {array.map((item) => (
+          <SwiperSlide key={item.id}>
+            <Hotels {...item} />
+          </SwiperSlide>
+        ))}
+        {children}
+      </Swiper>
+    </div>
+  );
+};

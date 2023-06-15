@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 
 import { useAvailableHotelsScrollContext } from './AvailableHotels.context';
 
@@ -7,7 +7,6 @@ import { availableSelector } from '../../../store/selectors/available.selector';
 
 import { Container } from '../../Container';
 import { List } from '../../List';
-import { Loading } from '../../Loading';
 import { Title } from '../../Title';
 
 import classNames from 'classnames';
@@ -18,17 +17,12 @@ export const AvailableHotels = () => {
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
 
   const hotelsArray = useSelector(availableSelector);
-  if (hotelsArray.length === 0) {
-    return null;
-  }
 
-  return (
+  return !hotelsArray || !hotelsArray.length ? null : (
     <section className={styles.section} ref={scrollAvailableHotels}>
       <Container>
         <Title content="Available hotels" />
-        <Suspense fallback={<Loading />}>
-          <List className={classNames('homes__list')} array={hotelsArray} />
-        </Suspense>
+        <List className={classNames('homes__list')} array={hotelsArray} />
       </Container>
     </section>
   );

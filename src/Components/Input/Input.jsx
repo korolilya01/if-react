@@ -40,4 +40,5 @@ Input.propTypes = {
   labelId: PropTypes.string,
   placeholder: PropTypes.string,
   content: PropTypes.string,
+  onChange: PropTypes.func,
 };

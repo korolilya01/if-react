@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { DATA_URL } from '../utils/utils';
+import { useGetAvailableHotelsQuery } from '../store/slices/api.slice';
 
 const cache = new Map();
 
@@ -18,6 +19,7 @@ export const getHomesHotels = async () => {
   return fetchData(`${DATA_URL}/popular`);
 };
 
-export const getAvailableHotels = async (search) => {
-  return fetchData(`${DATA_URL}?search=${search}`);
+export const getAvailableHotels = async () => {
+  return fetchData(`${useGetAvailableHotelsQuery}`);
 };
+

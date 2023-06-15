@@ -1,6 +1,7 @@
 /*filter*/
 .filter {
   position: absolute;
+  z-index: 1;
   width: 256px;
   height: fit-content;
   padding: 22px 0;

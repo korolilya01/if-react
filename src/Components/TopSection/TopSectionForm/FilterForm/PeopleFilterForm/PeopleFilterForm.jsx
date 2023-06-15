@@ -12,12 +12,16 @@ export const PeopleFilterForm = memo(function PeopleFilterForm({
   min,
   max,
   value,
+  setChildCount,
   onChange,
 }) {
   const makePlusInFilter = useCallback(
     (event) => {
       event.preventDefault();
       onChange(value + 1);
+      if (title === 'Children') {
+        setChildCount(value + 1);
+      }
     },
     [onChange, value],
   );
@@ -25,6 +29,9 @@ export const PeopleFilterForm = memo(function PeopleFilterForm({
     (event) => {
       event.preventDefault();
       onChange(value - 1);
+      if (title === 'Children') {
+        setChildCount(value - 1);
+      }
     },
     [onChange, value],
   );
