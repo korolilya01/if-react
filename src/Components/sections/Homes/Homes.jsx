@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
 
-import './Homes.css';
+import './Homes.scss';
 import { Container } from '../../Container';
 import { List } from '../../List';
-import { SwiperButton } from '../../SwiperButton';
-import { SwiperContainer } from '../../SwiperContainer';
 import { Title } from '../../Title';
 
 import { getHomesHotels } from '../../../services/index';
@@ -23,13 +21,7 @@ export const Homes = () => {
       <section className="homes">
         <Container>
           <Title content="Homes guests loves" />
-          <SwiperContainer>
-            <List
-              className={classNames('homes__list', 'swiper-wrapper')}
-              array={hotel}
-            />
-            <SwiperButton className="circle" />
-          </SwiperContainer>
+          <List className={classNames('homes__list')} array={hotel} />
         </Container>
       </section>
     </>

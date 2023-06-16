@@ -1,0 +1,48 @@
+.homes__item {
+  height: 432px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  @media (max-width: 480px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.img-style {
+  aspect-ratio: 1/1;
+  width: 100%;
+}
+.item__text {
+  width: 100%;
+  line-height: 28px;
+  text-align: start;
+  color: var(--blue);
+  margin: 24px 0;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 14px;
+    color: var(--black);
+  }
+  @media (max-width: 480px) {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+}
+.item__text:hover {
+  color: var(--light-blue);
+}
+.hostel-location {
+  color: var(--grey);
+  margin: 0;
+  @media (max-width: 768px) {
+    margin-top: 8px;
+    color: var(--black);
+  }
+}

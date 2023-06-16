@@ -1,5 +1,5 @@
 .main {
-  background-image: url('../../images/castelmezzano.png');
+  background-image: url('../../../public/images/castelmezzano.png');
   background-size: cover;
   background-position: 0 25%;
   min-height: 100vh;
@@ -7,13 +7,5 @@
 
   @media (max-width: 768px) {
     height: 100%;
-  }
-}
-
-.main-wrap {
-  padding-top: 52px;
-
-  @media (max-width: 480px) {
-    padding-top: 0;
   }
 }

@@ -1,0 +1,19 @@
+.page {
+  background-color: var(--dark-blue);
+  min-height: 100vh;
+}
+.img {
+  background-position: center;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  max-width: 400px;
+  min-width: 400px;
+  width: 100%;
+}
+.content {
+  margin-top: 100px;
+}
+.text {
+  color: var(--white);
+  margin-top: 8px;
+}

@@ -1,0 +1,82 @@
+.account {
+  width: 400px;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin: 176px auto;
+  border: 1px solid var(--light-grey);
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media (max-width: 768px) {
+    width: 320px;
+    margin: 50px auto;
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
+    width: 240px;
+  }
+}
+.account__title {
+  font-weight: bold;
+  line-height: 28px;
+  font-size: 24px;
+  text-align: center;
+  color: var(--black);
+  margin-top: 36px;
+}
+.account__email-text,
+.account__password-text {
+  display: flex;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: var(--black);
+  margin-bottom: 8px;
+  margin-left: 40px;
+}
+.account__email-text {
+  margin-top: 40px;
+}
+.account__password-text {
+  margin-top: 16px;
+}
+.account__email-field,
+.account__password-field {
+  width: 320px;
+  height: 40px;
+  background: var(--white);
+  border: 2px solid var(--light-grey);
+  border-radius: 8px;
+  margin: 0 auto;
+  padding-left: 8px;
+}
+.account__button {
+  width: 320px;
+  height: 48px;
+  background: var(--blue);
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: var(--white);
+  margin: 24px auto 36px;
+  @media (max-width: 1200px) {
+    font-size: 18px;
+  }
+  @media (max-width: 768px) {
+    width: 240px;
+  }
+  @media (max-width: 480px) {
+    font-size: 16px;
+    width: 160px;
+    margin-bottom: 12px;
+  }
+  &:active {
+    background: var(--dark-yellow);
+  }
+}
