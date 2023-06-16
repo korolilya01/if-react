@@ -25,6 +25,9 @@
   display: flex;
   flex-wrap: nowrap;
   min-width: 0;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 /* top */

@@ -18,13 +18,11 @@ export const Homes = () => {
   }, []);
 
   return (
-    <>
-      <section className="homes">
-        <Container>
-          <Title content="Homes guests loves" />
-          <List className={classNames('homes__list')} array={hotel} />
-        </Container>
-      </section>
-    </>
+    <section className="homes">
+      <Container>
+        <Title content="Homes guests loves" />
+        <List className={classNames('homes__list')} array={hotel} />
+      </Container>
+    </section>
   );
 };
