@@ -1,54 +1,44 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
 import { AvailableHotels } from '../sections/AvailableHotels';
-import { Homes } from '../sections/Homes';
-import { Sprites } from '../Sprites';
-import { TopSection } from '../TopSection';
-import { AvailableHotelsContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
-import { Authorization } from '../Authorization';
-import { Header } from '../Header';
-import { Main } from '../TopSection/Main';
-import { Container } from '../Container';
-import { Outlet } from 'react-router-dom';
+import { AvailableHotelsScrollContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
 import { Footer } from '../Footer';
-import { Reviews } from '../sections/Reviews';
+import { Homes } from '../sections/Homes';
+import { Main } from '../TopSection/Main';
 import { Offers } from '../sections/Offers';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { StaticPage } from '../StaticPage';
+import { Reviews } from '../sections/Reviews';
 
+import { authSelector } from '../../store/selectors/auth.selector';
+
+import '../../css/styles.css';
 import '../../css/responsive.css';
 
 export function App() {
-  const [authorize, setAuthorize] = useState(false);
-  const handleLogin = () => {
-    setAuthorize(true);
-  };
+  const loggedOut = useSelector(authSelector);
+  const navigate = useNavigate();
 
-  return authorize ? (
+  useEffect(() => {
+    if (loggedOut) {
+      navigate('/login');
+    }
+  }, [loggedOut, navigate]);
+
+  return (
     <>
-      <Sprites />
-      <AvailableHotelsContextProvider>
-        <TopSection>
-          <Container>
-            <Header authorize={authorize} setAuthorize={setAuthorize} />
-            <Main />
-          </Container>
-        </TopSection>
+      <AvailableHotelsScrollContextProvider>
+        <StaticPage>
+          <Outlet />
+          <Main />
+        </StaticPage>
         <AvailableHotels />
-        <Offers />
-        <Homes />
-        <Outlet />
-        <Reviews />
-        <Footer />
-      </AvailableHotelsContextProvider>
-    </>
-  ) : (
-    <>
-      <Sprites />
-      <TopSection>
-        <Container>
-          <Header />
-          <Authorization onLogin={handleLogin} />
-        </Container>
-      </TopSection>
+      </AvailableHotelsScrollContextProvider>
+      <Offers />
+      <Homes />
+      <Reviews />
+      <Footer />
     </>
   );
 }

@@ -1,15 +1,18 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import { Icon } from '../Icon';
+import { logoutAction } from '../../store/actions/auth.actions';
 
-import './Dropdown.scss';
 import classNames from 'classnames';
 
-export const Dropdown = ({ setAuthorize, isVisible }) => {
+import './Dropdown.scss';
 
-  const handleClick = (event) => {
-    event.preventDefault();
-    setAuthorize(false);
+export const Dropdown = ({ isVisible }) => {
+  const dispatch = useDispatch();
+  const handleClick = (e) => {
+    e.preventDefault();
+    dispatch(logoutAction);
   };
 
   return (

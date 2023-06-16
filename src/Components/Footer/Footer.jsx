@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { Container } from '../Container';
 import { FooterColumnLinks } from './FuterColumnLinks';
 import { Icon } from '../Icon';
 
 import { columnLinks } from './utils/columnLinks';
 
 import './Footer.scss';
-import { Container } from '../Container';
 
 export const Footer = () => {
   const [

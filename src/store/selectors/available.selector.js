@@ -1,0 +1,1 @@
+export const availableSelector = (state) => state.available.hotels;

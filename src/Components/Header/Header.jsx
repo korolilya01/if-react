@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-import { Icon } from '../Icon';
 import { Dropdown } from '../Dropdown';
+import { Icon } from '../Icon';
 import { Links } from '../Links';
+
+import { authSelector } from '../../store/selectors/auth.selector';
 
 import './Header.scss';
 
-export const Header = ({ authorize, setAuthorize }) => {
+export const Header = () => {
   const navigate = useNavigate();
 
   const [isVisible, setIsVisible] = useState(false);
@@ -15,6 +18,7 @@ export const Header = ({ authorize, setAuthorize }) => {
   const showDropdown = () => {
     setIsVisible(!isVisible);
   };
+  const isLogged = useSelector(authSelector);
 
   return (
     <>
@@ -34,9 +38,9 @@ export const Header = ({ authorize, setAuthorize }) => {
             <Icon
               onClick={showDropdown}
               className="accountIcon"
-              iconHref={authorize ? '#night-account' : '#account'}
+              iconHref={isLogged ? '#account' : '#night-account'}
             />
-            <Dropdown isVisible={isVisible} setAuthorize={setAuthorize} />
+            <Dropdown isVisible={isVisible} />
             <Icon className="menu" iconHref="#menu" />
           </div>
         </nav>

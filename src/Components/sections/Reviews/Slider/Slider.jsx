@@ -8,6 +8,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import '../Reviews.scss';
+import { sliderBreakpoints } from './sliderBreakpoints';
 
 export const Slider = ({ data }) => {
   return (
@@ -17,13 +18,8 @@ export const Slider = ({ data }) => {
       slidesPerView={3}
       navigation
       pagination
-      breakpoints={{
-        0: { slidesPerView: 1 },
-        480: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }}
-      loop={true}
+      breakpoints={sliderBreakpoints}
+      loop
     >
       {data.map((item) => (
         <SwiperSlide key={item.id}>
