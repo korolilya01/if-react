@@ -1,4 +1,8 @@
 /*for desktops*/
+#root {
+  display: flex;
+  flex-direction: column;
+}
 :root {
   --col-width: calc(100% / 12);
 }
@@ -38,6 +42,7 @@
 .col-lg-12 {
   width: calc(var(--col-width) * 12);
 }
+
 @media (max-width: 1200px) {
   .item__text {
     font-size: 18px;
@@ -78,51 +83,10 @@
   p {
     margin: 0;
   }
-  .offers__line {
-    display: none;
-  }
-  .circle {
-    width: 36px;
-    height: 36px;
-  }
-  .circle-slide-dop {
-    display: inline-block;
-    position: absolute;
-  }
-  .sign-up__block {
-    padding: 0;
-    margin: 0 50px;
-  }
-  .sign-up__text {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .sign-up__button {
-    width: 120px;
-    height: 40px;
-    font-size: 18px;
-  }
-  .sign-up-cross {
-    width: 20px;
-    height: 20px;
-  }
 }
 
 /*for mobile*/
 @media (max-width: 768px) {
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  .reviews {
-    order: 1;
-  }
-  .sign-up {
-    order: 2;
-  }
-  .footer {
-    order: 3;
-  }
   :root {
     --col-width: calc(100% / 6);
   }
@@ -156,67 +120,8 @@
   }
   .hostel-location {
     margin-top: 8px;
-    /*color: var(--black);
-*/
-  }
-
-  .circle {
-    width: 32px;
-    height: 32px;
-  }
-  .circle-slide {
-    position: absolute;
-    display: inline-block;
-  }
-
-  .icon-sign-up,
-  .sign-up__button {
-    display: none;
-  }
-  .sign-up__block {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    height: 106px;
-    padding: 0 10px;
-    background: var(--white);
-  }
-  .sign-up__text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 14px;
-    display: flex;
-    position: static;
-  }
-  .sign-up-cross {
-    width: 18px;
-    height: 18px;
-    display: inline-block;
-    position: static;
-  }
-  .sign-up__link {
-    display: flex;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 16px;
-    color: var(--blue);
-  }
-  .sign-up__block-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 64px;
-    height: 64px;
-    background: var(--blue);
-    border-radius: 4px;
-  }
-  .sign-up-logo {
-    width: 52px;
-    height: 12px;
   }
 }
-
 /*for small mobile*/
 @media (max-width: 480px) {
   :root {
@@ -245,22 +150,5 @@
   }
   .item__text {
     margin-top: 8px;
-  }
-  .sign-up__text {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 14px;
-  }
-  .sign-up-cross {
-    width: 16px;
-    height: 16px;
-  }
-  .sign-up__link {
-    font-size: 14px;
-    line-height: 16px;
-  }
-  .sign-up__block-logo {
-    width: 58px;
-    height: 58px;
   }
 }

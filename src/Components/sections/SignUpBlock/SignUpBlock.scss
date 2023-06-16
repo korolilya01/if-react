@@ -1,0 +1,156 @@
+/* sign -up */
+.sign-up {
+  order: 1;
+  margin: 0 104px;
+  @media (max-width: 768px) {
+    order: 2;
+  }
+}
+
+.sign-up__block {
+  background: var(--light-white);
+  padding: 0;
+  position: relative;
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    height: 106px;
+    background: var(--white);
+  }
+}
+.icon-sign-up {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--white);
+  display: inline-block;
+  margin: 56px 24px;
+  position: relative;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.sign-up__text {
+  top: 52px;
+  left: 134px;
+  position: absolute;
+  font-weight: bold;
+  line-height: 28px;
+  text-align: center;
+  color: var(--black);
+  @media (max-width: 1024px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  @media (max-width: 768px) {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 14px;
+    display: flex;
+    position: static;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+.sign-up__button {
+  width: 128px;
+  height: 48px;
+  background: var(--white);
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--blue);
+  position: absolute;
+  bottom: 52px;
+  left: 134px;
+  @media (max-width: 1024px) {
+    width: 120px;
+    height: 40px;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+.sign-up__button:hover {
+  background: var(--blue);
+  color: var(--white);
+  transition: 0.5s ease 0.1s;
+}
+.sign-up-person {
+  width: 32px;
+  height: 44px;
+  position: absolute;
+  left: 18px;
+  top: 21px;
+}
+.sign-up-plus {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 48px;
+  top: 46px;
+}
+.sign-up-cross {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  @media (max-width: 1024px) {
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width: 768px) {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: static;
+  }
+  @media (max-width: 480px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+.sign-up__link {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--blue);
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.sign-up__block-logo {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    background: var(--blue);
+    border-radius: 4px;
+  }
+  @media (max-width: 480px) {
+    width: 58px;
+    height: 58px;
+  }
+}
+.sign-up-logo {
+  @media (max-width: 768px) {
+    width: 52px;
+    height: 12px;
+  }
+}

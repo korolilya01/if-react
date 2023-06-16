@@ -1,4 +1,5 @@
 .reviews {
+  order: 2;
   @media (max-width: 768px) {
     background-color: var(--light-white);
     order: 1;

@@ -16,6 +16,7 @@ import { authSelector } from '../../store/selectors/auth.selector';
 
 import '../../css/styles.css';
 import '../../css/responsive.css';
+import { SignUpBlock } from '../sections/SignUpBlock';
 
 export function App() {
   const loggedOut = useSelector(authSelector);
@@ -39,6 +40,7 @@ export function App() {
       <Offers />
       <Homes />
       <Destinations />
+      <SignUpBlock />
       <Reviews />
       <Footer />
     </>
