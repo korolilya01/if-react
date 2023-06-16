@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { AvailableHotels } from '../sections/AvailableHotels';
 import { AvailableHotelsScrollContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
+import { Destinations } from '../sections/Destinations';
 import { Footer } from '../Footer';
 import { Homes } from '../sections/Homes';
 import { Main } from '../TopSection/Main';
@@ -37,6 +38,7 @@ export function App() {
       </AvailableHotelsScrollContextProvider>
       <Offers />
       <Homes />
+      <Destinations />
       <Reviews />
       <Footer />
     </>

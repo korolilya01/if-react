@@ -6,6 +6,10 @@
   width: 96px;
   height: 20px;
   display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    margin: 0 auto 32px;
+  }
 }
 .footer__list {
   display: flex;

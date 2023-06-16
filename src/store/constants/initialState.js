@@ -17,5 +17,6 @@ export const INITIAL_STATE = {
     children: 0,
     rooms: 1,
     childrenAges: null,
-  }
+  },
+  destination: 'regions',
 };

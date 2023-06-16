@@ -38,22 +38,11 @@
 .col-lg-12 {
   width: calc(var(--col-width) * 12);
 }
-
 @media (max-width: 1200px) {
-  .account__email-text,
-  .account__password-text {
-    font-size: 14px;
-  }
   .item__text {
     font-size: 18px;
     margin-top: 8px;
     margin-bottom: 0;
-  }
-  .wrapper {
-    margin-top: 50px;
-  }
-  .wrapper:hover .dest__list-add {
-    padding-bottom: 0;
   }
 }
 
@@ -92,11 +81,6 @@
   .offers__line {
     display: none;
   }
-  .homes__list,
-  .dest__list {
-    display: flex;
-    flex-wrap: nowrap;
-  }
   .circle {
     width: 36px;
     height: 36px;
@@ -104,21 +88,6 @@
   .circle-slide-dop {
     display: inline-block;
     position: absolute;
-  }
-  .dest__list {
-    margin-top: 24px;
-  }
-  .dest__item:nth-child(4) {
-    display: none;
-  }
-  .but__dest {
-    display: none;
-  }
-  .dest__item:hover img {
-    filter: none;
-  }
-  .destinations-add {
-    display: none;
   }
   .sign-up__block {
     padding: 0;
@@ -175,16 +144,8 @@
   .col-sm-6 {
     width: calc(var(--col-width) * 6);
   }
-
-  .account__email-field,
-  .account__password-field {
-    width: 240px;
-  }
-
-
-  .icon-trip_house_mobile {
-    display: flex;
-    margin: 0 auto 32px;
+  p {
+    font-size: 16px;
   }
   img {
     margin-bottom: 8px;
@@ -195,7 +156,10 @@
   }
   .hostel-location {
     margin-top: 8px;
+    /*color: var(--black);
+*/
   }
+
   .circle {
     width: 32px;
     height: 32px;
@@ -203,9 +167,6 @@
   .circle-slide {
     position: absolute;
     display: inline-block;
-  }
-  .dest__item:nth-child(3) {
-    display: none;
   }
 
   .icon-sign-up,
@@ -279,24 +240,11 @@
   .col-xs-6 {
     width: calc(var(--col-width) * 6);
   }
-  .account__email-text,
-  .account__password-text {
-    font-size: 12px;
-  }
-  .account__email-field,
-  .account__password-field {
-    width: 160px;
-  }
-
-  .item__text {
-    margin-top: 4px;
-    font-size: 12px;
-  }
-  .dest__item {
-    height: 240px;
-  }
   img {
     margin-bottom: 0;
+  }
+  .item__text {
+    margin-top: 8px;
   }
   .sign-up__text {
     font-weight: 400;

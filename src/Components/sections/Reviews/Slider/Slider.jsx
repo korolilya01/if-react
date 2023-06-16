@@ -1,14 +1,13 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
-
+import { sliderBreakpoints } from './sliderBreakpoints';
 import { ReviewsPage } from '../ReviewsPage';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 
 import '../Reviews.scss';
-import { sliderBreakpoints } from './sliderBreakpoints';
 
 export const Slider = ({ data }) => {
   return (

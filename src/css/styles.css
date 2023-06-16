@@ -41,25 +41,15 @@ ul {
   margin: 0;
 }
 
-.dest__item {
-  height: 432px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-}
 .img-style {
+  aspect-ratio: 1/1;
+  width: 100%;
   height: 295px;
 }
+
 .circle-slide-dop,
 .circle-slide {
   display: none;
-}
-.item-hostel,
-.item-review,
-.item-link {
-  position: relative;
 }
 .item__text {
   width: 100%;
@@ -71,10 +61,12 @@ ul {
 .item__text:hover {
   color: var(--light-blue);
 }
+
 .hostel-location {
   color: var(--grey);
   margin: 0;
 }
+
 .circle {
   width: 40px;
   height: 40px;
@@ -95,99 +87,6 @@ ul {
   transform: rotate(-50deg) skewX(-15deg);
   top: calc(50% - var(--arrow-width) / 2);
   left: calc(50% - var(--arrow-height) / 2);
-}
-
-/* destinations */
-.dest__item {
-  height: 296px;
-}
-.dest__list {
-  position: relative;
-  padding-bottom: 30px;
-  margin-top: 64px;
-  gap: 16px;
-}
-.but__dest {
-  position: absolute;
-  width: 128px;
-  height: 48px;
-  top: calc(50% - 48px / 2);
-  left: calc(50% - 128px / 2);
-  background: var(--white);
-  border: 1px solid var(--blue);
-  border-radius: 8px;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  color: var(--blue);
-  visibility: hidden;
-}
-.dest__item:hover .but__dest {
-  visibility: visible;
-  animation: but 0.5s ease-in 0.3s both;
-}
-@keyframes but {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-.dest__item:hover img {
-  filter: brightness(80%);
-  transition: 0.5s ease-in 0.3s;
-}
-
-/* destinations--additional */
-.block__regions-add,
-.block__cities-add,
-.block__places-add {
-  padding-bottom: 60px;
-}
-.dest__item:hover img {
-  filter: brightness(80%);
-  transition: 0.5s ease-in 0.3s;
-}
-.circle-dest {
-  position: absolute;
-  top: -72px;
-  right: calc(50% - var(--circle-width) / 2);
-  transform: rotate(90deg);
-  box-shadow: 4px 0 4px rgb(0 0 0 / 25%);
-}
-.circle-dest-add {
-  display: none;
-  transform: rotate(-90deg);
-  top: 90%;
-  right: calc(50% - var(--circle-width) / 2);
-  position: absolute;
-  box-shadow: -4px 0 4px rgb(0 0 0 / 25%);
-}
-.wrapper {
-  position: relative;
-  margin-top: 152px;
-}
-.wrapper:hover .dest__list-add {
-  display: flex;
-  gap: 16px;
-  margin-top: -60px;
-  padding-bottom: 104px;
-}
-.wrapper:hover .circle-dest {
-  display: none;
-}
-.wrapper:hover .circle-dest-add {
-  display: block;
-}
-.dest__list-add {
-  display: none;
-  margin-top: 64px;
-}
-.block__regions,
-.block__cities,
-.block__places {
-  display: none;
 }
 
 /* sign -up */
