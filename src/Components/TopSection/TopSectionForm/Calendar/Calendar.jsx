@@ -1,10 +1,7 @@
 import React, { memo, useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 
-import {
-  setDateFrom,
-  setDateTo,
-} from '../../../../store/slices/topSectionForm.slice';
+import { setFilters } from '../../../../store/slices/topSectionForm.slice';
 
 import 'react-datepicker/dist/react-datepicker.css';
 import './Calendar.scss';
@@ -16,12 +13,20 @@ export const Calendar = memo(() => {
 
   const dispatch = useDispatch();
 
-  const dispatchDateString = (startDate, endDate) => {
-    const startDateString = startDate ? startDate.toISOString() : null; //converting to string
-    const endDateString = endDate ? endDate.toISOString() : null;
+  const getDate = (date) => {
+    return date ? date.toISOString() : null;
+  };
 
-    dispatch(setDateFrom(startDateString));
-    dispatch(setDateTo(endDateString));
+  const dispatchDateString = (startDate, endDate) => {
+    const startDateString = getDate(startDate);
+    const endDateString = getDate(endDate);
+
+    dispatch(
+      setFilters({
+        dateFrom: startDateString,
+        dateTo: endDateString,
+      }),
+    );
   };
 
   useEffect(() => {

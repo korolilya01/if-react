@@ -36,7 +36,7 @@ export const SignUpBlock = () => {
           </p>
           <Button
             type="submit"
-            buttonClassName="sign-up__button"
+            className="sign-up__button"
             buttonName="sign-up__button"
             content="Sign up"
           />

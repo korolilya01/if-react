@@ -9,10 +9,10 @@ import { listBreakpoints } from './data';
 import classNames from 'classnames';
 
 import styles from './List.module.scss';
-import '../../css/swiper-style.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import '../../css/swiper-style.scss';
 
 export const List = ({ className, array, children }) => {
   const slidesPerView = array.length > 4 ? 4 : array.length;

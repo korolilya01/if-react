@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Button = ({
-  buttonClassName,
+  className,
   buttonName,
   type,
   disabled = false,
@@ -11,7 +11,7 @@ export const Button = ({
 }) => {
   return (
     <button
-      className={buttonClassName}
+      className={className}
       name={buttonName}
       type={type}
       disabled={disabled}
@@ -23,7 +23,7 @@ export const Button = ({
 };
 
 Button.propTypes = {
-  buttonClassName: PropTypes.string,
+  className: PropTypes.string,
   buttonName: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool,

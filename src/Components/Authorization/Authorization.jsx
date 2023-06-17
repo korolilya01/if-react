@@ -55,7 +55,7 @@ export const Authorization = () => {
         />
         <Button
           type="submit"
-          buttonClassName="account__button"
+          className="account__button"
           buttonName="account__button"
           content="Sign in"
         />

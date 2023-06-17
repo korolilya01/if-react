@@ -1,24 +1,24 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectChildrenAges } from '../../../../../../store/selectors/topSectionForm.selector';
-import { setChildrenAges } from '../../../../../../store/slices/topSectionForm.slice';
+import {  topSectionFormSelector } from '../../../../../../store/selectors/topSectionForm.selector';
+import { setFilters } from '../../../../../../store/slices/topSectionForm.slice';
 
 export const ChildrenFilterForm = ({ value, childCount }) => {
-  const childrenAges = useSelector(selectChildrenAges);
   const dispatch = useDispatch();
-
-
+  const {
+    childrenAges
+  } = useSelector(topSectionFormSelector);
   const handleClickChildrenAges = (event) => {
     event.preventDefault();
 
+
     const updatedChildrenAges = {...childrenAges};
     updatedChildrenAges[event.currentTarget.id] = event.target.value;
-    console.log(updatedChildrenAges);
 
     dispatch(
-      setChildrenAges(
-        Object.values(updatedChildrenAges).slice(0, childCount),
-      ),
+      setFilters({ childrenAges:
+        Object.values(updatedChildrenAges).slice(0, childCount)}
+      )
     );
   };
 

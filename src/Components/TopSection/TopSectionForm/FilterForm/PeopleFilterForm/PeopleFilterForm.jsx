@@ -42,7 +42,7 @@ export const PeopleFilterForm = memo(function PeopleFilterForm({
       </p>
       <div className="filter-form__counter">
         <Button
-          buttonClassName={classNames(
+          className={classNames(
             'filter-form__btn',
             `${name}-btn__minus`,
             'filter-btn__minus',
@@ -61,7 +61,7 @@ export const PeopleFilterForm = memo(function PeopleFilterForm({
           {value}
         </div>
         <Button
-          buttonClassName={classNames(
+          className={classNames(
             'filter-form__btn',
             `${name}-btn__plus`,
             'filter-btn__plus',

@@ -7,7 +7,7 @@ import { FilterForm } from './FilterForm/index';
 import { Icon } from '../../Icon';
 import { Input } from '../../Input';
 
-import { setSearch } from '../../../store/slices/topSectionForm.slice';
+import { setFilters } from '../../../store/slices/topSectionForm.slice';
 import { useGetAvailableHotelsQuery } from '../../../store/slices/api.slice';
 import { availableSearch } from '../../../store/slices/available.slice';
 import { topSectionFormSelector } from '../../../store/selectors/topSectionForm.selector';
@@ -36,16 +36,16 @@ export const TopSectionForm = memo(() => {
     const data = Object.fromEntries(formData.entries());
     const { destination } = data;
 
-    await dispatch(setSearch(destination));
+    await dispatch(setFilters({ search: destination }));
 
     const params = {
-      search: search,
-      dateFrom: dateFrom,
-      dateTo: dateTo,
-      adults: adults,
-      children: children,
-      childrenAges: childrenAges,
-      rooms: rooms,
+      search,
+      dateFrom,
+      dateTo,
+      adults,
+      children,
+      childrenAges,
+      rooms,
     };
     setSearchParams(params);
   };
@@ -86,7 +86,7 @@ export const TopSectionForm = memo(() => {
         <FilterForm />
         <Button
           type="submit"
-          buttonClassName="page__search-button"
+          className="page__search-button"
           buttonName="page__search-button"
           content="Search"
           onClick={scrollToAvailableHotels}
