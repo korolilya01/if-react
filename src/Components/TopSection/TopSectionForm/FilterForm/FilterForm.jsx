@@ -1,14 +1,21 @@
 import React, { useCallback, useState } from 'react';
-import { useTopSectionFormContext } from '../TopSectionFormContext';
+
 import classNames from 'classnames';
 
 import { FilterFormComponent } from './FilterFormComponent';
 import { PeopleFilterForm } from './PeopleFilterForm';
-
 import { ChildrenFilterForm } from './PeopleFilterForm/ChildrenFilterForm';
+
+import {
+setFilters
+} from '../../../../store/slices/topSectionForm.slice';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { topSectionFormSelector } from '../../../../store/selectors/topSectionForm.selector';
 
 export const FilterForm = () => {
   const [showFilterForm, setShowFilterForm] = useState(false);
+  const [childCount, setChildCount] = useState([]);
 
   const toggleVisibility = useCallback(
     (event) => {
@@ -17,15 +24,18 @@ export const FilterForm = () => {
     },
     [showFilterForm],
   );
+  const dispatch = useDispatch();
 
   const {
-    adultsNum,
-    setAdultsNum,
-    childrenNum,
-    setChildrenNum,
-    roomsNum,
-    setRoomsNum,
-  } = useTopSectionFormContext();
+    adults,
+    children,
+    rooms,
+  } = useSelector(topSectionFormSelector);
+
+  const handleClick = (payload) => {
+    dispatch(setFilters(payload));
+  };
+
   return (
     <>
       <div
@@ -33,13 +43,13 @@ export const FilterForm = () => {
         id="page__search-info"
         onClick={toggleVisibility}
       >
-        <FilterFormComponent title="Adults" name="adults" value={adultsNum} />
+        <FilterFormComponent title="Adults" name="adults" value={adults} />
         <FilterFormComponent
           title="Children"
           name="children"
-          value={childrenNum}
+          value={children}
         />
-        <FilterFormComponent title="Room" name="rooms" value={roomsNum} />
+        <FilterFormComponent title="Room" name="rooms" value={rooms} />
       </div>
       {showFilterForm && (
         <div className="filter" id="filter">
@@ -48,26 +58,32 @@ export const FilterForm = () => {
             name="adults"
             min={1}
             max={30}
-            value={adultsNum}
-            onChange={setAdultsNum}
+            value={adults}
+            onChange={(value) => handleClick({ adults: value })}
           />
           <PeopleFilterForm
             title="Children"
             name="children"
             min={0}
             max={10}
-            value={childrenNum}
-            onChange={setChildrenNum}
+            value={children}
+            childCount={childCount  }
+            setChildCount={setChildCount}
+            onChange={(value) => handleClick({ children: value})}
           />
           <PeopleFilterForm
             title="Rooms"
             name="rooms"
             min={1}
             max={30}
-            value={roomsNum}
-            onChange={setRoomsNum}
+            value={rooms}
+            onChange={(value) => handleClick({ rooms: value})}
           />
-          <ChildrenFilterForm value={childrenNum} onChange={setAdultsNum} />
+          <ChildrenFilterForm
+            childCount={childCount}
+            value={children}
+            onChange={(value) => handleClick({ children: value})}
+          />
         </div>
       )}
     </>

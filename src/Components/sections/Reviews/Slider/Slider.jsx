@@ -1,14 +1,15 @@
 import React from 'react';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper';
-
+import { sliderBreakpoints } from './sliderBreakpoints';
 import { ReviewsPage } from '../ReviewsPage';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 import '../Reviews.scss';
-import { sliderBreakpoints } from './sliderBreakpoints';
 
 export const Slider = ({ data }) => {
   return (
@@ -26,6 +27,7 @@ export const Slider = ({ data }) => {
           <ReviewsPage {...item} />
         </SwiperSlide>
       ))}
+      <div className="swiper-pagination"></div>
     </Swiper>
   );
 };

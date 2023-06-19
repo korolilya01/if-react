@@ -14,13 +14,7 @@
     display: none;
   }
 }
-.list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 104px;
-  min-width: 0;
-}
+
 .offers__list {
   @media (max-width: 1024px) {
     gap: 10px;

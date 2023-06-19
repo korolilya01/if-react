@@ -38,7 +38,7 @@
     top: 4em;
   }
 }
-.swiper-button-prev {
+.swiper .swiper-button-prev {
   display: none;
 }
 .swiper .swiper-button-next {
@@ -55,8 +55,8 @@
   background: #e5e5e5;
 }
 .swiper-pagination {
-  visibility: visible;
+  visibility: hidden;
   @media (max-width: 768px) {
-    visibility: hidden;
+    visibility: visible;
   }
 }

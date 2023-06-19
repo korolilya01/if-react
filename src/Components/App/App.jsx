@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { AvailableHotels } from '../sections/AvailableHotels';
 import { AvailableHotelsScrollContextProvider } from '../sections/AvailableHotels/AvailableHotels.context';
+import { Destinations } from '../sections/Destinations';
 import { Footer } from '../Footer';
 import { Homes } from '../sections/Homes';
 import { Main } from '../TopSection/Main';
@@ -15,6 +16,7 @@ import { authSelector } from '../../store/selectors/auth.selector';
 
 import '../../css/styles.css';
 import '../../css/responsive.css';
+import { SignUpBlock } from '../sections/SignUpBlock';
 
 export function App() {
   const loggedOut = useSelector(authSelector);
@@ -37,6 +39,8 @@ export function App() {
       </AvailableHotelsScrollContextProvider>
       <Offers />
       <Homes />
+      <Destinations />
+      <SignUpBlock />
       <Reviews />
       <Footer />
     </>
