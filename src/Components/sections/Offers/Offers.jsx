@@ -6,17 +6,22 @@ import { Title } from '../../Title';
 
 import { data } from './Data';
 
-import './Offers.scss';
+import { useOffersStyles } from './Offers.styles';
+import classNames from 'classnames';
 
-export const Offers = () => (
-  <section className="offers">
-    <Container>
-      <Title className="offers__title" content="What do we offer" />
-      <div className="list offers__list">
-        {data.map((item) => (
-          <OffersPage key={item.id} {...item} />
-        ))}
-      </div>
-    </Container>
-  </section>
-);
+export const Offers = () => {
+  const classes = useOffersStyles();
+
+  return (
+    <section>
+      <Container>
+        <Title className={classes.title} content="What do we offer" />
+        <div className={classNames('list', classes.list)}>
+          {data.map((item) => (
+            <OffersPage key={item.id} {...item} />
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+};

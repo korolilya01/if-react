@@ -11,10 +11,12 @@ import { availableSelector } from '../../../store/selectors/destination.selector
 
 import { data } from './data';
 
+import { useDestStyles } from './Destinations.styles';
 import classNames from 'classnames';
-import './Destinations.scss';
 
 export const Destinations = () => {
+  const classes = useDestStyles();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const activeBlock = useSelector(availableSelector);
@@ -29,29 +31,29 @@ export const Destinations = () => {
   };
 
   return (
-    <section className="destinations">
+    <section>
       <Container>
-        <Title className="dest__title" content="The best destinations" />
+        <Title content="The best destinations" />
         <Button
           className={classNames(
-            'dest__button',
-            `${activeBlock === 'regions' ? 'dest__button-active' : ''}`,
+            classes.button,
+            `${activeBlock === 'regions' ? classes.buttonActive : ''}`,
           )}
           content="Regions"
           onClick={() => handleButtonClick('regions')}
         />
         <Button
           className={classNames(
-            'dest__button',
-            `${activeBlock === 'cities' ? 'dest__button-active' : ''}`,
+            classes.button,
+            `${activeBlock === 'cities' ? classes.buttonActive : ''}`,
           )}
           content="Cities"
           onClick={() => handleButtonClick('cities')}
         />
         <Button
           className={classNames(
-            'dest__button',
-            `${activeBlock === 'places' ? 'dest__button-active' : ''}`,
+            classes.button,
+            `${activeBlock === 'places' ? classes.buttonActive : ''}`,
           )}
           content="Places of interest"
           onClick={() => handleButtonClick('places')}
@@ -63,8 +65,8 @@ export const Destinations = () => {
               <div key={value.id} className={value.name}>
                 <div
                   className={classNames(
-                    'dest__list',
-                    `${isOpen ? 'dest__list-wrap' : ''}`,
+                    classes.list,
+                    `${isOpen ? classes.listWrap : ''}`,
                   )}
                 >
                   <DestItem
@@ -80,7 +82,7 @@ export const Destinations = () => {
         )}
         <Button
           onClick={handleButtonClickList}
-          className={isOpen ? 'circleButUp' : 'circleButDown'}
+          className={isOpen ? classes.circleButUp : classes.circleButDown}
         />
       </Container>
     </section>

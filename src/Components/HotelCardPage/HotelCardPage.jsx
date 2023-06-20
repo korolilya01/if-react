@@ -7,9 +7,10 @@ import { Footer } from '../Footer';
 
 import { ScrollRestoration, useLocation } from 'react-router-dom';
 
-import styles from './HotelCardPage.module.scss';
+import { useCardStyles } from './HotelCardPage.styles';
 
 export const HotelCardPage = () => {
+  const classes = useCardStyles();
 
   const location = useLocation();
   const { state } = location;
@@ -17,14 +18,18 @@ export const HotelCardPage = () => {
   return (
     <>
       <ScrollRestoration />
-      <div className={styles.page}>
+      <div className={classes.page}>
         <Container>
           <Sprites />
           <Header />
-          <div className={styles.content}>
-            <img src={state.imageUrl} alt={state.name} className={styles.img} />
-            <p className={styles.text}>{state.name}</p>
-            <p className={styles.text}>{`${state.city}, ${state.country}`}</p>
+          <div className={classes.content}>
+            <img
+              src={state.imageUrl}
+              alt={state.name}
+              className={classes.img}
+            />
+            <p className={classes.text}>{state.name}</p>
+            <p className={classes.text}>{`${state.city}, ${state.country}`}</p>
           </div>
         </Container>
       </div>

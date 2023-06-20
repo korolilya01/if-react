@@ -1,8 +1,11 @@
 import React from 'react';
 
-import styles from './Container.module.scss';
 import classNames from 'classnames';
+import { useContainerStyles } from './Container.styles';
 
-export const Container = ({ children, className }) => (
-  <div className={classNames(styles.container, className)}>{children}</div>
-);
+export const Container = ({ children, className }) => {
+  const classes = useContainerStyles();
+  return (
+    <div className={classNames(classes.root, className)}>{children}</div>
+  );
+};

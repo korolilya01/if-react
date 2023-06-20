@@ -1,14 +1,22 @@
 import React from 'react';
 
-export const DestItem = ({ data }) =>
-  data.map((item) => (
-    <div key={item.id} className="dest__item">
-      <div className="item-link">
+import { Button } from '../../Button';
+
+import { useDestItemStyles } from './DestItem.styles';
+
+export const DestItem = ({ data }) => {
+  const classes = useDestItemStyles();
+
+  return data.map((item) => (
+    <div key={item.id} className={classes.item}>
+      <div className={classes.itemLink}>
         <a href="#">
-          <img className="dest__img" src={item.src} alt={item.alt} />
-          <button type="submit" className="but__dest">
-            Book now
-          </button>
+          <img className={classes.destImg} src={item.src} alt={item.alt} />
+          <Button
+            type="submit"
+            className={classes.butDest}
+            content="Book now"
+          />
         </a>
       </div>
       <a href="#">
@@ -16,3 +24,4 @@ export const DestItem = ({ data }) =>
       </a>
     </div>
   ));
+};

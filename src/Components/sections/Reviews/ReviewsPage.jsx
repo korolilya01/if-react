@@ -4,8 +4,8 @@ import { Icon } from '../../Icon';
 
 import PropTypes from 'prop-types';
 
-import '../../../css/styles.css';
-import './Reviews.scss';
+import { useReviewsStyles } from './Reviews.styles';
+import classNames from 'classnames';
 
 export const ReviewsPage = ({
   name,
@@ -19,35 +19,39 @@ export const ReviewsPage = ({
   authorCountry,
   countryFlag,
 }) => {
+  const classes = useReviewsStyles();
+
   return (
-    <div className="reviews__item">
-      <div className="reviews__block-top">
-        <img className="reviews__img" src={img} alt={name} />
-        <p className="reviews__text reviews__decor">{price}</p>
+    <div className={classes.item}>
+      <div className={classes.blockTop}>
+        <img className={classes.img} src={img} alt={name} />
+        <p className={classNames(classes.text, classes.decor)}>{price}</p>
       </div>
-      <div className="reviews__block-info">
-        <a href="#" className="reviews__text reviews__text-name">
+      <div className={classes.blockInfo}>
+        <a href="#" className={classNames(classes.text, classes.textName)}>
           {name}
         </a>
-        <a href="#" className="reviews__text reviews__text-location">
+        <a href="#" className={classNames(classes.text, classes.textLocation)}>
           {location}
         </a>
-        <div className="reviews__mark">
-          <p className="reviews__mark-text">{mark}</p>
+        <div className={classes.mark}>
+          <p className={classes.markText}>{mark}</p>
         </div>
-        <p className="reviews__score">{reviews}</p>
+        <p className={classes.score}>{reviews}</p>
       </div>
-      <div className="reviews__commit">
-        <Icon className="icon-reviews__commit" iconHref="#reviews__person" />
-        <div className="reviews__commit-person-info">
-          <p className="reviews__text">{author}</p>
-          <p className="reviews__text reviews__commit-country">
-            <Icon className="icon-flag" iconHref={countryFlag} />
+      <div className={classes.commit}>
+        <Icon className={classes.iconCommit} iconHref="#reviews__person" />
+        <div className={classes.commitPersonInfo}>
+          <p className={classes.text}>{author}</p>
+          <p className={classNames(classes.text, classes.commitCountry)}>
+            <Icon className={classes.iconFlag} iconHref={countryFlag} />
             {authorCountry}
           </p>
         </div>
       </div>
-      <p className="reviews__text reviews__text-indent">{description}</p>
+      <p className={classNames(classes.text, classes.textIndent)}>
+        {description}
+      </p>
     </div>
   );
 };

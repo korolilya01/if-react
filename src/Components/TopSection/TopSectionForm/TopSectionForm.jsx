@@ -14,16 +14,26 @@ import { topSectionFormSelector } from '../../../store/selectors/topSectionForm.
 
 import { useAvailableHotelsScrollContext } from '../../sections/AvailableHotels/AvailableHotels.context';
 
-import './TopSectionFormStyles/TopSectionFormMain.scss';
+import {useTopSectionFormMainStyles} from './TopSectionFormStyles/TopSectionFormMain.styles';
+import classNames from 'classnames';
 
 export const TopSectionForm = memo(() => {
+  const classes = useTopSectionFormMainStyles();
   //to pass the data to useGetAvailableHotelsQuery through onSubmit
   const [searchParams, setSearchParams] = useState(null);
 
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
   const dispatch = useDispatch();
 
-  const { search, dateFrom, dateTo, adults, children, childrenAges, rooms } =
+  const {
+    search,
+    dateFrom,
+    dateTo,
+    adults,
+    children,
+    childrenAges,
+    rooms
+  } =
     useSelector(topSectionFormSelector);
 
   const { data: hotels } = useGetAvailableHotelsQuery(searchParams);
@@ -67,26 +77,25 @@ export const TopSectionForm = memo(() => {
       onSubmit={buttonSearchClick}
       action="#"
       method="get"
-      className="form-filter"
     >
-      <div className="page__search">
-        <Icon className="searchIcon" iconHref="#search" />
+      <div className={classes.pageSearch}>
+        <Icon className={classes.searchIcon} iconHref="#search" />
         <Input
           id="city"
           labelId="city"
-          inputClassName="page__search-city page-text"
-          labelClassName="text-city page-text"
+          inputClassName={classNames(classes.searchCity, classes.pageText)}
+          labelClassName={classNames(classes.textCity, classes.pageText)}
           content="Your destination or hotel name"
           type="text"
           name="destination"
           placeholder=" Your destination or hotel name"
         />
         <Calendar />
-        <span className="text-date page-text">Check-in - Check-out</span>
+        <span className={classNames(classes.textDate, classes.pageText)}>Check-in - Check-out</span>
         <FilterForm />
         <Button
           type="submit"
-          className="page__search-button"
+          className={classes.searchButton}
           buttonName="page__search-button"
           content="Search"
           onClick={scrollToAvailableHotels}

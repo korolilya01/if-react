@@ -9,20 +9,19 @@ import { Container } from '../../Container';
 import { List } from '../../List';
 import { Title } from '../../Title';
 
-import classNames from 'classnames';
-
-import styles from './AvailableHotels.module.scss';
+import { useHomesStyles } from '../Homes/Homes.styles';
 
 export const AvailableHotels = () => {
+  const classes = useHomesStyles();
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
 
   const hotelsArray = useSelector(availableSelector);
 
   return !hotelsArray || !hotelsArray.length ? null : (
-    <section className={styles.section} ref={scrollAvailableHotels}>
+    <section className={classes.root} ref={scrollAvailableHotels}>
       <Container>
         <Title content="Available hotels" />
-        <List className={classNames('homes__list')} array={hotelsArray} />
+        <List className={classes.list} array={hotelsArray} />
       </Container>
     </section>
   );

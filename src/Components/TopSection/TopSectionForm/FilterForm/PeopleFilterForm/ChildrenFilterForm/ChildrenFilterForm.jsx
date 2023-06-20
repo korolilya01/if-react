@@ -1,24 +1,25 @@
 import React from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
-import {  topSectionFormSelector } from '../../../../../../store/selectors/topSectionForm.selector';
+import { topSectionFormSelector } from '../../../../../../store/selectors/topSectionForm.selector';
 import { setFilters } from '../../../../../../store/slices/topSectionForm.slice';
+import { usePeopleFilterFormStyles } from './PeopleFilterForm.styles';
 
 export const ChildrenFilterForm = ({ value, childCount }) => {
+  const classes = usePeopleFilterFormStyles();
+
   const dispatch = useDispatch();
-  const {
-    childrenAges
-  } = useSelector(topSectionFormSelector);
+  const { childrenAges } = useSelector(topSectionFormSelector);
   const handleClickChildrenAges = (event) => {
     event.preventDefault();
 
-
-    const updatedChildrenAges = {...childrenAges};
+    const updatedChildrenAges = { ...childrenAges };
     updatedChildrenAges[event.currentTarget.id] = event.target.value;
 
     dispatch(
-      setFilters({ childrenAges:
-        Object.values(updatedChildrenAges).slice(0, childCount)}
-      )
+      setFilters({
+        childrenAges: Object.values(updatedChildrenAges).slice(0, childCount),
+      }),
     );
   };
 
@@ -34,13 +35,13 @@ export const ChildrenFilterForm = ({ value, childCount }) => {
       content.push(
         <select
           id={`child${i}`}
-          className="filter_select-form"
+          className={classes.filterSelectForm}
           key={i}
           onChange={handleClickChildrenAges}
         >
           {childAge.map((item) => (
             <option
-              className="child"
+              // className="child"
               value={item}
               key={item}
             >{`${item} years`}</option>
@@ -53,9 +54,9 @@ export const ChildrenFilterForm = ({ value, childCount }) => {
 
   return (
     value > 0 && (
-      <div className="filter-form__children filter-form__children--hidden">
+      <div className={classes.filterFormChildren}>
         <p>What is the age of the child you’re travelling with?</p>
-        <div className="filter-form__children--container">
+        <div className={classes.filterFormChildrenContainer}>
           {getChildAgeElements()}
         </div>
       </div>

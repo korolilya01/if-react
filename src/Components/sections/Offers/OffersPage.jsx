@@ -5,15 +5,19 @@ import { Icon } from '../../Icon';
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
-
-import './Offers.scss';
+import { useOffersStyles } from './Offers.styles';
 
 export const OffersPage = ({ description, name, tag }) => {
+  const classes = useOffersStyles();
+
   return (
     <div className="col-lg-3 col-md-3 col-sm-4 col-xs-4">
-      <div className="offers__item">
-        <Icon className={classNames('offers__icon', name)} iconHref={tag} />
-        <p className="offers__description">{description}</p>
+      <div className={classes.item}>
+        <Icon
+          className={classNames(classes.icon, classes[`${name}`])}
+          iconHref={tag}
+        />
+        <p className={classes.description}>{description}</p>
       </div>
     </div>
   );

@@ -1,14 +1,18 @@
 import React from 'react';
 
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
+import classNames from 'classnames';
+import { useTopSectionFormMainStyles } from '../../TopSectionFormStyles/TopSectionFormMain.styles';
+
 export const FilterFormComponent = ({ title, value, name }) => {
+  const classes = useTopSectionFormMainStyles();
+
   return (
-    <div className={classNames('info-column', `column-${name}`)}>
+    <div className={classNames(classes.infoColumn,  classes[`column${title}`])}>
       <p>{title}</p>
       <input
-        className={classNames('info-num', `info-num-${name}`, ' page-text')}
+        className={classNames(classes.infoNum, classes.pageText)}
         type="text"
         name={name}
         value={value}
