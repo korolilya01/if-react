@@ -1,6 +1,8 @@
+import { v4 as uuid } from 'uuid';
+
 export const data = [
   {
-    id: 1,
+    id: uuid(),
     name: 'Ubud Bali Resort&SPA',
     location: 'Bali, Indonesia',
     img: '../../../images/ubud_bali_resort&spa.png',
@@ -17,7 +19,7 @@ export const data = [
     countryFlag: '#flag-ua',
   },
   {
-    id: 2,
+    id: uuid(),
     name: 'King Kong Hostel',
     location: 'Rotterdam, Netherlands',
     img: '../../../images/king_kong_hotel.png',
@@ -31,7 +33,7 @@ export const data = [
     countryFlag: '#flag-us',
   },
   {
-    id: 3,
+    id: uuid(),
     name: 'Rokoko Hotel',
     location: 'Ourika, Marocco',
     img: '../../../images/rokoko_hotel.png',
@@ -45,7 +47,7 @@ export const data = [
     countryFlag: '#flag-de',
   },
   {
-    id: 4,
+    id: uuid(),
     name: 'Ubud Bali Resort&SPA',
     location: 'Bali, Indonesia',
     img: '../../../images/ubud_bali_resort&spa.png',
@@ -62,7 +64,7 @@ export const data = [
     countryFlag: '#flag-ua',
   },
   {
-    id: 5,
+    id: uuid(),
     name: 'King Kong Hostel',
     location: 'Rotterdam, Netherlands',
     img: '../../../images/king_kong_hotel.png',
@@ -76,7 +78,7 @@ export const data = [
     countryFlag: '#flag-us',
   },
   {
-    id: 6,
+    id: uuid(),
     name: 'Rokoko Hotel',
     location: 'Ourika, Marocco',
     img: '../../../images/rokoko_hotel.png',

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 
-import classNames from 'classnames';
-
-import './Homes.scss';
 import { Container } from '../../Container';
 import { List } from '../../List';
 import { Title } from '../../Title';
 
 import { getHomesHotels } from '../../../services/index';
+
+import classNames from 'classnames';
+
+import './Homes.scss';
 
 export const Homes = () => {
   const [hotel, setHotel] = useState([]);
@@ -17,13 +18,11 @@ export const Homes = () => {
   }, []);
 
   return (
-    <>
-      <section className="homes">
-        <Container>
-          <Title content="Homes guests loves" />
-          <List className={classNames('homes__list')} array={hotel} />
-        </Container>
-      </section>
-    </>
+    <section className="homes">
+      <Container>
+        <Title content="Homes guests loves" />
+        <List className={classNames('homes__list')} array={hotel} />
+      </Container>
+    </section>
   );
 };

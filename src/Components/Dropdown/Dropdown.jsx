@@ -2,7 +2,9 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 
 import { Icon } from '../Icon';
-import { logoutAction } from '../../store/actions/auth.actions';
+import { logout } from '../../store/slices/auth.slice';
+
+import { setLogOut } from '../../store/slices/topSectionForm.slice';
 
 import classNames from 'classnames';
 
@@ -10,9 +12,11 @@ import './Dropdown.scss';
 
 export const Dropdown = ({ isVisible }) => {
   const dispatch = useDispatch();
+
   const handleClick = (e) => {
     e.preventDefault();
-    dispatch(logoutAction);
+    dispatch(logout());
+    dispatch(setLogOut());
   };
 
   return (

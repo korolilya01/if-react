@@ -1,1 +1,1 @@
-export const availableSelector = (state) => state.available.hotels;
+export const availableSelector = (state) => state.available;
