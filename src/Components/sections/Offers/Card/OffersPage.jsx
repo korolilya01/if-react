@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { Icon } from '../../Icon';
+import { Icon } from '../../../Icon';
 
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
-import { useOffersStyles } from './Offers.styles';
+import { styles } from '../Offers.styles';
 
 export const OffersPage = ({ description, name, tag }) => {
-  const classes = useOffersStyles();
+  const classes = styles();
 
   return (
     <div className="col-lg-3 col-md-3 col-sm-4 col-xs-4">

@@ -6,10 +6,10 @@ import { Title } from '../../Title';
 
 import { getHomesHotels } from '../../../services/index';
 
-import { useHomesStyles } from './Homes.styles';
+import { styles } from './Homes.styles';
 
 export const Homes = () => {
-  const classes = useHomesStyles();
+  const classes = styles();
 
   const [hotel, setHotel] = useState([]);
 

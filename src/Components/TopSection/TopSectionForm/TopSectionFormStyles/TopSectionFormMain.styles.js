@@ -17,7 +17,7 @@ const sharedTextStyles = {
     display: 'none',
   },
 };
-export const topSectionFormMainStyles = {
+export const styles = createUseStyles(() => ({
   ...searchButtonStyles,
   ...searchCityStyles,
   ...searchFilterStyles,
@@ -53,13 +53,4 @@ export const topSectionFormMainStyles = {
       top: -208,
     },
   },
-};
-
-export const useTopSectionFormMainStyles = createUseStyles(
-  topSectionFormMainStyles,
-  searchButtonStyles,
-  searchCityStyles,
-  searchFilterStyles,
-  topSectionFormStyles,
-  peopleFilterForm,
-);
+}));

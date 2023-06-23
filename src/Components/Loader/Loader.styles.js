@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const loaderStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     border: '4px solid #f3f3f3',
     borderTop: '4px solid #3498db',
@@ -18,6 +18,4 @@ export const loaderStyles = {
       transform: 'rotate(360deg)',
     },
   },
-};
-
-export const useLoaderStyles = createUseStyles(loaderStyles);
+}));

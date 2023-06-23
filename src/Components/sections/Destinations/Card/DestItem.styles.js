@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const destItemStyles = {
+export const styles = createUseStyles(() => ({
   item: {
     height: 432,
     width: 296,
@@ -57,6 +57,4 @@ export const destItemStyles = {
     aspectRatio: '1/1',
     maxWidth: '100%',
   },
-};
-
-export const useDestItemStyles = createUseStyles(destItemStyles);
+}));

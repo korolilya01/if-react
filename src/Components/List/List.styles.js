@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const listStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     display: 'flex',
     justifyContent: 'center',
@@ -16,6 +16,4 @@ export const listStyles = {
       marginBottom: '0',
     },
   },
-};
-
-export const useListStyles = createUseStyles(listStyles);
+}));

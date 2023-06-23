@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Button } from '../../Button';
+import { Button } from '../../../Button';
 
-import { useDestItemStyles } from './DestItem.styles';
+import { styles } from './DestItem.styles';
 
 export const DestItem = ({ data }) => {
-  const classes = useDestItemStyles();
+  const classes = styles();
 
   return data.map((item) => (
     <div key={item.id} className={classes.item}>

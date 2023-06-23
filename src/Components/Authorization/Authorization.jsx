@@ -8,10 +8,10 @@ import { StaticPage } from '../StaticPage';
 
 import { login } from '../../store/slices/auth.slice';
 
-import { useAuthStyles } from './Authorization.styles';
+import { styles } from './Authorization.styles';
 
 export const Authorization = () => {
-  const classes = useAuthStyles();
+  const classes = styles();
 
   const navigate = useNavigate();
   const dispatch = useDispatch();

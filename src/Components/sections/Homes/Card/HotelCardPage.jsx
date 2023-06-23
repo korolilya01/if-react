@@ -1,16 +1,16 @@
 import React from 'react';
 
-import { Container } from '../Container';
-import { Header } from '../Header';
-import { Sprites } from '../Sprites';
-import { Footer } from '../Footer';
+import { Container } from '../../../Container';
+import { Header } from '../../../Header';
+import { Sprites } from '../../../Sprites';
+import { Footer } from '../../../Footer';
 
 import { ScrollRestoration, useLocation } from 'react-router-dom';
 
-import { useCardStyles } from './HotelCardPage.styles';
+import { styles } from './HotelCardPage.styles';
 
 export const HotelCardPage = () => {
-  const classes = useCardStyles();
+  const classes = styles();
 
   const location = useLocation();
   const { state } = location;

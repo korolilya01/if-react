@@ -1,15 +1,13 @@
 import { createUseStyles } from 'react-jss';
 
-export const containerStyles = {
+export const styles = createUseStyles(() => ({
   root: {
-    color: 'var(--black)',
     margin: '0 auto',
     padding: '120px 104px',
     maxWidth: 1440,
     position: 'relative',
     fontSize: 24,
     fontWeight: 400,
-
     '@media (max-width: 1024px)': {
       padding: '60px 100px',
     },
@@ -22,6 +20,4 @@ export const containerStyles = {
       padding: '40px 0',
     },
   },
-};
-
-export const useContainerStyles = createUseStyles(containerStyles);
+}));

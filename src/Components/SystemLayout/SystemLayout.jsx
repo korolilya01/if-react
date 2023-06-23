@@ -7,15 +7,19 @@ import { Outlet, ScrollRestoration } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { store, persistor } from '../../store';
+import { ThemeProvider } from 'react-jss';
+import theme from 'tailwindcss/defaultTheme';
 
-export const SystemLayout = () =>  (
-    <>
-      <ScrollRestoration />
-      <Sprites />
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
-            <Outlet />
-        </PersistGate>
-      </Provider>
-    </>
-  );
+export const SystemLayout = () => (
+  <>
+    <ScrollRestoration />
+    <Sprites />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <ThemeProvider theme={theme}>
+          <Outlet />
+        </ThemeProvider>
+      </PersistGate>
+    </Provider>
+  </>
+);

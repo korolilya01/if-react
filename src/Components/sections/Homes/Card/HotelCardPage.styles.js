@@ -1,8 +1,8 @@
 import { createUseStyles } from 'react-jss';
 
-export const cardStyles = {
+export const styles = createUseStyles(() => ({
   page: {
-    backgroundColor: 'var(--dark-blue)',
+    backgroundColor: '#6495ed',
     minHeight: '100vh',
     '@media (max-width: 1024px)': {
       minHeight: '85vh',
@@ -37,6 +37,4 @@ export const cardStyles = {
       fontSize: '20px',
     },
   },
-};
-
-export const useCardStyles = createUseStyles(cardStyles);
+}));

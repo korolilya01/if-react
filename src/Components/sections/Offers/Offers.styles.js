@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const offersStyles = {
+export const styles = createUseStyles(() => ({
   title: {
     position: 'relative',
     marginBottom: 0,
@@ -87,6 +87,4 @@ export const offersStyles = {
       width: 56,
     },
   },
-};
-
-export const useOffersStyles = createUseStyles(offersStyles);
+}));

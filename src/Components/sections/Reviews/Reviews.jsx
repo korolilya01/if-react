@@ -6,11 +6,11 @@ import { Slider } from './Slider';
 
 import { data } from './Data';
 
-import { useReviewsStyles } from './Reviews.styles';
+import { styles } from './Reviews.styles';
 import classNames from 'classnames';
 
 export const Reviews = () => {
-  const classes = useReviewsStyles();
+  const classes = styles();
 
   return (
     <section className={classes.root}>

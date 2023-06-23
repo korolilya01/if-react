@@ -13,7 +13,7 @@ const text = {
     color: 'var(--light-blue)',
   },
 };
-export const reviewsStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     order: 2,
     '@media (max-width: 768px)': {
@@ -195,6 +195,4 @@ export const reviewsStyles = {
     width: 16,
     height: 20,
   },
-};
-
-export const useReviewsStyles = createUseStyles(reviewsStyles);
+}));

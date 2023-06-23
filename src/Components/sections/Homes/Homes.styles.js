@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const homesStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     backgroundColor: 'var(--light-white)',
   },
@@ -10,6 +10,4 @@ export const homesStyles = {
       flexWrap: 'nowrap',
     },
   },
-};
-
-export const useHomesStyles = createUseStyles(homesStyles);
+}));

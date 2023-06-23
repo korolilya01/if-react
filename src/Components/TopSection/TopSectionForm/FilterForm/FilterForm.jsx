@@ -11,10 +11,10 @@ import { setFilters } from '../../../../store/slices/topSectionForm.slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { topSectionFormSelector } from '../../../../store/selectors/topSectionForm.selector';
 
-import { useTopSectionFormMainStyles } from '../TopSectionFormStyles/TopSectionFormMain.styles';
+import { styles } from '../TopSectionFormStyles/TopSectionFormMain.styles';
 
 export const FilterForm = () => {
-  const classes = useTopSectionFormMainStyles();
+  const classes = styles();
 
   const [showFilterForm, setShowFilterForm] = useState(false);
   const [childCount, setChildCount] = useState([]);

@@ -1,16 +1,16 @@
 import React from 'react';
 
 import { Container } from '../Container';
-import { FooterColumnLinks } from './FuterColumnLinks';
+import { FooterColumnLinks } from './FooterColumnLinks';
 import { Icon } from '../Icon';
 
 import { columnLinks } from './utils/columnLinks';
 
-import { useFooterStyles } from './Footer.styles';
+import { styles } from './Footer.styles';
 import classNames from 'classnames';
 
 export const Footer = () => {
-  const classes = useFooterStyles();
+  const classes = styles();
 
   const [firstColumnLinks, secondColumnLinks, thirdColumnLinks] = columnLinks;
 

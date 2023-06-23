@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import { INITIAL_STATE } from '../constants/initialState';
+import { darkTheme } from '../../Components/Themes/darkTheme.styles';
 
 const { theme } = INITIAL_STATE;
 
@@ -10,13 +11,11 @@ const themeSlice = createSlice({
   reducers: {
     toggleTheme: (state) => {
       state.themeStyle = state.themeStyle === 'light' ? 'dark' : 'light';
-      state.backgroundImage =
-        state.themeStyle === 'light'
-          ? "url('../images/laguna_beach.png')"
-          : "url('../images/castelmezzano.png')";
+      state.themeParams =
+        state.themeStyle === 'light' ? theme.themeParams : darkTheme;
     },
   },
 });
 
-export const { toggleTheme, toggleThemeBack } = themeSlice.actions;
+export const { toggleTheme } = themeSlice.actions;
 export const themeReducer = themeSlice.reducer;

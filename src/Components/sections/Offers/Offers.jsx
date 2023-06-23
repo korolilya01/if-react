@@ -1,16 +1,16 @@
 import React from 'react';
 
 import { Container } from '../../Container';
-import { OffersPage } from './OffersPage';
+import { OffersPage } from './Card/OffersPage';
 import { Title } from '../../Title';
 
 import { data } from './Data';
 
-import { useOffersStyles } from './Offers.styles';
+import { styles } from './Offers.styles';
 import classNames from 'classnames';
 
 export const Offers = () => {
-  const classes = useOffersStyles();
+  const classes = styles();
 
   return (
     <section>

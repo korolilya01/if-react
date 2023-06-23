@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const titleStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     fontSize: 40,
     fontWeight: 'bold',
@@ -19,7 +19,4 @@ export const titleStyles = {
       marginBottom: 32,
     },
   },
-
-};
-
-export const useTitleStyles = createUseStyles(titleStyles);
+}));

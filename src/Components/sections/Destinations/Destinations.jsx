@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { Button } from '../../Button';
 import { Container } from '../../Container';
-import { DestItem } from './DestItem';
+import { DestItem } from './Card/DestItem';
 import { Title } from '../../Title';
 
 import { useDispatch, useSelector } from 'react-redux';
@@ -11,11 +11,11 @@ import { availableSelector } from '../../../store/selectors/destination.selector
 
 import { data } from './data';
 
-import { useDestStyles } from './Destinations.styles';
+import { styles } from './Destinations.styles';
 import classNames from 'classnames';
 
 export const Destinations = () => {
-  const classes = useDestStyles();
+  const classes = styles();
 
   const [isOpen, setIsOpen] = useState(false);
 

@@ -7,14 +7,14 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { listBreakpoints } from './data';
 
 import classNames from 'classnames';
-import { useListStyles } from './List.styles';
+import { styles } from './List.styles';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export const List = ({ className, array, children }) => {
-  const classes = useListStyles();
+  const classes = styles();
 
   const slidesPerView = array.length > 4 ? 4 : array.length;
 

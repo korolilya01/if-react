@@ -5,12 +5,12 @@ import { Icon } from '../../Icon';
 
 import { TopSectionFormContextProvider } from '../TopSectionForm/TopSectionFormContext';
 
-import { useMainSvgStyles } from './MainSvg.styles';
-import { useMainStyles } from './Main.styles';
+import { stylesSVG } from './MainSvg.styles';
+import { styles } from './Main.styles';
 
 export const Main = () => {
-  const classes = useMainStyles();
-  const svg = useMainSvgStyles();
+  const classes = styles();
+  const svg = stylesSVG();
 
   return (
     <main className={classes.root}>

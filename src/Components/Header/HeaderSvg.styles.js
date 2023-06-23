@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const headerSvgStyles = {
+export const stylesSVG = createUseStyles(() => ({
   logo: {
     width: 208,
     height: 40,
@@ -21,7 +21,6 @@ export const headerSvgStyles = {
   night: {
     width: 30,
     height: 30,
-    border: '1px solid red',
     cursor: 'pointer',
     '@media (max-width: 1200px)': {
       width: 24,
@@ -71,6 +70,4 @@ export const headerSvgStyles = {
       height: 16,
     },
   },
-};
-
-export const useHeaderSvgStyles = createUseStyles(headerSvgStyles);
+}));

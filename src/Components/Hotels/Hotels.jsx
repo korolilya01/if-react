@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { useHotelsStyles } from './Hotels.styles';
+import { styles } from './Hotels.styles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 export const Hotels = ({ imageUrl, name, city, country, id }) => {
-  const classes = useHotelsStyles();
+  const classes = styles();
 
   return (
     <div className={classes.root}>

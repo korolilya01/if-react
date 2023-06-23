@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const dropdownStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     position: 'absolute',
     top: '100%',
@@ -42,6 +42,4 @@ export const dropdownStyles = {
     width: 20,
     height: 20,
   },
-};
-
-export const useDropdownStyles = createUseStyles(dropdownStyles);
+}));

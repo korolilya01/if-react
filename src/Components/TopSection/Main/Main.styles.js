@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const mainStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     color: 'var(--white)',
   },
@@ -32,6 +32,4 @@ export const mainStyles = {
       paddingBottom: 40,
     },
   },
-};
-
-export const useMainStyles = createUseStyles(mainStyles);
+}));

@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const hotelsStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     height: 432,
     width: '100%',
@@ -13,6 +13,4 @@ export const hotelsStyles = {
       alignItems: 'center',
     },
   },
-};
-
-export const useHotelsStyles = createUseStyles(hotelsStyles);
+}));

@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const authStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     width: 400,
     backgroundColor: 'var(--white)',
@@ -82,6 +82,4 @@ export const authStyles = {
       background: 'var(--dark-yellow)',
     },
   },
-};
-
-export const useAuthStyles = createUseStyles(authStyles);
+}));

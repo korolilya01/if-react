@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const footerStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     order: 3,
     backgroundColor: 'var(--dark-blue)',
@@ -77,6 +77,4 @@ export const footerStyles = {
       margin: '0 auto 32px',
     },
   },
-};
-
-export const useFooterStyles = createUseStyles(footerStyles);
+}));

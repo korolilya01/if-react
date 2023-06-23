@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const SignUpStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     order: 1,
     margin: '0 104px',
@@ -149,6 +149,4 @@ export const SignUpStyles = {
       height: 12,
     },
   },
-};
-
-export const useSignUpStyles = createUseStyles(SignUpStyles);
+}));

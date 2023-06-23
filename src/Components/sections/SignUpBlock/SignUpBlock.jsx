@@ -4,10 +4,10 @@ import { Button } from '../../Button';
 import { Container } from '../../Container';
 import { Icon } from '../../Icon';
 
-import { useSignUpStyles } from './SignUp.styles';
+import { styles } from './SignUp.styles';
 
 export const SignUpBlock = () => {
-  const classes = useSignUpStyles();
+  const classes = styles();
 
   const [isShow, setIsShow] = useState(true);
 

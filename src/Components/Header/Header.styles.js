@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 
-export const headerStyles = {
+export const styles = createUseStyles(() => ({
   root: {
     display: 'flex',
     alignItems: 'center',
@@ -77,6 +77,4 @@ export const headerStyles = {
       width: '80%',
     },
   },
-};
-
-export const useHeaderStyles = createUseStyles(headerStyles);
+}));

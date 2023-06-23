@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { Icon } from '../../Icon';
+import { Icon } from '../../../Icon';
 
 import PropTypes from 'prop-types';
 
-import { useReviewsStyles } from './Reviews.styles';
+import { styles } from '../Reviews.styles';
 import classNames from 'classnames';
 
 export const ReviewsPage = ({
@@ -19,7 +19,7 @@ export const ReviewsPage = ({
   authorCountry,
   countryFlag,
 }) => {
-  const classes = useReviewsStyles();
+  const classes = styles();
 
   return (
     <div className={classes.item}>

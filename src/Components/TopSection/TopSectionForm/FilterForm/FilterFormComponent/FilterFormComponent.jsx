@@ -3,13 +3,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import classNames from 'classnames';
-import { useTopSectionFormMainStyles } from '../../TopSectionFormStyles/TopSectionFormMain.styles';
+import { styles } from '../../TopSectionFormStyles/TopSectionFormMain.styles';
 
 export const FilterFormComponent = ({ title, value, name }) => {
-  const classes = useTopSectionFormMainStyles();
+  const classes = styles();
 
   return (
-    <div className={classNames(classes.infoColumn,  classes[`column${title}`])}>
+    <div className={classNames(classes.infoColumn, classes[`column${title}`])}>
       <p>{title}</p>
       <input
         className={classNames(classes.infoNum, classes.pageText)}

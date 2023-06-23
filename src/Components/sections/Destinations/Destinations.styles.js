@@ -7,6 +7,7 @@ const circleBut = {
   borderRadius: '50%',
   background: 'var(--dark-white)',
   border: 1,
+  cursor: 'pointer',
   zIndex: 1,
   top: 'calc(50% - var(--circle-height) / 2)',
   boxShadow: '0 4px 4px rgb(0 0 0 / 25%)',
@@ -25,7 +26,7 @@ const circleButAfter = {
   left: 'calc(50% - var(--arrow-height) / 2)',
 };
 
-export const destStyles = {
+export const styles = createUseStyles(() => ({
   button: {
     padding: '16px 48px',
     width: 'fit-content',
@@ -89,6 +90,4 @@ export const destStyles = {
       transform: 'rotate(220deg) skewX(-15deg)',
     },
   },
-};
-
-export const useDestStyles = createUseStyles(destStyles);
+}));

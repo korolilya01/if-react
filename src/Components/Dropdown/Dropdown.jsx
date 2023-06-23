@@ -6,10 +6,10 @@ import { logout } from '../../store/slices/auth.slice';
 
 import { setLogOut } from '../../store/slices/topSectionForm.slice';
 
-import { useDropdownStyles } from './Dropdown.styles';
+import { styles } from './Dropdown.styles';
 
 export const Dropdown = ({ isVisible }) => {
-  const classes = useDropdownStyles();
+  const classes = styles();
 
   const dispatch = useDispatch();
 
