@@ -6,16 +6,20 @@ import { Slider } from './Slider';
 
 import { data } from './Data';
 
-import '../../../css/swiper-style.scss';
-import './Reviews.scss';
+import { styles } from './Reviews.styles';
+import classNames from 'classnames';
 
-export const Reviews = () => (
-  <section className="reviews">
-    <Container>
-      <Title className="reviews__title" content="Guests reviews" />
-      <div className="list reviews__list">
-        <Slider data={data} />
-      </div>
-    </Container>
-  </section>
-);
+export const Reviews = () => {
+  const classes = styles();
+
+  return (
+    <section className={classes.root}>
+      <Container>
+        <Title content="Guests reviews" />
+        <div className={classNames('list', classes.list)}>
+          <Slider data={data} />
+        </div>
+      </Container>
+    </section>
+  );
+};

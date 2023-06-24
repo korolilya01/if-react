@@ -12,6 +12,7 @@ export const Input = memo(function Input({
   placeholder,
   value,
   onChange,
+  required = null,
 }) {
   return (
     <>
@@ -26,6 +27,7 @@ export const Input = memo(function Input({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required={required}
       />
     </>
   );

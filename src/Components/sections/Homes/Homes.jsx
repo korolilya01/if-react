@@ -6,11 +6,11 @@ import { Title } from '../../Title';
 
 import { getHomesHotels } from '../../../services/index';
 
-import classNames from 'classnames';
-
-import './Homes.scss';
+import { styles } from './Homes.styles';
 
 export const Homes = () => {
+  const classes = styles();
+
   const [hotel, setHotel] = useState([]);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ export const Homes = () => {
   }, []);
 
   return (
-    <section className="homes">
+    <section className={classes.root}>
       <Container>
         <Title content="Homes guests loves" />
-        <List className={classNames('homes__list')} array={hotel} />
+        <List className={classes.list} array={hotel} />
       </Container>
     </section>
   );

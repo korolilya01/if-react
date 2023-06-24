@@ -1,7 +1,26 @@
 import React from 'react';
 
-import './TopSection.scss';
+import { styles } from './TopSection.styles';
+
+import {
+  themeSelectorParams,
+  themeSelectorStyle,
+} from '../../store/selectors/theme.selector';
+import { useSelector } from 'react-redux';
 
 export const TopSection = ({ children }) => {
-  return <section className="main">{children}</section>;
+  const themeStyle = useSelector(themeSelectorStyle);
+  const themeParams = useSelector(themeSelectorParams);
+
+  const classes = styles(themeParams);
+
+  return (
+    <>
+      <div style={{ display: 'none' }}>
+        {' '}
+        {themeStyle === 'light' ? 'light' : 'dark'}{' '}
+      </div>
+      <section className={classes.root}>{children}</section>
+    </>
+  );
 };

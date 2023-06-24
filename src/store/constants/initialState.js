@@ -1,3 +1,8 @@
+// import { darkTheme } from '../../Components/Themes/darkTheme.styles';
+// import { lightTheme } from '../../Components/Themes/lightTheme.styles';
+
+import { lightTheme } from '../../Components/Themes/lightTheme.styles';
+
 export const INITIAL_STATE = {
   authState: null,
   availableState: {
@@ -19,4 +24,8 @@ export const INITIAL_STATE = {
     childrenAges: null,
   },
   destination: 'regions',
+  theme: {
+    themeStyle: 'light',
+    themeParams: lightTheme,
+  },
 };

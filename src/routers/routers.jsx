@@ -7,7 +7,7 @@ import {
 } from 'react-router-dom';
 import { App } from '../Components/App';
 import { Authorization } from '../Components/Authorization';
-import { HotelCardPage } from '../Components/HotelCardPage';
+import { HotelCardPage } from '../Components/sections/Homes/Card';
 import { SystemLayout } from '../Components/SystemLayout';
 
 export const router = createBrowserRouter(

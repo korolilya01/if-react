@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Button } from '../../../../Button';
 
 import classNames from 'classnames';
-import './PeopleFilterForm.scss';
+import { usePeopleFilterFormStyles } from './ChildrenFilterForm/PeopleFilterForm.styles';
 
 export const PeopleFilterForm = memo(function PeopleFilterForm({
   title,
@@ -15,6 +15,8 @@ export const PeopleFilterForm = memo(function PeopleFilterForm({
   setChildCount,
   onChange,
 }) {
+  const classes = usePeopleFilterFormStyles();
+
   const makePlusInFilter = useCallback(
     (event) => {
       event.preventDefault();
@@ -36,36 +38,27 @@ export const PeopleFilterForm = memo(function PeopleFilterForm({
     [onChange, value],
   );
   return (
-    <div className="filter-form">
-      <p className={classNames('filter-form__property', 'filter-form__value')}>
+    <div className={classes.filterForm}>
+      <p
+        className={classNames(
+          classes.filterFormProperty,
+          classes.filterFormValue,
+        )}
+      >
         {title}
       </p>
-      <div className="filter-form__counter">
+      <div className={classes.filterFormCounter}>
         <Button
-          className={classNames(
-            'filter-form__btn',
-            `${name}-btn__minus`,
-            'filter-btn__minus',
-          )}
+          className={classes.filterFormBtn}
           onClick={makeMinusInFilter}
           content="-"
           disabled={value === min}
         />
-        <div
-          id={`${name}`}
-          className={classNames(
-            'filter-form__value',
-            `filter-form__value--${name}`,
-          )}
-        >
+        <div id={`${name}`} className={classes.filterFormValue}>
           {value}
         </div>
         <Button
-          className={classNames(
-            'filter-form__btn',
-            `${name}-btn__plus`,
-            'filter-btn__plus',
-          )}
+          className={classes.filterFormBtn}
           onClick={makePlusInFilter}
           content="+"
           disabled={value === max}

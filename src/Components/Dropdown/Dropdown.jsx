@@ -6,23 +6,23 @@ import { logout } from '../../store/slices/auth.slice';
 
 import { setLogOut } from '../../store/slices/topSectionForm.slice';
 
-import classNames from 'classnames';
-
-import './Dropdown.scss';
+import { styles } from './Dropdown.styles';
 
 export const Dropdown = ({ isVisible }) => {
+  const classes = styles();
+
   const dispatch = useDispatch();
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = (event) => {
+    event.preventDefault();
     dispatch(logout());
     dispatch(setLogOut());
   };
 
   return (
     isVisible && (
-      <button onClick={handleClick} className={classNames('sign-out-button')}>
-        <Icon iconHref="#sign-out" className="sign-out-svg" />
+      <button onClick={handleClick} className={classes.root}>
+        <Icon iconHref="#sign-out" className={classes.svg} />
         Sign out
       </button>
     )

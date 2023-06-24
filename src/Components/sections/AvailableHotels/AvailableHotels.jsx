@@ -9,21 +9,30 @@ import { Container } from '../../Container';
 import { List } from '../../List';
 import { Title } from '../../Title';
 
-import classNames from 'classnames';
-
-import styles from './AvailableHotels.module.scss';
+import { styles } from '../Homes/Homes.styles';
 
 export const AvailableHotels = () => {
+  const classes = styles();
   const scrollAvailableHotels = useAvailableHotelsScrollContext();
 
   const hotelsArray = useSelector(availableSelector);
 
-  return !hotelsArray || !hotelsArray.length ? null : (
-    <section className={styles.section} ref={scrollAvailableHotels}>
+  return hotelsArray.length ? (
+    <section className={classes.root} ref={scrollAvailableHotels}>
       <Container>
         <Title content="Available hotels" />
-        <List className={classNames('homes__list')} array={hotelsArray} />
+        <List className={classes.list} array={hotelsArray} />
       </Container>
     </section>
-  );
+  ) : hotelsArray.length === 0 ? (
+    <section className={classes.root} ref={scrollAvailableHotels}>
+      <Container>
+        <Title content="Available hotels" />
+        <p>
+          Sorry, either you mistyped the request or we deleted these items,{' '}
+          <br /> but let is agree to blame this on you :(
+        </p>
+      </Container>
+    </section>
+  ) : null;
 };

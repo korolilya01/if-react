@@ -1,35 +1,31 @@
 import React from 'react';
 
 import { Container } from '../Container';
-import { FooterColumnLinks } from './FuterColumnLinks';
+import { FooterColumnLinks } from './FooterColumnLinks';
 import { Icon } from '../Icon';
 
 import { columnLinks } from './utils/columnLinks';
 
-import './Footer.scss';
+import { styles } from './Footer.styles';
+import classNames from 'classnames';
 
 export const Footer = () => {
-  const [
-    firstColumnLinks,
-    secondColumnLinks,
-    thirdColumnLinks
-  ] = columnLinks;
+  const classes = styles();
+
+  const [firstColumnLinks, secondColumnLinks, thirdColumnLinks] = columnLinks;
 
   return (
-    <footer className="footer">
+    <footer className={classes.root}>
       <Container>
-        <Icon
-          className="footer__icon icon-trip_house_mobile"
-          iconHref="#trip_house_mobile"
-        />
-        <div className="footer__list">
+        <Icon className={classes.svg} iconHref="#trip_house_mobile" />
+        <div className={classes.list}>
           <FooterColumnLinks array={firstColumnLinks} />
           <FooterColumnLinks array={secondColumnLinks} />
           <FooterColumnLinks array={thirdColumnLinks} />
         </div>
         <div className="col-lg-4 col-md-4 col-sm-6 col-xs-6">
-          <div className="footer__item-bot">
-            <p className="footer__text footer__text-bottom">
+          <div className={classes.itemBot}>
+            <p className={classNames(classes.text, classes.textBottom)}>
               © 2022Triphouse, Inc. All rights reserved
             </p>
           </div>

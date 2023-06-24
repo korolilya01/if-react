@@ -8,11 +8,11 @@ import { StaticPage } from '../StaticPage';
 
 import { login } from '../../store/slices/auth.slice';
 
-import classNames from 'classnames';
-
-import './Authorization.scss';
+import { styles } from './Authorization.styles';
 
 export const Authorization = () => {
+  const classes = styles();
+
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -30,32 +30,31 @@ export const Authorization = () => {
 
   return (
     <StaticPage>
-      <form
-        onSubmit={handleSubmit}
-        className={classNames('account', 'account-block ')}
-      >
-        <p className="account__title">Sign in</p>
+      <form onSubmit={handleSubmit} className={classes.root}>
+        <p className={classes.title}>Sign in</p>
         <Input
           labelId="email"
-          labelClassName="account__email-text"
+          labelClassName={classes.label}
           id="email"
           name="email"
           type="email"
-          inputClassName="account__email-field"
+          inputClassName={classes.input}
           content="Email address"
+          required
         />
         <Input
           labelId="password"
-          labelClassName="account__password-text"
+          labelClassName={classes.label}
           id="password"
           name="password"
           type="password"
-          inputClassName="account__password-field"
+          inputClassName={classes.input}
           content="Password"
+          required
         />
         <Button
           type="submit"
-          className="account__button"
+          className={classes.button}
           buttonName="account__button"
           content="Sign in"
         />
