@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-import { DATA_URL } from '../utils/utils';
-import { useGetAvailableHotelsQuery } from '../store/slices/api.slice';
+export const DATA_URL = 'https://if-student-api.onrender.com/api/hotels';
 
 const cache = new Map();
 
@@ -18,8 +17,3 @@ export const fetchData = (url) => {
 export const getHomesHotels = async () => {
   return fetchData(`${DATA_URL}/popular`);
 };
-
-export const getAvailableHotels = async () => {
-  return fetchData(`${useGetAvailableHotelsQuery}`);
-};
-
