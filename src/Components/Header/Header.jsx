@@ -18,8 +18,7 @@ import {
 } from '../../store/selectors/theme.selector';
 
 export const Header = () => {
-  const themeStyle = useSelector(themeSelectorStyle);
-  const themeParams = useSelector(themeSelectorParams);
+  const [isVisible, setIsVisible] = useState(false);
 
   const classes = styles();
   const svg = stylesSVG();
@@ -27,7 +26,8 @@ export const Header = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const [isVisible, setIsVisible] = useState(false);
+  const themeStyle = useSelector(themeSelectorStyle);
+  const themeParams = useSelector(themeSelectorParams);
 
   const showDropdown = () => {
     setIsVisible(!isVisible);
