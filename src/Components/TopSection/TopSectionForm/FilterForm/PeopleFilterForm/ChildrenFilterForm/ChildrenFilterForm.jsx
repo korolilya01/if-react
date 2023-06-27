@@ -40,11 +40,7 @@ export const ChildrenFilterForm = ({ value, childCount }) => {
           onChange={handleClickChildrenAges}
         >
           {childAge.map((item) => (
-            <option
-              // className="child"
-              value={item}
-              key={item}
-            >{`${item} years`}</option>
+            <option value={item} key={item}>{`${item} years`}</option>
           ))}
         </select>,
       );

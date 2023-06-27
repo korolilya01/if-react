@@ -46,7 +46,7 @@ export const styles = createUseStyles(() => ({
     },
   },
 
-  // top
+  //top
   blockTop: {
     position: 'relative',
   },
