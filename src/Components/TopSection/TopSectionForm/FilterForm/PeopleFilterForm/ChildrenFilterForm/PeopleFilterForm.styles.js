@@ -16,6 +16,9 @@ export const peopleFilterForm = {
     top: 'calc(100% + 12px)',
     left: '58%',
     color: 'var(--black)',
+    '@media (max-width: 1024px)': {
+      left: '10%',
+    },
     '@media (max-width: 768px)': {
       top: '78%',
       left: '30%',

@@ -8,6 +8,12 @@ export const styles = createUseStyles(() => ({
     flexDirection: 'column',
     justifyContent: 'start',
     alignItems: 'start',
+    '@media (max-width: 1200px) ': {
+      height: 374,
+    },
+    '@media (max-width: 768px) ': {
+      height: 332,
+    },
     '@media (max-width: 480px) ': {
       justifyContent: 'center',
       alignItems: 'center',

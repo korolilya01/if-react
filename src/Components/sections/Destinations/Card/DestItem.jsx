@@ -19,7 +19,7 @@ export const DestItem = ({ data }) => {
           />
         </a>
       </div>
-      <a href="#">
+      <a className="item__text" href="#">
         {item?.dest} {item?.city} {item.country}
       </a>
     </div>

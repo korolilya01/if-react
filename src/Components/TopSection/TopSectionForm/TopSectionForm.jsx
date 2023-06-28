@@ -38,9 +38,6 @@ export const TopSectionForm = () => {
       scrollAvailableHotels.current.scrollIntoView({
         behavior: 'smooth',
       });
-      setTimeout(() => {
-        scrollToAvailableHotels();
-      }, 20);
     }
   };
 

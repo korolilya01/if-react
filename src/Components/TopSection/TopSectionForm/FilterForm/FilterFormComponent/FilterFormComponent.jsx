@@ -16,6 +16,7 @@ export const FilterFormComponent = ({ title, value, name }) => {
         type="text"
         name={name}
         value={value}
+        readOnly={true}
         required
       />
     </div>

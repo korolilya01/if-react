@@ -83,6 +83,9 @@
   p {
     margin: 0;
   }
+  .img-style {
+    max-height: 230px;
+  }
 }
 
 /*for mobile*/
