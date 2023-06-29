@@ -5,10 +5,6 @@ import { Container } from '../../Container';
 import { DestItem } from './Card/DestItem';
 import { Title } from '../../Title';
 
-import { useDispatch, useSelector } from 'react-redux';
-import { setDestination } from '../../../store/slices/destination.slice';
-import { availableSelector } from '../../../store/selectors/destination.selector';
-
 import { data } from './data';
 
 import { styles } from './Destinations.styles';
@@ -18,12 +14,12 @@ export const Destinations = () => {
   const classes = styles();
 
   const [isOpen, setIsOpen] = useState(false);
+  const [dest, setDest] = useState('regions');
 
-  const activeBlock = useSelector(availableSelector);
-  const dispatch = useDispatch();
+  const activeBlock = dest;
 
   const handleButtonClick = (block) => {
-    dispatch(setDestination(block));
+    setDest(block);
   };
 
   const handleButtonClickList = () => {

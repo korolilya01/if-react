@@ -9,7 +9,7 @@ export const data = [
     array: [
       {
         id: uuid(),
-        src: './images/maldives.png',
+        src: './maldives.png',
         alt: 'Maldives',
         country: 'Maldives',
       },

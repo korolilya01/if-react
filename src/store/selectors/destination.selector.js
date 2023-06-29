@@ -1,1 +1,0 @@
-export const availableSelector = (state) => state.destination;

@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { INITIAL_STATE } from '../constants/initialState';
 
-const { availableState } = INITIAL_STATE;
+const { topSectionForm } = INITIAL_STATE;
 
 const availableSlice = createSlice({
   name: 'availableSearch',
-  initialState: availableState,
+  initialState: topSectionForm,
   reducers: {
     availableSearch: (state, { payload }) => payload,
   },

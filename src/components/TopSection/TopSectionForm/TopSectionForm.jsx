@@ -10,7 +10,6 @@ import { Input } from '../../Input';
 import { setFilters } from '../../../store/slices/topSectionForm.slice';
 import { useGetAvailableHotelsQuery } from '../../../store/slices/api.slice';
 import { availableSearch } from '../../../store/slices/available.slice';
-import { setDestination } from '../../../store/slices/destination.slice';
 import { topSectionFormSelector } from '../../../store/selectors/topSectionForm.selector';
 
 import { useAvailableHotelsScrollContext } from '../../sections/AvailableHotels/AvailableHotels.context';
@@ -46,7 +45,6 @@ export const TopSectionForm = () => {
 
     const destinationValue = event.target.value;
     dispatch(setFilters({ search: destinationValue }));
-    setDestination(destinationValue);
   };
 
   const buttonSearchClick = (event) => {
@@ -79,6 +77,7 @@ export const TopSectionForm = () => {
           name="destination"
           placeholder=" Your destination or hotel name"
           onChange={findHotels}
+          required
         />
         <Calendar />
         <span className={classNames(classes.textDate, classes.pageText)}>

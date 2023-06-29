@@ -6,7 +6,6 @@ import { authReducer } from './auth.slice';
 import { availableReducer } from './available.slice';
 import { topSectionFormReducer } from './topSectionForm.slice';
 import { apiSlice } from './api.slice';
-import { destinationReducer } from './destination.slice';
 import { themeReducer } from './theme.slice';
 
 const persistConfig = {
@@ -22,7 +21,6 @@ export const rootReducer = persistReducer(
     available: availableReducer,
     topSectionForm: topSectionFormReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
-    destination: destinationReducer,
     theme: themeReducer,
   }),
 );

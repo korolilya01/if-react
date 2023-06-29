@@ -5,10 +5,10 @@ import {
   Outlet,
   Route,
 } from 'react-router-dom';
-import { App } from '../Components/App';
-import { Authorization } from '../Components/Authorization';
-import { HotelCardPage } from '../Components/sections/Homes/Card';
-import { SystemLayout } from '../Components/SystemLayout';
+import { App } from '../components/App';
+import { Authorization } from '../components/Authorization';
+import { HotelCardPage } from '../components/sections/Homes/Card';
+import { SystemLayout } from '../components/SystemLayout';
 
 export const router = createBrowserRouter(
   createRoutesFromElements(

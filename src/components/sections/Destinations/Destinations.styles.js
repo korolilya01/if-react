@@ -54,6 +54,7 @@ export const styles = createUseStyles(() => ({
   buttonActive: {
     background: 'var(--blue)',
     color: 'var(--white)',
+    transition: 'background 1.3s ease',
   },
   list: {
     display: 'flex',

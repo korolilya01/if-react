@@ -1,16 +1,7 @@
-import { lightTheme } from '../../Components/Themes/lightTheme.styles';
+import { lightTheme } from '../../components/Themes/lightTheme.styles';
 
 export const INITIAL_STATE = {
   authState: null,
-  availableState: {
-    search: '',
-    checkIn: '',
-    checkOut: '',
-    adults: 1,
-    children: 0,
-    rooms: 1,
-    childrenAges: [],
-  },
   topSectionForm: {
     search: '',
     dateFrom: null,
@@ -20,7 +11,6 @@ export const INITIAL_STATE = {
     rooms: 1,
     childrenAges: null,
   },
-  destination: 'regions',
   theme: {
     themeStyle: 'light',
     themeParams: lightTheme,
